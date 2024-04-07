@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Public sector intranet',
+    'title' => 'Public Sector Intranet',
     'description' => 'Site package for public sector intranet (psi)',
     'category' => 'distribution',
     'author' => 'Oliver Bartsch',
