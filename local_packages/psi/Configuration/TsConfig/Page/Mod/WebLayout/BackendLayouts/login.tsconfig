@@ -1,0 +1,30 @@
+################################
+#### BACKENDLAYOUT: 404 ####
+################################
+mod {
+    web_layout {
+        BackendLayouts {
+            login {
+                title = Login Page
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = Login Form
+                                        colPos = 999
+                                        colspan = 9
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:psi/Resources/Public/Icons/Extension.svg
+            }
+        }
+    }
+}
