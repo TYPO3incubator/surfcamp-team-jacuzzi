@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f53de3fefb3211552e74f9fbbd206e13",
+    "content-hash": "d2f3923c909924ffda76579234c205c2",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1199,6 +1199,55 @@
                 }
             ],
             "time": "2023-12-03T20:05:35+00:00"
+        },
+        {
+            "name": "jacuzzi/psi",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "local_packages/psi",
+                "reference": "c9ce232dcd8489b4d058206541335dae1ea1d429"
+            },
+            "require": {
+                "php": ">=8.2.0",
+                "typo3/cms-backend": "dev-main",
+                "typo3/cms-core": "dev-main",
+                "typo3/cms-frontend": "dev-main"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "psi"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jacuzzi\\Psi\\": "Classes"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Bartsch",
+                    "email": "bo@cedev.de"
+                }
+            ],
+            "description": "Site package for public sector intranet (psi)",
+            "homepage": "https://team5.surfcamp.typo3.com",
+            "keywords": [
+                "Jacuzzi",
+                "Public sector",
+                "Surfcamp",
+                "TYPO3"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "lolli42/finediff",

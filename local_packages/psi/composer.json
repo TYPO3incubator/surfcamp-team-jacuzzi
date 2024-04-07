@@ -1,0 +1,38 @@
+{
+  "name": "jacuzzi/psi",
+  "description": "Site package for public sector intranet (psi)",
+  "type": "typo3-cms-extension",
+  "homepage": "https://team5.surfcamp.typo3.com",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "TYPO3",
+    "Surfcamp",
+    "Jacuzzi",
+    "Public sector"
+  ],
+  "authors": [
+    {
+      "name": "Oliver Bartsch",
+      "email": "bo@cedev.de"
+    }
+  ],
+  "require": {
+    "php": ">=8.2.0",
+    "typo3/cms-core": "dev-main",
+    "typo3/cms-backend": "dev-main",
+    "typo3/cms-frontend": "dev-main"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "psi"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Jacuzzi\\Psi\\": "Classes"
+    }
+  }
+}

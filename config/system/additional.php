@@ -43,6 +43,9 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'
         'displayErrors' => $_ENV['TYPO3_SYS_DISPLAYERRORS'] ?? 0,
         'encryptionKey' => $_ENV['TYPO3_SYS_ENCRYPTIONKEY'],
         'exceptionalErrors' => $_ENV['TYPO3_SYS_EXCEPTIONALERRORS'] ?? 4096,
-        'sitename' => 'Surfcamp team jacuzzi'
+        'sitename' => 'Surfcamp team jacuzzi',
+        'systemMaintainers' => [
+            1, 3, 4, 5, 6, 7,
+        ],
     ],
 ]);
