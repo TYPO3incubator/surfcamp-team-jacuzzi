@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2f3923c909924ffda76579234c205c2",
+    "content-hash": "34bde2d2eef79d7477e492dff2964bb4",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1206,13 +1206,14 @@
             "dist": {
                 "type": "path",
                 "url": "local_packages/psi",
-                "reference": "c9ce232dcd8489b4d058206541335dae1ea1d429"
+                "reference": "f121d4001624793f9fa60357802448d2883c0349"
             },
             "require": {
                 "php": ">=8.2.0",
                 "typo3/cms-backend": "dev-main",
                 "typo3/cms-core": "dev-main",
-                "typo3/cms-frontend": "dev-main"
+                "typo3/cms-frontend": "dev-main",
+                "typo3/cms-impexp": "dev-main"
             },
             "require-dev": {
                 "roave/security-advisories": "dev-master"
@@ -6101,6 +6102,65 @@
             "time": "2024-04-07T09:49:20+00:00"
         },
         {
+            "name": "typo3/cms-impexp",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/impexp.git",
+                "reference": "3c2e7274448da1d87fcdd91be00ce2873083a827"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/impexp/zipball/3c2e7274448da1d87fcdd91be00ce2873083a827",
+                "reference": "3c2e7274448da1d87fcdd91be00ce2873083a827",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "13.1.*@dev"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "default-branch": true,
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "13.1.x-dev"
+                },
+                "typo3/cms": {
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    },
+                    "extension-key": "impexp"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Impexp\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS Import/Export - Tool for importing and exporting records using XML or the custom T3D format.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-impexp/main/en-us/",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2024-03-29T09:47:59+00:00"
+        },
+        {
             "name": "typo3/cms-info",
             "version": "dev-main",
             "source": {
@@ -7584,6 +7644,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "jacuzzi/psi": 20,
         "typo3/cms-backend": 20,
         "typo3/cms-belog": 20,
         "typo3/cms-beuser": 20,
@@ -7596,6 +7657,7 @@
         "typo3/cms-fluid": 20,
         "typo3/cms-form": 20,
         "typo3/cms-frontend": 20,
+        "typo3/cms-impexp": 20,
         "typo3/cms-info": 20,
         "typo3/cms-install": 20,
         "typo3/cms-lowlevel": 20,
