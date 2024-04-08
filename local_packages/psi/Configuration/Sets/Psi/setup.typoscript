@@ -1,3 +1,5 @@
 @import "EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript"
+@import "EXT:seo/Configuration/TypoScript/XmlSitemap/setup.typoscript"
+
 @import "./TypoScript/content.typoscript"
 @import "./TypoScript/page.typoscript"
