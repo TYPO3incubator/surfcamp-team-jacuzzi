@@ -12,6 +12,20 @@ languages:
     hreflang: en-US
     direction: ''
     flag: us
+  -
+    title: Spanish
+    enabled: true
+    languageId: 1
+    base: /es
+    typo3Language: es
+    locale: es_ES.UTF-8
+    iso-639-1: es
+    navigationTitle: Español
+    hreflang: es
+    direction: ''
+    flag: es
+    fallbackType: strict
+    fallbacks: ''
 
 rootPageId: 1
 websiteTitle: 'Tax Office of La Pared'
