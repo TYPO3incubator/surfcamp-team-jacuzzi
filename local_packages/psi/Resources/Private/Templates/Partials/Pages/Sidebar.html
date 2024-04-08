@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="sidebar-container">
+    <div class="sidebar-inner">
+        <f:if condition="{mainnavigation}">
+            <nav>
+                <ul id="sidebar-nav">
+                    <f:for as="item" each="{mainnavigation}">
+                        <li class="{f:if(condition: item.active, then:' active')}">
+                            <a title="{item.title}" href="{item.link}">
+                                <span>{item.title}</span>
+                            </a>
+                        </li>
+                    </f:for>
+                </ul>
+            </nav>
+        </f:if>
+    </div>
+</div>
+
+</html>
