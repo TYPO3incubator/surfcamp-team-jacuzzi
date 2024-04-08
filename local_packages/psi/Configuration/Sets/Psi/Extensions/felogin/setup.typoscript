@@ -1,0 +1,9 @@
+@import 'EXT:felogin/Configuration/TypoScript/setup.typoscript'
+
+plugin.tx_felogin_login {
+    view {
+        templateRootPaths.1 = EXT:psi/Resources/Private/Templates/Extensions/Felogin/
+        partialRootPaths.1 = EXT:psi/Resources/Private/Extensions/felogin/
+        layoutRootPaths.1 = EXT:psi/Resources/Private/Extensions/felogin/
+    }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" date="2024-04-08T16:16:32Z" product-name="psi">
+		<header/>
+		<body>
+			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.status_header" resname="tt_content.pi_flexform.felogin_login.s_messages.status_header">
+				<source>Confidentiality Header</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.status_message" resname="tt_content.pi_flexform.felogin_login.s_messages.status_message">
+				<source>Confidentiality Message</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
