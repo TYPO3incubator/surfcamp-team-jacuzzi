@@ -15,7 +15,7 @@ mod {
                                 columns {
                                     1 {
                                         name = Login Form
-                                        colPos = 999
+                                        colPos = 0
                                         colspan = 9
                                     }
                                 }

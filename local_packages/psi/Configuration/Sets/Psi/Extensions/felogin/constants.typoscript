@@ -1,0 +1,5 @@
+@import 'EXT:felogin/Configuration/TypoScript/constants.typoscript'
+
+styles.content.loginform {
+  redirectMode = login
+}
