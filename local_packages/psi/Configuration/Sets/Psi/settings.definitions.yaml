@@ -1,0 +1,11 @@
+settings:
+  psi.entrypoints.mainnavigation:
+    label: 'Main navigation entry point'
+    description: 'Configure the entrypoint for the main navigation'
+    type: int
+    default: 0
+  psi.entrypoints.footernavigation:
+    label: 'Footer navigation entry point'
+    description: 'Configure the entrypoint for the footer navigation'
+    type: int
+    default: 0

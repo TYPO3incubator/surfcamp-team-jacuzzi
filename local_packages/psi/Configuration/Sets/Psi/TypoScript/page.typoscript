@@ -5,5 +5,24 @@ page {
     10 = PAGEVIEW
     10 {
         paths.100 = EXT:psi/Resources/Private/Templates/
+
+        dataProcessing {
+            10 = menu
+            10 {
+                special = directory
+                special.value = {$psi.entrypoints.mainnavigation}
+                expandAll = 1
+                levels = 2
+                as = mainnavigation
+            }
+            20 = menu
+            20 {
+                special = directory
+                special.value = {$psi.entrypoints.footernavigation}
+                expandAll = 1
+                levels = 1
+                as = footernavigation
+            }
+        }
     }
 }
