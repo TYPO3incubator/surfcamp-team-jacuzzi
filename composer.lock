@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34bde2d2eef79d7477e492dff2964bb4",
+    "content-hash": "628f2ab39edeec03dee07d3d5fc63501",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1206,12 +1206,13 @@
             "dist": {
                 "type": "path",
                 "url": "local_packages/psi",
-                "reference": "f121d4001624793f9fa60357802448d2883c0349"
+                "reference": "08e2ff15983d9d989d7524308cd24186fcb91756"
             },
             "require": {
                 "php": ">=8.2.0",
                 "typo3/cms-backend": "dev-main",
                 "typo3/cms-core": "dev-main",
+                "typo3/cms-fluid-styled-content": "dev-main",
                 "typo3/cms-frontend": "dev-main",
                 "typo3/cms-impexp": "dev-main"
             },
@@ -5969,6 +5970,67 @@
             "time": "2024-04-07T09:49:20+00:00"
         },
         {
+            "name": "typo3/cms-fluid-styled-content",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/fluid_styled_content.git",
+                "reference": "8dfa81a6b7677ca0aff813d9e2b1d00accb1b9ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/fluid_styled_content/zipball/8dfa81a6b7677ca0aff813d9e2b1d00accb1b9ef",
+                "reference": "8dfa81a6b7677ca0aff813d9e2b1d00accb1b9ef",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "13.1.*@dev",
+                "typo3/cms-fluid": "13.1.*@dev",
+                "typo3/cms-frontend": "13.1.*@dev"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "default-branch": true,
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "13.1.x-dev"
+                },
+                "typo3/cms": {
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    },
+                    "extension-key": "fluid_styled_content"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\FluidStyledContent\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS Fluid Styled Content - Fluid templates for TYPO3 content elements.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-fluid-styled-content/main/en-us",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2024-03-07T17:48:11+00:00"
+        },
+        {
             "name": "typo3/cms-form",
             "version": "dev-main",
             "source": {
@@ -7655,6 +7717,7 @@
         "typo3/cms-filelist": 20,
         "typo3/cms-filemetadata": 20,
         "typo3/cms-fluid": 20,
+        "typo3/cms-fluid-styled-content": 20,
         "typo3/cms-form": 20,
         "typo3/cms-frontend": 20,
         "typo3/cms-impexp": 20,

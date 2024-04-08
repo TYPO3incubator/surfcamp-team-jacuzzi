@@ -3,5 +3,7 @@ page {
     shortcutIcon = EXT:psi/Resources/Public/Images/Tax-Office-Logo.png
 
     10 = PAGEVIEW
-    10.paths.100 = EXT:psi/Resources/Private/Templates/
+    10 {
+        paths.100 = EXT:psi/Resources/Private/Templates/
+    }
 }
