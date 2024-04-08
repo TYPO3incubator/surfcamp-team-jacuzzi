@@ -1,7 +1,15 @@
-# TYPO3 Surfcamp Demo Template
+# TYPO3 Surfcamp – Public Sector Intranet
+Note: This Git repository was created by the participants of team 5 during the TYPO3 Surfcamp 2024 (https://surfcamp.typo3.com/).
 
-This Git repository is intended for use by our dedicated teams at the [TYPO3 Surfcamp](https://surfcamp.typo3.com/).
+## Purpose and Intended Usage
+With this preset, users can set up a new intranet-like solution with ease – with a specific focus on the requirements of the public sector. 
+By downloading and installing this preset, users receive:
+* a predefined pagetree with a set of pages,
+* basic content elements with example content for quick and easy adoption,
+* a defined folder structure within the fileadmin – corresponding with the pagetree structure,
+* established backend user groups and corresponding test users with granularly defined access rights.
 
+## Basic Information
 The project is based on the current development branch of TYPO3 v13.x, using Composer. The configuration happens via
 `.env` thanks to the underlying package `vlucas/phpdotenv`.
 
