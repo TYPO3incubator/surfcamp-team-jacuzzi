@@ -1,6 +1,12 @@
 # TYPO3 Surfcamp – Public Sector Intranet
-Note: This Git repository was created by the participants of team 5 during the TYPO3 Surfcamp 2024 (https://surfcamp.typo3.com/). This team consists of the following particpants:
-Susi Moog (Mentor), Oliver Bartsch (Backend Development), Kirk Kleinau (Frontend Development), Fjora Hodo (Fullstack Development), Filippos Karpouchtsis (Frontend Development) and Luisa Faßbender (Content & Marketing). 
+Note: This Git repository was created by the participants of team 5 during the TYPO3 Surfcamp 2024 (https://surfcamp.typo3.com/). 
+This team consists of the following particpants:
+* Susi Moog (Mentor),
+* Oliver Bartsch (Backend Development),
+* Kirk Kleinau (Frontend Development),
+* Fjora Hodo (Fullstack Development),
+* Filippos Karpouchtsis (Frontend Development),
+* Luisa Faßbender (Content & Marketing). 
 
 ## Purpose and Intended Usage
 With this preset, users can set up a new intranet-like solution with ease – with a specific focus on the requirements of the public sector. 
