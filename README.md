@@ -33,6 +33,20 @@ ddev auth ssh
 ddev pull assets
 ```
 
+### Assets compilation
+
+Install gulp and dependencies:
+```sh
+ddev exec npm install
+```
+Compile assets with the following commands:
+```sh
+# compile styles
+ddev exec gulp styles
+# compile scripts
+ddev exec gulp scripts
+```
+
 ### Contributing to the TYPO3 Core
 
 In case the team decides to, or needs to contribute to the TYPO3 core, this project can be "upgraded".
