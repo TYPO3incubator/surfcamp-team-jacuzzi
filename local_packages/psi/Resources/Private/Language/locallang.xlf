@@ -3,11 +3,52 @@
 	<file source-language="en" datatype="plaintext" date="2024-04-08T16:16:32Z" product-name="psi">
 		<header/>
 		<body>
-			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.status_header" resname="tt_content.pi_flexform.felogin_login.s_messages.status_header">
+			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.status_header">
 				<source>Confidentiality Header</source>
 			</trans-unit>
-			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.status_message" resname="tt_content.pi_flexform.felogin_login.s_messages.status_message">
+			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.status_message">
 				<source>Confidentiality Message</source>
+			</trans-unit>
+
+			<trans-unit id="fe_users.info.header">
+				<source>User information</source>
+			</trans-unit>
+			<trans-unit id="fe_users.contact.header">
+				<source>Contact information</source>
+			</trans-unit>
+			<trans-unit id="fe_users.bio.header">
+				<source>Short Bio</source>
+			</trans-unit>
+
+			<trans-unit id="fe_users.firstname.label">
+				<source>First Name:</source>
+			</trans-unit>
+			<trans-unit id="fe_users.lastname.label">
+				<source>Last Name:</source>
+			</trans-unit>
+			<trans-unit id="fe_users.title.label">
+				<source>Position / Department:</source>
+			</trans-unit>
+			<trans-unit id="fe_users.address.label">
+				<source>Address:</source>
+			</trans-unit>
+			<trans-unit id="fe_users.country.label">
+				<source>Country:</source>
+			</trans-unit>
+			<trans-unit id="fe_users.city.label">
+				<source>City:</source>
+			</trans-unit>
+			<trans-unit id="fe_users.zip.label">
+				<source>ZIP Code:</source>
+			</trans-unit>
+			<trans-unit id="fe_users.email.label">
+				<source>Email Address:</source>
+			</trans-unit>
+			<trans-unit id="fe_users.telephone.label">
+				<source>Telephone:</source>
+			</trans-unit>
+			<trans-unit id="fe_users.fax.label">
+				<source>Fax:</source>
 			</trans-unit>
 		</body>
 	</file>

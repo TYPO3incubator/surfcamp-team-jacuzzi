@@ -4,4 +4,4 @@
 @import "./TypoScript/content.typoscript"
 @import "./TypoScript/frontenduser.typoscript"
 @import "./TypoScript/page.typoscript"
-@import "./Extensions/setup.typoscript"
+@import "./TypoScript/Plugins/setup.typoscript"

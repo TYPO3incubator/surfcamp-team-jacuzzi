@@ -1,1 +1,2 @@
 @import './felogin/setup.typoscript'
+@import './felogin/loginBox.typoscript'
