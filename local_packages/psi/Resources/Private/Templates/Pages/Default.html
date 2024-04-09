@@ -2,12 +2,10 @@
 
 <f:render partial="Pages/Header" arguments="{_all}" />
 
-<div class="site-content">
+<div id="site-content">
 
-    <div class="sidebar">
-        <f:render partial="Pages/Sidebar" arguments="{_all}" />
-    </div>
-    <div class="main-content">
+    <f:render partial="Pages/Sidebar" arguments="{_all}" />
+    <div id="main-content">
         {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{colPos: 0}')}
     </div>
 
