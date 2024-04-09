@@ -6,4 +6,8 @@ plugin.tx_felogin_login {
         partialRootPaths.1 = EXT:psi/Resources/Private/Extensions/felogin/
         layoutRootPaths.1 = EXT:psi/Resources/Private/Extensions/felogin/
     }
+
+    settings {
+          redirectMode = login
+    }
 }

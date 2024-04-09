@@ -10,6 +10,7 @@ TCEFORM {
                 }
 
                 s_redirect {
+                  settings\.redirectMode.disabled = 1
                   settings\.redirectFirstMethod.disabled = 1
                   settings\.redirectDisable.disabled = 1
                 }
@@ -28,5 +29,13 @@ TCEFORM {
                 }
             }
         }
+    }
+
+    fe_users {
+        felogin_redirectPid.disabled = 1
+        company.disabled = 1
+        www.disabled = 1
+
+        title.label = LLL:EXT:psi/Resources/Private/Language/locallang.xlf:fe_users.title.label
     }
 }
