@@ -3,12 +3,17 @@
 <div class="sidebar-container">
     <div class="sidebar-inner">
         <f:if condition="{mainnavigation}">
-            <nav>
+            <nav id="mainnavigation" aria-expanded="true">
                 <ul id="sidebar-nav">
                     <f:for as="item" each="{mainnavigation}">
-                        <li class="{f:if(condition: item.active, then:' active')}">
-                            <a title="{item.title}" href="{item.link}">
-                                <span>{item.title}</span>
+                        <li class="sidebar-nav-item {f:if(condition: item.active, then:' active')}">
+                            <a class="sidebar-nav-link" title="{item.title}" href="{item.link}">
+                                <f:if condition="{item.icon}">
+                                    <f:then>
+                                        <f:image image="{item.icon.0}" class="sidebar-nav-icon"></f:image>
+                                    </f:then>
+                                </f:if>
+                                <span class="sidebar-nav-link-text">{item.title}</span>
                             </a>
                         </li>
                     </f:for>
