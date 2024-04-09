@@ -2,12 +2,28 @@
 
 plugin.tx_felogin_login {
     view {
-        templateRootPaths.1 = EXT:psi/Resources/Private/Templates/Extensions/Felogin/
-        partialRootPaths.1 = EXT:psi/Resources/Private/Extensions/felogin/
-        layoutRootPaths.1 = EXT:psi/Resources/Private/Extensions/felogin/
+        templateRootPaths.1 = EXT:psi/Resources/Private/Templates/Extensions/Felogin/Login/
+        partialRootPaths.1 = EXT:psi/Resources/Private/Partials/Extensions/Felogin/
+        layoutRootPaths.1 = EXT:psi/Resources/Private/Layouts/Extensions/Felogin/
     }
 
     settings {
           redirectMode = login
     }
+}
+
+lib.loginBox = USER
+lib.loginBox {
+  userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+  extensionName = Felogin
+  pluginName = Login
+  settings < plugin.tx_felogin_login.settings
+  settings.redirectPageLogout = 1
+  view < plugin.tx_felogin_login.view
+  view {
+      templateRootPaths {
+        20 = EXT:psi/Resources/Private/Templates/Extensions/Felogin/Menu/
+      }
+  }
+}
 }
