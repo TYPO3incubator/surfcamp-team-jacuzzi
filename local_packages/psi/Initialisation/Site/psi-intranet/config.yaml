@@ -16,17 +16,26 @@ languages:
     title: Spanish
     enabled: true
     languageId: 1
-    base: /es
-    typo3Language: es
+    base: /es/
     locale: es_ES.UTF-8
-    iso-639-1: es
     navigationTitle: Español
     hreflang: es
     direction: ''
     flag: es
     fallbackType: strict
     fallbacks: ''
-
+  -
+    title: 'Easy Language'
+    enabled: true
+    languageId: 2
+    locale: en-US
+    hreflang: en-US
+    base: /easy/
+    websiteTitle: ''
+    navigationTitle: 'Easy Language'
+    fallbackType: strict
+    fallbacks: ''
+    flag: global
 rootPageId: 1
 websiteTitle: 'Tax Office of La Pared'
 errorHandling:
