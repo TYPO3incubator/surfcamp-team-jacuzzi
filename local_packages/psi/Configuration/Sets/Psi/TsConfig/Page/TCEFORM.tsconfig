@@ -6,7 +6,6 @@ TCEFORM {
                   settings\.showForgotPassword.disabled = 1
                   settings\.showPermaLogin.disabled = 1
                   settings\.showLogoutFormAfterLogin.disabled = 1
-
                 }
 
                 s_redirect {
@@ -34,6 +33,7 @@ TCEFORM {
     fe_users {
         felogin_redirectPid.disabled = 1
         company.disabled = 1
+        middle_name.disabled = 1
         www.disabled = 1
 
         title.label = LLL:EXT:psi/Resources/Private/Language/locallang.xlf:fe_users.title.label
