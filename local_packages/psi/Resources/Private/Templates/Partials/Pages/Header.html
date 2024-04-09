@@ -1,21 +1,22 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<header id="header">
-    <div class="header-container">
-        <div class="header-inner">
-            <div class="header-logo">
-                <f:link.page pageUid="{rootPage}" class="header-logo" title="{settings.logo.linktitle}">
-                    <div class="logo-group">
-                        <f:image src="EXT:psi/Resources/Public/Images/Tax-Office-Logo.png" width="200"/>
-                    </div>
-                </f:link.page>
-            </div>
-            <div class="header-search">
-
-            </div>
-            <div class="header-avatar">
-
-            </div>
+<header id="page-header">
+    <div class="header-inner">
+        <div class="header-left-container">
+            <button class="header-menu-toggle" id="menu-toggle" aria-expanded="true">
+                <div class="menu-toggle-stripe"></div>
+                <div class="menu-toggle-stripe"></div>
+                <div class="menu-toggle-stripe"></div>
+            </button>
+            <f:link.page pageUid="1" class="header-logo" title="{settings.logo.linktitle}">
+                <f:image src="EXT:psi/Resources/Public/Images/Tax-Office-Logo.png" width="200"/>
+            </f:link.page>
+        </div>
+        <div class="header-search-container">
+            <h2>SEARCH</h2>
+        </div>
+        <div class="header-avatar">
+            <f:image src="EXT:psi/Resources/Public/Images/Tax-Office-Logo.png" width="200"/>
         </div>
     </div>
 </header>
