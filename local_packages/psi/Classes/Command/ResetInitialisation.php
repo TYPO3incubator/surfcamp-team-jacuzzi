@@ -40,6 +40,9 @@ class ResetInitialisation extends Command
             )
             ->executeStatement();
 
+        // Remove backend users
+        $this->connectionPool->getQueryBuilderForTable('be_users')->delete('be_users')->executeStatement();
+
         $io = new SymfonyStyle($input, $output);
 
         if ($count > 0) {
