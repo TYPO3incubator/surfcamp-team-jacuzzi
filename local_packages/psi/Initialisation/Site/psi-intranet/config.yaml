@@ -1,4 +1,8 @@
-base: /
+base: 'https://team5.surfcamp.typo3.com/'
+baseVariants:
+  -
+    condition: 'applicationContext == "Development/Local"'
+    base: 'https://surfcamp-team5.ddev.site/'
 languages:
   -
     title: English
