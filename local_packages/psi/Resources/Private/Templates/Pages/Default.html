@@ -1,5 +1,15 @@
-<f:image src="EXT:psi/Resources/Public/Images/Tax-Office-Logo.png" width="200"/>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
 
-{f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{colPos: 0}')}
+<f:section name="Main">
+    <f:render partial="Pages/Sidebar" arguments="{_all}" />
+    <div id="main-content">
+        <f:for each="{content}" as="column">
+            <f:for each="{column.blocks}" as="block">
+                <f:renderBlock data="{block}"/>
+            </f:for>
+        </f:for>
+    </div>
+</f:section>
 
-<p>You are on page: {page.title}</p>
+</html>

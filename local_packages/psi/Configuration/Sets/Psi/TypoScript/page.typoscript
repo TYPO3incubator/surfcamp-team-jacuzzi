@@ -14,6 +14,13 @@ page {
                 expandAll = 1
                 levels = 2
                 as = mainnavigation
+                dataProcessing {
+                    20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    20 {
+                        references.fieldName = navigation_icon
+                        as = icon
+                    }
+                }
             }
             20 = menu
             20 {
@@ -23,10 +30,16 @@ page {
                 levels = 1
                 as = footernavigation
             }
+            30 = pageContent
         }
     }
 
     includeCSS {
-        psi = EXT:psi/Resources/Public/Css/main.min.css
+        theme = EXT:psi/Resources/Public/Css/main.css
     }
+
+    includeJSFooter {
+        theme = EXT:psi/Resources/Public/JavaScript/main.js
+    }
+
 }
