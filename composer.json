@@ -45,6 +45,7 @@
         "typo3/cms-dashboard": "dev-main",
         "typo3/cms-extbase": "dev-main",
         "typo3/cms-extensionmanager": "dev-main",
+        "typo3/cms-felogin": "dev-main",
         "typo3/cms-filelist": "dev-main",
         "typo3/cms-filemetadata": "dev-main",
         "typo3/cms-fluid": "dev-main",

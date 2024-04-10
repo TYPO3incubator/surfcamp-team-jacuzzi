@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d61f713db9382aedce0e1d804634e89a",
+    "content-hash": "afe6c3b56f9821e8157ad883635f8bd7",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -7759,6 +7759,7 @@
         "typo3/cms-dashboard": 20,
         "typo3/cms-extbase": 20,
         "typo3/cms-extensionmanager": 20,
+        "typo3/cms-felogin": 20,
         "typo3/cms-filelist": 20,
         "typo3/cms-filemetadata": 20,
         "typo3/cms-fluid": 20,
