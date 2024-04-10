@@ -10,14 +10,14 @@ ExtensionManagementUtility::addTcaSelectItem(
     'CType',
     [
         'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.text',
-        'value' => 'psi_text',
+        'value' => 'text',
         'icon' => 'content-text',
         'group' => 'PSI',
         'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.text.description',
     ]
 );
 
-$GLOBALS['TCA']['tt_content']['types']['psi_text'] = [
+$GLOBALS['TCA']['tt_content']['types']['text'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
     --palette--;;general,
@@ -42,7 +42,7 @@ $GLOBALS['TCA']['tt_content']['types']['psi_text'] = [
     ],
 ];
 
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['psi_text'] = 'content-text';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['text'] = 'content-text';
 
 /**
  * PSI Image Element
@@ -52,14 +52,14 @@ ExtensionManagementUtility::addTcaSelectItem(
     'CType',
     [
         'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.image',
-        'value' => 'psi_image',
+        'value' => 'image',
         'icon' => 'content-image',
         'group' => 'PSI',
         'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.image.description',
     ]
 );
 
-$GLOBALS['TCA']['tt_content']['types']['psi_image'] = [
+$GLOBALS['TCA']['tt_content']['types']['image'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
     --palette--;;general,
@@ -81,7 +81,7 @@ $GLOBALS['TCA']['tt_content']['types']['psi_image'] = [
     ],
 ];
 
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['psi_image'] = 'content-image';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['image'] = 'content-image';
 
 /**
  * PSI TextMedia Element
@@ -91,14 +91,14 @@ ExtensionManagementUtility::addTcaSelectItem(
     'CType',
     [
         'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.textmedia',
-        'value' => 'psi_textmedia',
+        'value' => 'textmedia',
         'icon' => 'content-beside-text-img-above-center',
         'group' => 'PSI',
         'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.textmedia.description',
     ]
 );
 
-$GLOBALS['TCA']['tt_content']['types']['psi_textmedia'] = [
+$GLOBALS['TCA']['tt_content']['types']['textmedia'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
     --palette--;;general,
@@ -106,7 +106,7 @@ $GLOBALS['TCA']['tt_content']['types']['psi_textmedia'] = [
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:media, assets,
     --linebreak--, imageorient;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient_formlabel,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:appearance,
-    --palette--;;frames,
+    --palette--;;,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
     --palette--;;language, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
     --palette--;;hidden,
@@ -127,4 +127,4 @@ $GLOBALS['TCA']['tt_content']['types']['psi_textmedia'] = [
     ],
 ];
 
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['psi_textmedia'] = 'content-beside-text-img-above-center';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['textmedia'] = 'content-beside-text-img-above-center';
