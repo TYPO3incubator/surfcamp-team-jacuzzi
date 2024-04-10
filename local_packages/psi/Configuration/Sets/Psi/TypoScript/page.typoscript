@@ -7,8 +7,10 @@ page {
         paths.100 = EXT:psi/Resources/Private/Templates/
 
         variables {
-            user = USER_INT
-            user.userFunc = Jacuzzi\Psi\User\FrontendUser->render
+            frontendusername = lib.frontendusername
+            frontenduserlastname = lib.frontenduserlastname
+            frontendusertitle = lib.frontendusertitle
+            frontenduseravatar = lib.frontenduseravatar
         }
 
         dataProcessing {
