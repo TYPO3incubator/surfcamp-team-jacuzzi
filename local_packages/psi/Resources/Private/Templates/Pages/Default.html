@@ -4,7 +4,11 @@
 <f:section name="Main">
     <f:render partial="Pages/Sidebar" arguments="{_all}" />
     <div id="main-content">
-        {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{colPos: 0}')}
+        <f:for each="{content}" as="column">
+            <f:for each="{column.blocks}" as="block">
+                <f:renderBlock data="{block}"/>
+            </f:for>
+        </f:for>
     </div>
 </f:section>
 
