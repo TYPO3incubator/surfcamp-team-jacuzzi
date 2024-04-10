@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" date="2024-04-08T16:16:32Z" product-name="psi">
+		<header/>
+		<body>
+			<trans-unit id="ctype.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="ctype.text.description">
+				<source>Text Element</source>
+			</trans-unit>
+			<trans-unit id="ctype.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="ctype.image.description">
+				<source>Image Element</source>
+			</trans-unit>
+			<trans-unit id="ctype.textmedia">
+				<source>Text Media</source>
+			</trans-unit>
+			<trans-unit id="ctype.textmedia.description">
+				<source>Text Media Element</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
