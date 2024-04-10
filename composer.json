@@ -28,13 +28,15 @@
         "sort-packages": true,
         "allow-plugins": {
             "typo3/class-alias-loader": true,
-            "typo3/cms-composer-installers": true
+            "typo3/cms-composer-installers": true,
+            "cweagans/composer-patches": true
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": "^8.2",
+        "cweagans/composer-patches": "^1.7",
         "jacuzzi/psi": "dev-main",
         "typo3/cms-backend": "dev-main",
         "typo3/cms-belog": "dev-main",
@@ -46,7 +48,6 @@
         "typo3/cms-filelist": "dev-main",
         "typo3/cms-filemetadata": "dev-main",
         "typo3/cms-fluid": "dev-main",
-        "typo3/cms-fluid-styled-content": "dev-main",
         "typo3/cms-form": "dev-main",
         "typo3/cms-frontend": "dev-main",
         "typo3/cms-impexp": "dev-main",
@@ -62,5 +63,18 @@
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest"
+    },
+    "extra": {
+        "patches": {
+            "typo3/cms-frontend": {
+                "83638": "composer_patches/typo3-cms-frontend-review-83638.patch"
+            },
+            "typo3/cms-core": {
+                "83638": "composer_patches/typo3-cms-core-review-83638.patch"
+            },
+            "typo3/cms-fluid": {
+                "83638": "composer_patches/typo3-cms-fluid-review-83718.diff"
+            }
+        }
     }
 }

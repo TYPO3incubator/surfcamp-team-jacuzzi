@@ -8,4 +8,10 @@
     </div>
 </f:section>
 
-</html>
+<p>You are on page: {page.title}</p>
+
+<f:for each="{content}" as="column">
+    <f:for each="{column.blocks}" as="block">
+        <f:renderBlock data="{block}"/>
+    </f:for>
+</f:for>
