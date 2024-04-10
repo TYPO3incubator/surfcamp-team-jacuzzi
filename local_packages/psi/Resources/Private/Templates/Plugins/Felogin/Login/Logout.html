@@ -1,99 +1,114 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:form action="login" actionUri="{actionUri}" target="_top" fieldNamePrefix="">
+            <f:form.submit value="{f:translate(key: 'logout')}" name="submit" id="tx-felogin-input-logout"/>
 
+
+        <div class="felogin-hidden">
+            <f:form.hidden name="logintype" value="logout"/>
+        </div>
+</f:form>
 <div class="container profile">
-    <div class="profile__card">
-        <f:if condition="{user.first_name} || {user.last_name}">
-            <h3>{user.first_name} {user.last_name}</h3>
-        </f:if>
-        <f:if condition="{user.title}">
-            <h4>{user.title}</h4>
-        </f:if>
-    </div>
+    <div class="profile__container">
 
-    <div class="profile__info">
-        <f:render section="UserInfo" arguments="{_all}"/>
+        <div class="profile__card">
+            <f:if condition="{user.image}">
+                <img alt="Image placeholder" class="profile__image"
+                     src="https://static.vecteezy.com/system/resources/previews/009/749/643/non_2x/woman-profile-mascot-illustration-female-avatar-character-icon-cartoon-girl-head-face-business-user-logo-free-vector.jpg">
+            </f:if>
+            <f:if condition="{user.first_name} || {user.last_name}">
+                <h3 class="profile__name">{user.first_name} {user.last_name}</h3>
+            </f:if>
+            <f:if condition="{user.title}">
+                <h4 class="profile__title">{user.title}</h4>
+            </f:if>
+        </div>
 
-        <f:render section="UserContact" arguments="{_all}"/>
+        <div class="profile__info">
+            <f:render section="UserInfo" arguments="{_all}"/>
+            <f:render section="UserContact" arguments="{_all}"/>
+            <f:render section="UserBio" arguments="{_all}"/>
+        </div>
 
-        <f:render section="UserBio" arguments="{_all}"/>
     </div>
 </div>
 
 <f:section name="UserInfo">
     <f:if condition="{user.first_name} || {user.last_name}">
-        <h4>
+        <h4 class="profile__header">
             <f:translate key="fe_users.info.header" extensionName="psi"/>
         </h4>
     </f:if>
     <f:if condition="{user.first_name}">
-        <div>
-            <span class="profile__bio-label"><f:translate key="fe_users.firstname.label" extensionName="psi"/></span>
-            <span class="profile__bio-info">{user.first_name}</span>
+        <div class="profile__info-item">
+            <span class="profile__label"><f:translate key="fe_users.firstname.label" extensionName="psi"/></span>
+            <span class="profile__data">{user.first_name}</span>
         </div>
     </f:if>
     <f:if condition="{user.last_name}">
-        <div>
-            <span class="profile__bio-label"><f:translate key="fe_users.lastname.label" extensionName="psi"/></span>
-            <span class="profile__bio-info">{user.last_name}</span>
+        <div class="profile__info-item">
+            <span class="profile__label"><f:translate key="fe_users.lastname.label" extensionName="psi"/></span>
+            <span class="profile__data">{user.last_name}</span>
         </div>
     </f:if>
 </f:section>
 
 <f:section name="UserContact">
     <f:if condition="{user.address} || {user.country} || {user.city} || {user.zip}">
-        <h4>
+        <h4 class="profile__header">
             <f:translate key="fe_users.contact.header" extensionName="psi"/>
         </h4>
     </f:if>
     <f:if condition="{user.address}">
-        <div>
-            <span class="profile__bio-label"><f:translate key="fe_users.address.label" extensionName="psi"/></span>
-            <span class="profile__bio-info">{user.address}</span>
+        <div class="profile__info-item">
+            <span class="profile__label"><f:translate key="fe_users.address.label" extensionName="psi"/></span>
+            <span class="profile__data">{user.address}</span>
         </div>
     </f:if>
     <f:if condition="{user.country}">
-        <div>
-            <span class="profile__bio-label"><f:translate key="fe_users.country.label" extensionName="psi" /></span>
-            <span class="profile__bio-info">{user.country}</span>
+        <div class="profile__info-item">
+            <span class="profile__label"><f:translate key="fe_users.country.label" extensionName="psi"/></span>
+            <span class="profile__data">{user.country}</span>
         </div>
     </f:if>
     <f:if condition="{user.city}">
-        <div>
-            <span class="profile__bio-label"><f:translate key="fe_users.city.label" extensionName="psi" /></span>
-            <span class="profile__bio-info">{user.city}</span>
+        <div class="profile__info-item">
+            <span class="profile__label"><f:translate key="fe_users.city.label" extensionName="psi"/></span>
+            <span class="profile__data">{user.city}</span>
         </div>
     </f:if>
     <f:if condition="{user.zip}">
-        <div>
-            <span class="profile__bio-label"><f:translate key="fe_users.zip.label" extensionName="psi" /></span>
-            <span class="profile__bio-info">{user.zip}</span>
+        <div class="profile__info-item">
+            <span class="profile__label"><f:translate key="fe_users.zip.label" extensionName="psi"/></span>
+            <span class="profile__data">{user.zip}</span>
         </div>
     </f:if>
     <f:if condition="{user.email}">
-        <div>
-            <span class="profile__bio-label"><f:translate key="fe_users.email.label" extensionName="psi" /></span>
-            <span class="profile__bio-info">{user.email}</span>
+        <div class="profile__info-item">
+            <span class="profile__label"><f:translate key="fe_users.email.label" extensionName="psi"/></span>
+            <span class="profile__data">{user.email}</span>
         </div>
     </f:if>
     <f:if condition="{user.telephone}">
-        <div>
-            <span class="profile__bio-label"><f:translate key="fe_users.telephone.label" extensionName="psi" /></span>
-            <span class="profile__bio-info">{user.telephone}</span>
+        <div class="profile__info-item">
+            <span class="profile__label"><f:translate key="fe_users.telephone.label" extensionName="psi"/></span>
+            <span class="profile__data">{user.telephone}</span>
         </div>
     </f:if>
     <f:if condition="{user.fax}">
-        <div>
-            <span class="profile__bio-label"><f:translate key="fe_users.fax.label" extensionName="psi" /></span>
-            <span class="profile__bio-info">{user.fax}</span>
+        <div class="profile__info-item">
+            <span class="profile__label"><f:translate key="fe_users.fax.label" extensionName="psi"/></span>
+            <span class="profile__data">{user.fax}</span>
         </div>
     </f:if>
 </f:section>
 
 <f:section name="UserBio">
     <f:if condition="{user.description}">
-        <h4><f:translate key="fe_users.bio.header" extensionName="psi" /></h4>
-        <div>
-            <span class="profile__bio-info">{user.description}</span>
+        <h4 class="profile__header">
+            <f:translate key="fe_users.bio.header" extensionName="psi"/>
+        </h4>
+        <div class="profile__info-item">
+            <span class="profile__data">{user.description}</span>
         </div>
     </f:if>
 </f:section>
