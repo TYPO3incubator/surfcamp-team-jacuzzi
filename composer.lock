@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d61f713db9382aedce0e1d804634e89a",
+    "content-hash": "afe6c3b56f9821e8157ad883635f8bd7",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -5840,6 +5840,65 @@
             "time": "2024-04-07T09:49:20+00:00"
         },
         {
+            "name": "typo3/cms-felogin",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/felogin.git",
+                "reference": "fb6b0feef5d90f473a829094731fc26e4a458715"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/felogin/zipball/fb6b0feef5d90f473a829094731fc26e4a458715",
+                "reference": "fb6b0feef5d90f473a829094731fc26e4a458715",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "13.1.*@dev"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "default-branch": true,
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "13.1.x-dev"
+                },
+                "typo3/cms": {
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    },
+                    "extension-key": "felogin"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\FrontendLogin\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS Frontend Login - A template-based plugin to log in website users in the TYPO3 frontend.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-felogin/main/en-us",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2024-03-09T14:37:24+00:00"
+        },
+        {
             "name": "typo3/cms-filelist",
             "version": "dev-main",
             "source": {
@@ -7700,6 +7759,7 @@
         "typo3/cms-dashboard": 20,
         "typo3/cms-extbase": 20,
         "typo3/cms-extensionmanager": 20,
+        "typo3/cms-felogin": 20,
         "typo3/cms-filelist": 20,
         "typo3/cms-filemetadata": 20,
         "typo3/cms-fluid": 20,
