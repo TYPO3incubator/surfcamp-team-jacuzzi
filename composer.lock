@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd9d2f1e49f016f1bb2c41ba4a464d7b",
+    "content-hash": "d61f713db9382aedce0e1d804634e89a",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -6704,12 +6704,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-CMS/tstemplate.git",
-                "reference": "801be5ed27dc8e5f0189c778008b0e500d61661a"
+                "reference": "11fdc93137424f8bd4a31fbc241b0cb17500acb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-CMS/tstemplate/zipball/801be5ed27dc8e5f0189c778008b0e500d61661a",
-                "reference": "801be5ed27dc8e5f0189c778008b0e500d61661a",
+                "url": "https://api.github.com/repos/TYPO3-CMS/tstemplate/zipball/11fdc93137424f8bd4a31fbc241b0cb17500acb0",
+                "reference": "11fdc93137424f8bd4a31fbc241b0cb17500acb0",
                 "shasum": ""
             },
             "require": {
@@ -6755,7 +6755,7 @@
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },
-            "time": "2024-04-07T09:18:44+00:00"
+            "time": "2024-04-10T10:53:17+00:00"
         },
         {
             "name": "typo3/html-sanitizer",
