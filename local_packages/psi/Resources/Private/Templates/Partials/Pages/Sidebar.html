@@ -2,6 +2,18 @@
 
 <div class="sidebar-container">
     <div class="sidebar-inner">
+        <div class="user-info-container">
+            <div class="user-info-avatar">
+                <f:cObject typoscriptObjectPath="lib.frontenduseravatar"></f:cObject>
+            </div>
+            <div class="user-infos">
+                <f:cObject typoscriptObjectPath="lib.frontendusertitle"></f:cObject>
+                <div class="user-info-name">
+                    <f:cObject typoscriptObjectPath="lib.frontendusername"></f:cObject>
+                    <f:cObject typoscriptObjectPath="lib.frontenduserlastname"></f:cObject>
+                </div>
+            </div>
+        </div>
         <f:if condition="{mainnavigation}">
             <nav id="mainnavigation" aria-expanded="true">
                 <ul id="sidebar-nav">

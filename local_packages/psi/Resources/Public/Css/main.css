@@ -147,3 +147,40 @@ body {
     padding: 30px;
     width: calc(100% - 240px);
 }
+
+.user-info-container {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+}
+
+#site-content.sidebar-collapse .user-info-container {
+    justify-content: center;
+}
+
+#site-content.sidebar-collapse .user-infos {
+    display: none;
+}
+
+.user-info-avatar img {
+    border: 1px solid #63B21F;
+    border-radius: 50%;
+}
+
+.user-info-name {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+.fe-user-title {
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.user-info-name p {
+    font-size: 16px;
+    margin: 0;
+}
