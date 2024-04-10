@@ -23,6 +23,7 @@ page {
                 levels = 1
                 as = footernavigation
             }
+            30 = pageContent
         }
     }
 }
