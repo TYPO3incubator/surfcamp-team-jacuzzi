@@ -2,7 +2,17 @@
 
 <div class="sidebar-container">
     <div class="sidebar-inner">
-        {user -> f:format.raw()}
+        <f:if condition="{frontendusername}">
+            <div class="user-info-container">
+                <div class="user-info-avatar">{frontenduseravatar -> f:format.raw()}</div>
+                <div class="user-infos">{frontendusertitle -> f:format.raw()}
+                    <div class="user-info-name">
+                        {frontendusername -> f:format.raw()}
+                        {frontenduserlastname -> f:format.raw()}
+                    </div>
+                </div>
+            </div>
+        </f:if>
         <f:if condition="{mainnavigation}">
             <nav id="mainnavigation" aria-expanded="true">
                 <ul id="sidebar-nav">
