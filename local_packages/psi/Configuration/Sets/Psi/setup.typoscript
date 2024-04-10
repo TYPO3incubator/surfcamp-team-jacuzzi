@@ -3,3 +3,40 @@
 
 @import "./TypoScript/content.typoscript"
 @import "./TypoScript/page.typoscript"
+
+
+lib.frontendusername = COA_INT
+lib.frontendusername {
+    10 = TEXT
+    10.data = TSFE : fe_user|user|name
+    10.stdWrap.wrap = <p class="fe-user-name">|</p>
+}
+
+lib.frontenduserlastname = COA_INT
+lib.frontenduserlastname {
+    10 = TEXT
+    10.data = TSFE : fe_user|user|last_name
+    10.stdWrap.wrap = <p class="fe-user-lastname">|</p>
+}
+
+lib.frontendusertitle = COA_INT
+lib.frontendusertitle {
+    10 = TEXT
+    10.data = TSFE : fe_user|user|title
+    10.stdWrap.wrap = <p class="fe-user-title">|</p>
+}
+
+lib.frontenduseravatar = FILES
+lib.frontenduseravatar {
+    references {
+        table = fe_users
+        uid.data = TSFE : fe_user|user|uid
+        fieldName = image
+    }
+    renderObj = TEXT
+    renderObj {
+        data = file:current:publicUrl
+        stdWrap.wrap = <img src="|" alt="">
+    }
+}
+
