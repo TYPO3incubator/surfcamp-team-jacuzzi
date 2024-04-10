@@ -7,7 +7,7 @@
 defined('TYPO3') or die('Access denied.');
 
 // Register Extra Cols
-$columns = array(
+$columns = [
     'navigation_icon' => [
         'label' => 'Navigation Icon',
         'config' => [
@@ -16,7 +16,7 @@ $columns = array(
             'allowed' => 'common-image-types'
         ],
     ]
-);
+];
 
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages', $columns);
