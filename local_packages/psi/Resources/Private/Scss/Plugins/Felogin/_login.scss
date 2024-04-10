@@ -1,0 +1,62 @@
+.frame-type-felogin_login {
+	@include container;
+}
+.login {
+	@include row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	min-height: 100vh;
+	background: #F2F0FF;
+
+	&__container {
+		@include column(4);
+		padding: 45px;
+		background: #ffffff;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		width: 100%;
+		margin: 0 0 15px;
+		padding: 15px;
+		border: 0;
+		background: #f2f2f2;
+		box-sizing: border-box;
+		font-size: 14px;
+
+		&:focus {
+			outline: none;
+			background: #F2F0FF;
+		}
+	}
+
+	&__label {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 2;
+	}
+
+	&__submit {
+		align-self: center;
+		width: 100%;
+		margin: 15px 0 0;
+		padding: 15px;
+		border: 0;
+		background: #9B8BF4;
+		box-sizing: border-box;
+		font-size: 18px;
+		font-weight: 600;
+		color: #ffffff;
+		cursor: pointer;
+
+		&:hover {
+			background: #c379b8;
+		}
+	}
+}

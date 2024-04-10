@@ -25,4 +25,8 @@ page {
             }
         }
     }
+
+    includeCSS {
+        psi = EXT:psi/Resources/Public/Css/main.min.css
+    }
 }
