@@ -1,20 +1,26 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<footer>
-    <p>You are on page: {page.title}</p>
-    <f:if condition="{footernavigation}">
-        <nav>
-            <ul id="sidebar-nav">
-                <f:for as="item" each="{footernavigation}">
-                    <li class="{f:if(condition: item.active, then:' active')}">
-                        <a title="{item.title}" href="{item.link}">
-                            <span>{item.title}</span>
-                        </a>
-                    </li>
-                </f:for>
-            </ul>
-        </nav>
-    </f:if>
+<footer id="site-footer">
+    <div class="footer-container">
+        <div class="footer-logout">
+            <f:cObject typoscriptObjectPath="lib.logoutbutton"></f:cObject>
+        </div>
+        <div class="footermenu-container">
+            <f:if condition="{footernavigation}">
+                <nav id="footer-nav">
+                    <ul>
+                        <f:for as="item" each="{footernavigation}">
+                            <li class="{f:if(condition: item.active, then:' active')}">
+                                <a title="{item.title}" href="{item.link}">
+                                    <span>{item.title}</span>
+                                </a>
+                            </li>
+                        </f:for>
+                    </ul>
+                </nav>
+            </f:if>
+        </div>
+    </div>
 </footer>
 
 </html>
