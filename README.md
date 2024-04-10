@@ -15,6 +15,7 @@ By downloading and installing this preset, users receive:
 * basic content elements with example content for quick and easy adoption,
 * a defined folder structure within the fileadmin – corresponding with the pagetree structure,
 * established backend user groups and corresponding test users with granularly defined access rights.
+* a mulitlingual setup with EN and "easy language" to adhere to governmental specifications
 
 ### Page Structure & Functionalities
 The Public Sector Intranet Preset comes with the following page structure:
