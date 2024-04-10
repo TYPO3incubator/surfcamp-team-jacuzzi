@@ -3,9 +3,21 @@
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 /**
- * Text Element
+ * PSI Text Element
  */
-$GLOBALS['TCA']['tt_content']['types']['text'] = [
+ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.text',
+        'value' => 'psi_text',
+        'icon' => 'content-text',
+        'group' => 'PSI',
+        'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.text.description',
+    ]
+);
+
+$GLOBALS['TCA']['tt_content']['types']['psi_text'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
     --palette--;;general,
@@ -30,19 +42,28 @@ $GLOBALS['TCA']['tt_content']['types']['text'] = [
     ],
 ];
 
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['text'] = 'content-text';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['psi_text'] = 'content-text';
 
 /**
- * Image Element
+ * PSI Image Element
  */
+ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.image',
+        'value' => 'psi_image',
+        'icon' => 'content-image',
+        'group' => 'PSI',
+        'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.image.description',
+    ]
+);
 
-$GLOBALS['TCA']['tt_content']['types']['image'] = [
+$GLOBALS['TCA']['tt_content']['types']['psi_image'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
     --palette--;;general,
     --palette--;;headers,media,
-    --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:appearance,
-    --palette--;;frames,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
     --palette--;;language, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
     --palette--;;hidden,
@@ -60,18 +81,30 @@ $GLOBALS['TCA']['tt_content']['types']['image'] = [
     ],
 ];
 
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['image'] = 'content-image';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['psi_image'] = 'content-image';
 
 /**
- * TextImage Element
+ * PSI TextMedia Element
  */
+ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.textmedia',
+        'value' => 'psi_textmedia',
+        'icon' => 'content-beside-text-img-above-center',
+        'group' => 'PSI',
+        'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.textmedia.description',
+    ]
+);
 
-$GLOBALS['TCA']['tt_content']['types']['textpic'] = [
+$GLOBALS['TCA']['tt_content']['types']['psi_textmedia'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
     --palette--;;general,
     --palette--;;headers, bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:media, assets,
+    --linebreak--, imageorient;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient_formlabel,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:appearance,
     --palette--;;frames,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
@@ -91,13 +124,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
                 'richtextConfiguration' => 'default'
             ],
         ],
-        'assets' => [
-            'config' => [
-                'type' => 'file',
-                'allowed' => 'jpg,jpeg,png,webp,svg',
-            ],
-        ],
     ],
 ];
 
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['textpic'] = 'content-beside-text-img-above-center';
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['psi_textmedia'] = 'content-beside-text-img-above-center';

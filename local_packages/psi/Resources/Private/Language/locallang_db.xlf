@@ -15,6 +15,25 @@
 			<trans-unit id="tt_content.textpic.layout.1">
 				<source>Image position right</source>
 			</trans-unit>
+			<trans-unit id="ctype.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="ctype.text.description">
+				<source>Text Element</source>
+			</trans-unit>
+			<trans-unit id="ctype.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="ctype.image.description">
+				<source>Image Element</source>
+			</trans-unit>
+			<trans-unit id="ctype.textmedia">
+				<source>Text Media</source>
+			</trans-unit>
+			<trans-unit id="ctype.textmedia.description">
+				<source>Text Media Element</source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>
