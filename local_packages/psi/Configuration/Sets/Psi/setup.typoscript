@@ -40,3 +40,18 @@ lib.frontenduseravatar {
     }
 }
 
+
+
+lib.logoutbutton = TEXT
+[frontend.user.isLoggedIn]
+lib.logoutbutton {
+        value = LOGOUT
+        typolink {
+            parameter.data = TSFE:id
+            additionalParams = &logintype=logout
+        }
+}
+[end]
+
+
+
