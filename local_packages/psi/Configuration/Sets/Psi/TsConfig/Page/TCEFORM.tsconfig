@@ -95,8 +95,6 @@ TCEFORM {
         // Header Link
         header_link.disabled = 1
 
-        subheader.disabled = 1
-
         frame_class {
             disabled = 1
         }
@@ -130,18 +128,6 @@ TCEFORM {
             types {
                 textpic {
                     disabled = 1
-                }
-            }
-        }
-
-        subheader {
-            types {
-
-                text {
-                    disabled = 0
-                }
-                textpic {
-                    disabled = 0
                 }
             }
         }

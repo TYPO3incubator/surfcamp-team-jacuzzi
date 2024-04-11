@@ -1,0 +1,52 @@
+.textpic {
+    @include container;
+
+    &__container {
+        @include row;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__content {
+        @include column(12);
+    }
+
+    &__image {
+        @include column(12);
+
+        figure {
+            margin: 0;
+        }
+
+        &-file {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        &-right {
+            order: 2;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .textpic {
+        flex-direction: row;
+
+        &__container {
+            justify-content: center;
+            align-items: center;
+            column-gap: calc(100% / 12);
+        }
+
+        &__content {
+            @include column(4);
+        }
+
+        &__image {
+            @include column(5);
+        }
+    }
+}

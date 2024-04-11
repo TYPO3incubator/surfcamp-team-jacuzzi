@@ -17,8 +17,8 @@ $grid-gutter-width: 24px;
 }
 
 @mixin column($columns, $total-columns: $grid-columns) {
-	flex: 0 0 percentage($columns / $total-columns);
-	max-width: percentage($columns / $total-columns);
+	flex: 0 0 calc(($columns / $total-columns) * 100%);
+	max-width: calc(($columns / $total-columns) * 100%);
 	padding-right: $grid-gutter-width / 2;
 	padding-left: $grid-gutter-width / 2;
 }
