@@ -95,6 +95,8 @@ $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
             'config' => [
                 'type' => 'file',
                 'allowed' => 'jpg,jpeg,png,webp,svg',
+                'minitems' => 1,
+                'maxitems' => 1,
             ],
         ],
     ],

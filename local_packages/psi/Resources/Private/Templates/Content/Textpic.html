@@ -1,13 +1,59 @@
-<f:if condition="{data.subheader}">
-    <span class="subheadline">{data.subheader}</span>
-</f:if>
-<f:if condition="{data.header}">
-    <f:render partial="Content/Header" arguments="{
+<div class="textpic">
+    <f:if condition="{data.subheader}">
+        <span class="subheadline">{data.subheader}</span>
+    </f:if>
+    <f:if condition="{data.header}">
+        <f:render partial="Content/Header" arguments="{
                 header: data.header,
                 layout: data.header_layout,
                 positionClass: '',
                 default: settings.defaultHeaderType}"/>
-</f:if>
-<f:if condition="{data.bodytext}">
-    <f:format.raw>{data.bodytext}</f:format.raw>
-</f:if>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+        <f:format.raw>{data.bodytext}</f:format.raw>
+    </f:if>
+    <f:if condition="{data.assets}">
+        <f:for each="{data.assets}" as="file">
+            <f:render section="Image" arguments="{file: file, settings: settings}"/>
+        </f:for>
+
+    </f:if>
+
+</div>
+
+
+<f:section name="Image">
+    <figure>
+        <picture>
+            <f:render section="Source"
+                      arguments="{breakpoint: settings.psi.breakpoints.desktop, cropVariant: 'default', file: file, width: '800'}"/>
+            <f:render section="Source"
+                      arguments="{breakpoint: settings.psi.breakpoints.tablet, cropVariant: 'default', file: file, width: '500'}"/>
+            <f:render section="Source"
+                      arguments="{breakpoint: settings.psi.breakpoints.mobile, cropVariant: 'default', file: file, width: '600'}"/>
+
+            <source media="{settings.psi.breakpoints.mobile.media}" type="image/webp"
+                    srcset="{f:uri.image(image: file, width: '600', cropVariant: 'default',fileExtension: 'webp')}"/>
+
+            <f:image image="{file}"
+                     alt="{file.alternative}"
+                     title="{file.title}"
+                     width="600"
+                     cropVariant="default"
+                     loading="{settings.media.lazyLoading}"
+                     decoding="{settings.media.imageDecoding}"
+                     crop="{crop}"
+                     class="textpic__image"/>
+        </picture>
+        <f:if condition="{file.description}">
+            <figcaption>{file.description}</figcaption>
+        </f:if>
+    </figure>
+</f:section>
+
+<f:section name="Source">
+    <source media="{breakpoint.media}" type="image/webp"
+            srcset="{f:uri.image(image: file, width: width, cropVariant: cropVariant, fileExtension: 'webp')}"/>
+    <source media="{breakpoint.media}" type="{file.properties.mime_type}"
+            srcset="{f:uri.image(image: file, width: width, cropVariant: cropVariant, fileExtension: '{file.properties.extension}')}"/>
+</f:section>
