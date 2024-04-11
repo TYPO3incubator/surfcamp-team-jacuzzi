@@ -1,0 +1,2 @@
+@import './felogin/setup.typoscript'
+@import './indexed-search/setup.typoscript'

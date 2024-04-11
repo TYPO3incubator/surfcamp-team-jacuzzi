@@ -1,1 +1,1 @@
-@import "EXT:psi/Configuration/TsConfig/User/*.tsconfig"
+@import "EXT:psi/Configuration/Sets/Psi/TsConfig/User/*.tsconfig"

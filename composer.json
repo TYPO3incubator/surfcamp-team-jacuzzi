@@ -28,13 +28,15 @@
         "sort-packages": true,
         "allow-plugins": {
             "typo3/class-alias-loader": true,
-            "typo3/cms-composer-installers": true
+            "typo3/cms-composer-installers": true,
+            "cweagans/composer-patches": true
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": "^8.2",
+        "cweagans/composer-patches": "^1.7",
         "jacuzzi/psi": "dev-main",
         "typo3/cms-backend": "dev-main",
         "typo3/cms-belog": "dev-main",
@@ -43,13 +45,14 @@
         "typo3/cms-dashboard": "dev-main",
         "typo3/cms-extbase": "dev-main",
         "typo3/cms-extensionmanager": "dev-main",
+        "typo3/cms-felogin": "dev-main",
         "typo3/cms-filelist": "dev-main",
         "typo3/cms-filemetadata": "dev-main",
         "typo3/cms-fluid": "dev-main",
-        "typo3/cms-fluid-styled-content": "dev-main",
         "typo3/cms-form": "dev-main",
         "typo3/cms-frontend": "dev-main",
         "typo3/cms-impexp": "dev-main",
+        "typo3/cms-indexed-search": "dev-main",
         "typo3/cms-info": "dev-main",
         "typo3/cms-install": "dev-main",
         "typo3/cms-lowlevel": "dev-main",
@@ -61,6 +64,19 @@
         "vlucas/phpdotenv": "^5.6"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest"
+        "roave/security-advisories": "dev-latest",
+        "typo3/coding-standards": "^0.8"
+    },
+    "extra": {
+        "patches": {
+            "typo3/cms-core": {
+                "cc410ef": "composer_patches/typo3-cms-core-review-cc410ef.diff"
+            }
+        }
+    },
+    "scripts": {
+		"cs": [
+			"@php bin/php-cs-fixer fix --diff --config=./.php-cs-fixer.php local_packages/"
+		]
     }
 }

@@ -2,6 +2,8 @@ page = PAGE
 page {
     shortcutIcon = EXT:psi/Resources/Public/Images/Tax-Office-Logo.png
 
+    meta.viewport = width=device-width, initial-scale=1.0
+
     10 = PAGEVIEW
     10 {
         paths.100 = EXT:psi/Resources/Private/Templates/
@@ -45,12 +47,14 @@ page {
                 languages = auto
                 as = languagenavigation
             }
-
+            # Page content
+            50 = pageContent
         }
     }
 
     includeCSS {
         theme = EXT:psi/Resources/Public/Css/main.css
+        theme2 = EXT:psi/Resources/Public/Css/main.min.css
     }
 
     includeJSFooter {
@@ -58,3 +62,13 @@ page {
     }
 
 }
+
+[frontend.user.isLoggedIn]
+page.10.variables {
+    frontendusername =< lib.frontendusername
+    frontenduserlastname =< lib.frontenduserlastname
+    frontendusertitle =< lib.frontendusertitle
+    frontenduseravatar =< lib.frontenduseravatar
+    frontenduserlogoutbutton =< lib.frontenduserlogoutbutton
+}
+[end]
