@@ -38,9 +38,9 @@ readonly class ResolvedRecord implements RecordInterface
         return $this->record;
     }
 
-    public function toArray(): array
+    public function toArray(bool $includeSpecialProperties = false): array
     {
-        return array_replace($this->record->toArray(), $this->resolvedProperties);
+        return array_replace($this->record->toArray($includeSpecialProperties), $this->resolvedProperties);
     }
 
     public function offsetExists(mixed $offset): bool
