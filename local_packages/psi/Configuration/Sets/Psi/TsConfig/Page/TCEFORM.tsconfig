@@ -7,9 +7,6 @@ TCEFORM {
 
             // Standard Elements
 
-            // Header Only
-            removeItems := addToList(header)
-
             // Text and Media
             removeItems := addToList(textmedia)
 
@@ -26,9 +23,6 @@ TCEFORM {
 
             // Pages - Menu of selected pages
             removeItems := addToList(menu_pages)
-
-            // Subpages - Menu of subpages of selected pages
-            removeItems := addToList(menu_subpages)
 
             // Recently updated pages - Menu of recently updated pages
             removeItems := addToList(menu_recently_updated)
