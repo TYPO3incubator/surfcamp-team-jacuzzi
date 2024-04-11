@@ -132,6 +132,26 @@ TCEFORM {
             }
         }
 
+        header_position {
+            types {
+                textpic {
+                    disabled = 1
+                }
+            }
+        }
+
+        subheader {
+            types {
+
+                text {
+                    disabled = 0
+                }
+                textpic {
+                    disabled = 0
+                }
+            }
+        }
+
         // remove unused media settings
         imagewidth.disabled = 1
         imageheight.disabled = 1
