@@ -44,7 +44,7 @@ class RecordCollector
         do {
             $recordsOnPid = $contentObjectRenderer->getRecords($table, $select);
             $recordsOnPid = array_map(
-                function ($record) use ($table) {
+                function($record) use ($table) {
                     return $this->recordFactory->createFromDatabaseRecord($table, $record);
                 },
                 $recordsOnPid
