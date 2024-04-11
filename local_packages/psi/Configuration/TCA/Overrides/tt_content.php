@@ -1,7 +1,5 @@
 <?php
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-
 /**
  * Text Element
  */
@@ -24,7 +22,7 @@ $GLOBALS['TCA']['tt_content']['types']['text'] = [
                 'cols' => 50,
                 'rows' => 5,
                 'enableRichtext' => true,
-                'richtextConfiguration' => 'default'
+                'richtextConfiguration' => 'default',
             ],
         ],
     ],
@@ -35,7 +33,6 @@ $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['text'] = 'content-tex
 /**
  * Image Element
  */
-
 $GLOBALS['TCA']['tt_content']['types']['image'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
@@ -65,7 +62,6 @@ $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['image'] = 'content-im
 /**
  * TextImage Element
  */
-
 $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
@@ -88,7 +84,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
                 'cols' => 50,
                 'rows' => 5,
                 'enableRichtext' => true,
-                'richtextConfiguration' => 'default'
+                'richtextConfiguration' => 'default',
             ],
         ],
         'assets' => [
