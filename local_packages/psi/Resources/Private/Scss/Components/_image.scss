@@ -1,8 +1,8 @@
 .image {
-    @include container;
+    // @include container;
 
     &__container {
-        @include row;
+        // @include row;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -12,13 +12,13 @@
 
     }
 
-    &__content {
-        @include column(8);
+    // &__content {
+    //     @include column(8);
 
-        &-full {
-            @include column(12);
-        }
-    }
+    //     &-full {
+    //         @include column(12);
+    //     }
+    // }
 
     &__figure {
         margin: 0;
@@ -30,9 +30,9 @@
     }
 }
 
-@media (min-width: 768px) {
-    .image {
-        @include container;
-    }
+// @media (min-width: 768px) {
+//     .image {
+//         @include container;
+//     }
 
-}
+// }

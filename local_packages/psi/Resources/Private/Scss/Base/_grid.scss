@@ -1,0 +1,74 @@
+// $grid-columns: 12;
+// $grid-gutter-width: 24px;
+
+// @mixin container {
+// 	width: 100%;
+// 	margin-right: auto;
+// 	margin-left: auto;
+// 	padding-right: $grid-gutter-width / 2;
+// 	padding-left: $grid-gutter-width / 2;
+// }
+
+// @mixin row {
+// 	margin-right: -$grid-gutter-width / 2;
+// 	margin-left: -$grid-gutter-width / 2;
+// 	display: flex;
+// 	flex-wrap: wrap;
+// }
+
+// @mixin column($columns, $total-columns: $grid-columns) {
+// 	flex: 0 0 calc($columns / $total-columns);
+// 	max-width: calc($columns / $total-columns);
+// 	padding-right: $grid-gutter-width / 2;
+// 	padding-left: $grid-gutter-width / 2;
+// }
+
+.container {
+	--columns: #{map-get($grid-config, columns)};
+	--gutter: #{map-get($grid-config, gutter)};
+	--maxWidth: #{map-get($grid-config, max-width)};
+
+	width: calc(100% - var(--gutter));
+	max-width: var(--maxWidth);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: calc(var(--gutter) / 2);
+	padding-right: calc(var(--gutter) / 2);
+
+	.row {
+	    display: flex; 
+	    flex-flow: row wrap;
+	    gap: var(--gutter);
+	}
+
+	.col {
+		flex: 0 0 auto;
+		min-height: 0;
+		min-width: 0;
+		width: 100%;
+		flex-basis: auto;
+		box-sizing: border-box;
+		padding: 0 var(--gutter / 2);
+
+		@include breakpoint-up(md){
+			padding: 0 var(--gutter);
+		} 
+	}
+}
+
+
+// generating columns
+@for $i from 1 through map-get($grid-config, columns) {
+	.col-#{$i}{
+		flex-basis: calc((100% - #{map-get($grid-config, gutter)}) / #{map-get($grid-config, columns)} * #{$i});
+	}
+}
+
+// generating responsive columns
+@each $bp, $value in $breakpoints {
+	@for $i from 1 through map-get($grid-config, columns) {
+		.col-#{$bp}-#{$i}{
+			flex-basis: calc((100% - #{map-get($grid-config, gutter)}) / #{map-get($grid-config, columns)} * #{$i});
+		}
+	}
+}

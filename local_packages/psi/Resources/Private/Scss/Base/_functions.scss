@@ -1,0 +1,27 @@
+@mixin breakpoint-up($bp){
+    // from to breakpoints
+    @if map-has-key($breakpoints, $bp){
+        @media screen and (min-width: map-get($breakpoints, $bp)){
+            @content;
+        }
+    }
+}
+@mixin breakpoint-down($bp){
+    // from to breakpoints
+    @if map-has-key($breakpoints, $bp){
+        @media screen and (max-width: map-get($breakpoints, $bp)){
+            @content;
+        }
+    }
+}
+
+@mixin bundleCssVars {
+    :root {
+        @content;
+    }
+}
+
+//! requires global set $rem-base => shall be included in html selector
+@function rem($value){
+    @return calc($value / $rem-base) + rem;
+}
