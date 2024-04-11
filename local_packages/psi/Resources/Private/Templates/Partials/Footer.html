@@ -2,9 +2,11 @@
 
 <footer id="site-footer">
     <div class="footer-container">
-        <div class="footer-logout">
-            <f:cObject typoscriptObjectPath="lib.logoutbutton"></f:cObject>
-        </div>
+        <f:if condition="{frontenduserlogoutbutton}">
+            <div class="footer-logout">
+                {frontenduserlogoutbutton -> f:format.raw()}
+            </div>
+        </f:if>
         <f:if condition="{breadcrumb}">
             <f:then>
                 <f:variable name="breadcrumblength"><f:count>{breadcrumb}</f:count></f:variable>
