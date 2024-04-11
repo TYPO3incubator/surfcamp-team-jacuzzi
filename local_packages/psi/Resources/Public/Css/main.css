@@ -263,3 +263,31 @@ body {
 .breadcrumb-container a {
     font-size: 14px;
 }
+
+.language-menu {
+    display: flex;
+    justify-content: center;
+}
+
+#language-navigation {
+    display: flex;
+    gap: 5px;
+    margin: auto;
+    padding: 0;
+}
+
+#language-navigation li {
+    border-right: 1px solid #000;
+    display: block;
+    padding-right: 5px;
+}
+
+#language-navigation li:last-child {
+    border-right: none
+}
+
+#language-navigation li a {
+    color: #000;
+    text-decoration: none;
+}
+

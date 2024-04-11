@@ -1,6 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <header id="page-header">
+
     <div class="header-inner">
         <div class="header-left-container">
             <button class="header-menu-toggle" id="menu-toggle" aria-expanded="true">
@@ -14,6 +15,17 @@
         </div>
         <div class="header-search-container">
             <h2>SEARCH</h2>
+        </div>
+        <div class="language-menu">
+            <ul id="language-navigation">
+                <f:for as="lang" each="{languagenavigation}">
+                    <li>
+                        <a title="{lang.title}" hreflang="{lang.hreflang}" href="{lang.link}">
+                            <span>{lang.title}</span>
+                        </a>
+                    </li>
+                </f:for>
+            </ul>
         </div>
 
     </div>
