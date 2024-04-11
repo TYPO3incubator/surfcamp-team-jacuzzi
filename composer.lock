@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1fb00bf0d1c6fce5b0432f70cb9f8c6c",
+    "content-hash": "ae7b7eaf3e316d2164ed0809b8ee4561",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1254,12 +1254,13 @@
             "dist": {
                 "type": "path",
                 "url": "local_packages/psi",
-                "reference": "f121d4001624793f9fa60357802448d2883c0349"
+                "reference": "1776221b064852ada5a66d0fe2148d759b435b1f"
             },
             "require": {
                 "php": ">=8.2.0",
                 "typo3/cms-backend": "dev-main",
                 "typo3/cms-core": "dev-main",
+                "typo3/cms-felogin": "dev-main",
                 "typo3/cms-frontend": "dev-main",
                 "typo3/cms-impexp": "dev-main"
             },
@@ -6268,6 +6269,66 @@
             "time": "2024-03-29T09:47:59+00:00"
         },
         {
+            "name": "typo3/cms-indexed-search",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/indexed_search.git",
+                "reference": "91cc244d575377592c0e49b6d0d33e9be8e95dc0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/indexed_search/zipball/91cc244d575377592c0e49b6d0d33e9be8e95dc0",
+                "reference": "91cc244d575377592c0e49b6d0d33e9be8e95dc0",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "13.1.*@dev"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "suggest": {
+                "ext-exif": "Used to extract exif metadata 'COMMENT' and 'ImageDescription' of uploaded images",
+                "typo3/cms-scheduler": "For garbage collection of search statistics"
+            },
+            "default-branch": true,
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "13.1.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "indexed_search"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\IndexedSearch\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS Indexed Search - Provides indexing functionality for TYPO3 pages and records as well as files including PDF, Word, HTML and plain text.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-indexed-search/main/en-us",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2024-04-10T19:37:56+00:00"
+        },
+        {
             "name": "typo3/cms-info",
             "version": "dev-main",
             "source": {
@@ -8427,6 +8488,7 @@
         "typo3/cms-form": 20,
         "typo3/cms-frontend": 20,
         "typo3/cms-impexp": 20,
+        "typo3/cms-indexed-search": 20,
         "typo3/cms-info": 20,
         "typo3/cms-install": 20,
         "typo3/cms-lowlevel": 20,

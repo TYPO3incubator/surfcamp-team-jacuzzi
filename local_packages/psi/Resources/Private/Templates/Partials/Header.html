@@ -13,9 +13,14 @@
                 <f:image src="EXT:psi/Resources/Public/Images/Tax-Office-Logo.png" width="200"/>
             </f:link.page>
         </div>
-        <div class="header-search-container">
-            <h2>SEARCH</h2>
-        </div>
+        <f:if condition="{frontendusername}">
+            <div class="header-search-container">
+                <form method="post" action="{f:uri.page(pageUid: settings.psi.pageIds.searchresult, additionalParams:'{tx_indexedsearch_pi2: {action:\'search\',controller:\'Search\'}}')}">
+                    <input type="text" name="tx_indexedsearch_pi2[search][sword]" value="">
+                    <input type="submit" value="Suchen" name="tx_indexedsearch_pi2[search][submitButton]">
+                </form>
+            </div>
+        </f:if>
         <div class="language-menu">
             <ul id="language-navigation">
                 <f:for as="lang" each="{languagenavigation}">

@@ -9,3 +9,8 @@ settings:
     description: 'Configure the entrypoint for the footer navigation'
     type: int
     default: 0
+  psi.pageIds.searchresult:
+    label: 'Page id of the search result page'
+    description: 'Configure the page if of the search result page'
+    type: int
+    default: 0
