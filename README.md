@@ -29,6 +29,9 @@ This section displays any important announcements and upcoming institution event
 #### Organigram
 This section displays the institutions structure and offers access to employee contact details, their positions and sorts the employees by departments. 
 
+#### Working Groups
+This section displays the different working groups within the organization and is only accessible to those frontend users who already belong to one or mulitple of these groups. 
+
 #### Cafeteria & Meal Plans
 This section enables an overview over the cantina opening hours and offers the weekly changing meal plans. 
 
@@ -55,6 +58,10 @@ The content editor receives full content editing access and resembles the standa
 
 #### HR Manager
 Analogue to the cafeteria manager, the HR manager also receives limited editorial access rights to the backend. This user only receives access to manage and update the company's organigram. 
+
+### Frontend Users and User Groups
+* Standard Access
+* Internal Working Groups
 
 --------------------------------------------
 
