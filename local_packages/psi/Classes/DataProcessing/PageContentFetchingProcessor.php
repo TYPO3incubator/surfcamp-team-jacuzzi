@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Jacuzzi\Psi\DataProcessing;
 
-use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
-use TYPO3\CMS\Core\Page\PageLayoutResolver;
 use Jacuzzi\Psi\Content\ContentSlideMode;
 use Jacuzzi\Psi\Content\RecordCollector;
 use Jacuzzi\Psi\Content\RecordEnricher;
+use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
+use TYPO3\CMS\Core\Page\PageLayoutResolver;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
@@ -57,7 +57,7 @@ class PageContentFetchingProcessor implements DataProcessorInterface
                 $cObj,
             );
             if ($processorConfiguration['enrich'] ?? true) {
-                $items = array_map(fn($item) => $this->recordEnricher->createResolvedRecordFromRecord($item), $items);
+                $items = array_map(fn ($item) => $this->recordEnricher->createResolvedRecordFromRecord($item), $items);
             }
             $contentAreaData['blocks'] = $items;
             $contentAreaName = $contentAreaData['identifier'] ?? 'column' . $contentAreaData['colPos'];

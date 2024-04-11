@@ -17,12 +17,9 @@ use TYPO3\CMS\Frontend\Resource\FileCollector;
  */
 class RecordEnricher
 {
-
     public function __construct(
         protected readonly RecordFactory $recordFactory
-    )
-    {
-    }
+    ) {}
 
     public function createResolvedRecordFromRecord(Record $record): ResolvedRecord
     {
@@ -88,5 +85,4 @@ class RecordEnricher
         }
         return new ResolvedRecord($record, $resolvedProperties);
     }
-
 }
