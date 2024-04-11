@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
@@ -10,31 +6,218 @@
   src: url("../../Fonts/nunito-sans/NunitoSans-Regular.ttf") format("ttf");
 }
 
-body {
+@font-face {
   font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../Fonts/nunito-sans/NunitoSans-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Chivo", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../Fonts/chivo/Chivo-Bold.ttf") format("ttf");
+}
+
+:root {
+  --primary: #63B41D;
+  --secondary: #99D6B4;
+  --accent: #79C9B2;
+  --light: #F4F9F1;
+  --dark: #090C05;
+  --background: #F4F9F1;
+  --text: #090C05;
+  --success: #63B41D;
+  --error: #FF5D2D;
+  --warn: #F4C659;
+  --hint: #00B0FF;
+}
+
+@media (prefers-contrast: more) or (forced-colors: active) {
+  :root,
+  :root[data-theme=contrastMode] {
+    --primary: #FBEE14;
+    --secondary: #99D6B4;
+    --accent: #D5C904;
+    --background: #090C05;
+    --text: #F4F9F1;
+    --success: #63B41D;
+    --error: #FF5D2D;
+    --warn: #F4C659;
+    --hint: #00B0FF;
+  }
+}
+
+*,
+:before,
+:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(16 * 1px);
+}
+
+body {
+  font-family: "Nunito Sans";
   font-weight: 400;
-  color: #1d0b1e;
+  color: var(--text, #1d0b1e);
   position: relative;
   margin: 0;
-  background: #ffffff;
+  background: var(--background, #fff);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.frame-type-felogin_login {
-  width: 100%;
-  margin-right: auto;
+.h1,
+h1 {
+  font-size: calc(48 * 1px);
+  line-height: calc(48 * 1.5 * 1px);
+  font-family: "Chivo";
+  display: block;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.h2,
+h2 {
+  font-size: calc(40 * 1px);
+  line-height: calc(40 * 1.5 * 1px);
+  font-family: "Chivo";
+  display: block;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.h3,
+h3 {
+  font-size: calc(34 * 1px);
+  line-height: calc(34 * 1.5 * 1px);
+  font-family: "Chivo";
+  display: block;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.h4,
+h4 {
+  font-size: calc(28 * 1px);
+  line-height: calc(28 * 1.5 * 1px);
+  font-family: "Chivo";
+  display: block;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.h5,
+h5 {
+  font-size: calc(24 * 1px);
+  line-height: calc(24 * 1.5 * 1px);
+  font-family: "Chivo";
+  display: block;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.container {
+  --columns: 12;
+  --gutter: 24px;
+  --maxWidth: 1200px;
+  width: calc(100% - var(--gutter));
+  max-width: var(--maxWidth);
   margin-left: auto;
-  padding-right: 12px;
-  padding-left: 12px;
+  margin-right: auto;
+  padding-left: calc(var(--gutter) / 2);
+  padding-right: calc(var(--gutter) / 2);
+}
+
+.container .row {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--gutter);
+}
+
+.container .col {
+  flex: 0 0 auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  flex-basis: auto;
+  box-sizing: border-box;
+  padding: 0 var(--gutter/2);
+}
+
+@media screen and (min-width: 768px) {
+  .container .col {
+    padding: 0 var(--gutter);
+  }
+}
+
+.col-1 {
+  flex-basis: calc((100% - 24px) / 12 * 1);
+}
+
+.col-2 {
+  flex-basis: calc((100% - 24px) / 12 * 2);
+}
+
+.col-3 {
+  flex-basis: calc((100% - 24px) / 12 * 3);
+}
+
+.col-4 {
+  flex-basis: calc((100% - 24px) / 12 * 4);
+}
+
+.col-5 {
+  flex-basis: calc((100% - 24px) / 12 * 5);
+}
+
+.col-6 {
+  flex-basis: calc((100% - 24px) / 12 * 6);
+}
+
+.col-7 {
+  flex-basis: calc((100% - 24px) / 12 * 7);
+}
+
+.col-8 {
+  flex-basis: calc((100% - 24px) / 12 * 8);
+}
+
+.col-9 {
+  flex-basis: calc((100% - 24px) / 12 * 9);
+}
+
+.col-10 {
+  flex-basis: calc((100% - 24px) / 12 * 10);
+}
+
+.col-11 {
+  flex-basis: calc((100% - 24px) / 12 * 11);
+}
+
+.col-12 {
+  flex-basis: calc((100% - 24px) / 12 * 12);
 }
 
 .login {
-  margin-right: -12px;
-  margin-left: -12px;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -43,10 +226,6 @@ body {
 }
 
 .login__container {
-  flex: 0 0 33.3333333333%;
-  max-width: 33.3333333333%;
-  padding-right: 12px;
-  padding-left: 12px;
   padding: 45px;
   background: #ffffff;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -97,20 +276,11 @@ body {
 }
 
 .profile {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 12px;
-  padding-left: 12px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .profile__container {
-  margin-right: -12px;
-  margin-left: -12px;
-  display: flex;
-  flex-wrap: wrap;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -118,10 +288,6 @@ body {
 
 .profile__card,
 .profile__info {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding-right: 12px;
-  padding-left: 12px;
   position: relative;
   width: 100%;
   padding: 1.25rem 1.5rem;
@@ -158,19 +324,5 @@ body {
     flex-direction: row;
     flex-flow: nowrap;
     gap: 24px;
-  }
-
-  .profile__card {
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
-    padding-right: 12px;
-    padding-left: 12px;
-  }
-
-  .profile__info {
-    flex: 0 0 66.6666666667%;
-    max-width: 66.6666666667%;
-    padding-right: 12px;
-    padding-left: 12px;
   }
 }
