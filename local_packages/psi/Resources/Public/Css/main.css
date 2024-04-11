@@ -166,6 +166,9 @@ body {
 .user-info-avatar img {
     border: 1px solid #63B21F;
     border-radius: 50%;
+    height: 32px;
+    object-fit: cover;
+    width: 32px;
 }
 
 .user-info-name {

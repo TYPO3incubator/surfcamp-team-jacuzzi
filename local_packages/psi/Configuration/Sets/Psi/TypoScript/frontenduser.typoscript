@@ -35,7 +35,7 @@ lib.frontenduserlogoutbutton {
     10 = TEXT
     10.value = LOGOUT
     10.typolink {
-       parameter.data = TSFE:id
+       parameter = 1
        additionalParams = &logintype=logout
     }
 }
