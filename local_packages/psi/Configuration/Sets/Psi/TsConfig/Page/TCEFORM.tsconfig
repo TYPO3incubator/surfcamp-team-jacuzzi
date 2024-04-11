@@ -1,5 +1,145 @@
 TCEFORM {
+
     tt_content {
+
+        // remove unused standard content elements
+        CType {
+
+            // Standard Elements
+
+            // Header Only
+            removeItems := addToList(header)
+
+            // Text and Media
+            removeItems := addToList(textmedia)
+
+            // Menu elements
+
+            // Abstracts - Menu of subpages of selected pages including abstracts
+            removeItems := addToList(menu_abstract)
+
+            // Categorized content - Content elements for selected categories
+            removeItems := addToList(menu_categorized_content)
+
+            // Categorized pages - Pages for selected categories
+            removeItems := addToList(menu_categorized_pages)
+
+            // Pages - Menu of selected pages
+            removeItems := addToList(menu_pages)
+
+            // Subpages - Menu of subpages of selected pages
+            removeItems := addToList(menu_subpages)
+
+            // Recently updated pages - Menu of recently updated pages
+            removeItems := addToList(menu_recently_updated)
+
+            // Related pages - Menu of related pages based on keywords
+            removeItems := addToList(menu_related_pages)
+
+            // Section index - Page content marked for section menus
+            removeItems := addToList(menu_section)
+
+            // Section index of subpages - Menu of subpages of selected pages including sections
+            removeItems := addToList(menu_section_pages)
+
+            // Sitemap - Expanded menu of all pages and subpages for selected pages
+            removeItems := addToList(menu_sitemap)
+
+            // Sitemaps of selected pages - Expanded menu of all subpages for selected pages
+            removeItems := addToList(menu_sitemap_pages)
+
+
+            // Lists
+
+            // Bullet List
+            removeItems := addToList(bullets)
+
+            // Table
+            removeItems := addToList(table)
+
+            // File Links
+            removeItems := addToList(uploads)
+
+
+            // Form
+
+            // Insert records
+            removeItems := addToList(form_formframework)
+
+
+            // Special
+
+            // Insert records
+            removeItems := addToList(shortcut)
+
+            // Divider
+            removeItems := addToList(div)
+
+            // Plain HTML
+            removeItems := addToList(html)
+        }
+
+        // Date
+        date.disabled = 1
+
+        colPos.disabled = 1
+
+        // Top Margin
+        space_before_class.disabled = 1
+        // Bottom Margin
+        space_after_class.disabled = 1
+        // Show in Section Menus
+        sectionIndex.disabled = 1
+        // Append with Link to Top of Page
+        linkToTop.disabled = 1
+
+        // Categories
+        categories.disabled = 1
+        // Notes Description
+        rowDescription.disabled = 1
+
+        // Header Link
+        header_link.disabled = 1
+
+        subheader.disabled = 1
+
+        frame_class {
+            disabled = 1
+        }
+
+        layout {
+
+            removeItems = 1,2,3
+
+            types {
+                image {
+                    removeItems = 2,3
+
+                    altLabels {
+                        0 = LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:tt_content.image.layout.0
+                        1 = LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:tt_content.image.layout.1
+                    }
+                }
+
+                textpic {
+                    removeItems = 2,3
+
+                    altLabels {
+                        0 = LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:tt_content.textpic.layout.0
+                        1 = LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:tt_content.textpic.layout.1
+                    }
+                }
+            }
+        }
+
+        // remove unused media settings
+        imagewidth.disabled = 1
+        imageheight.disabled = 1
+        imageborder.disabled = 1
+        imageorient.disabled = 1
+        imagecols.disabled = 1
+        image_zoom.disabled = 1
+
         pi_flexform {
             felogin_login {
                 sDEF {
@@ -29,6 +169,8 @@ TCEFORM {
             }
         }
     }
+
+
 
     fe_users {
         felogin_redirectPid.disabled = 1
