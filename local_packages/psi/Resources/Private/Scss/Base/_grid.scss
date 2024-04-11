@@ -49,8 +49,8 @@
 		flex-basis: auto;
 		box-sizing: border-box;
 		padding: 0 var(--gutter / 2);
-
-		@include breakpoint-up($md){
+		
+		@include breakpoint-up(md){
 			padding: 0 var(--gutter);
 		} 
 	}
