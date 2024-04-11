@@ -27,13 +27,25 @@
 			<trans-unit id="ctype.image.description">
 				<source>Image Element</source>
 			</trans-unit>
-			<trans-unit id="ctype.textmedia">
-				<source>Text Media</source>
+			<trans-unit id="ctype.textpic">
+				<source>Text Image</source>
 			</trans-unit>
-			<trans-unit id="ctype.textmedia.description">
-				<source>Text Media Element</source>
+			<trans-unit id="ctype.textpic.description">
+				<source>Text Image Element</source>
 			</trans-unit>
 
+			<trans-unit id="tt_content.image.layout.0">
+				<source>Container width</source>
+			</trans-unit>
+			<trans-unit id="tt_content.image.layout.1">
+				<source>Full width</source>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic.layout.0">
+				<source>Image position left</source>
+			</trans-unit>
+			<trans-unit id="tt_content.textpic.layout.1">
+				<source>Image position right</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
