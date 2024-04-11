@@ -1,8 +1,8 @@
 .frame-type-felogin_login {
-	@include container;
+	// @include container;
 }
 .login {
-	@include row;
+	// @include row;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
@@ -10,7 +10,7 @@
 	background: #F2F0FF;
 
 	&__container {
-		@include column(4);
+		// @include column(4);
 		padding: 45px;
 		background: #ffffff;
 		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);

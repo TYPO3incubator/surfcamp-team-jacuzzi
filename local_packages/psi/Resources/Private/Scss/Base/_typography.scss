@@ -1,7 +1,24 @@
+// Base font
 @font-face {
 	font-family: "Nunito Sans", sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
 	src: url("../../Fonts/nunito-sans/NunitoSans-Regular.ttf") format("ttf");
+}
+@font-face {
+	font-family: "Nunito Sans", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../../Fonts/nunito-sans/NunitoSans-Bold.ttf") format("ttf");
+}
+
+// Headline Font
+@font-face {
+	font-family: "Chivo", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../../Fonts/chivo/Chivo-Bold.ttf") format("ttf");
 }

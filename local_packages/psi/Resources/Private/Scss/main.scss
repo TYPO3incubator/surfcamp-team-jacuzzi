@@ -1,7 +1,4 @@
-@import "Base/global";
-@import "Base/typography";
-@import "Base/variables";
-@import "Base/body";
-@import "Base/container";
+@import './Base/index';
+
 @import "Plugins/Felogin/login";
 @import "Plugins/Felogin/profile";

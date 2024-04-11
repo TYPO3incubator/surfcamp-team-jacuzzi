@@ -1,10 +1,10 @@
 .profile {
-	@include container;
+	// @include container;
 	padding-top: 60px;
 	padding-bottom: 60px;
 
 	&__container {
-		@include row;
+		// @include row;
 		max-width: 1440px;
 		margin-left: auto;
 		margin-right: auto;
@@ -12,7 +12,7 @@
 
 	&__card,
 	&__info {
-		@include column(12);
+		// @include column(12);
 		position: relative;
 		width: 100%;
 		padding: 1.25rem 1.5rem;
@@ -54,11 +54,11 @@
 		}
 
 		&__card {
-			@include column(4);
+			// @include column(4);
 		}
 
 		&__info {
-			@include column(8);
+			// @include column(8);
 		}
 	}
 }
