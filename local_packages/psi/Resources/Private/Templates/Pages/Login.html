@@ -1,8 +1,7 @@
-<f:layout name="Default" />
+<f:layout name="Login" />
 
 <f:section name="Main">
-    <f:render partial="Sidebar" arguments="{_all}" />
-    <div id="main-content">
+    <div id="main-content main__login">
         <f:for each="{content}" as="column">
             <f:for each="{column.blocks}" as="block">
                 <uzi:renderBlock data="{block}"/>

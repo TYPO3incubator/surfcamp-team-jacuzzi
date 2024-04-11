@@ -7,10 +7,10 @@
             <f:form.hidden name="logintype" value="logout"/>
         </div>
 </f:form>
-<div class="container profile">
-    <div class="profile__container">
+<section class="container profile">
+    <div class="row profile__row">
 
-        <div class="profile__card">
+        <div class="profile__card col-12 col-sm-12 col-md-4">
             <f:variable name="frontenduseravatar" value="{f:cObject(typoscriptObjectPath: 'lib.frontenduseravatar')}" />
             <f:if condition="{frontenduseravatar}">
                 <img src="{frontenduseravatar -> f:format.raw()}" alt="Image placeholder" class="profile__image" />
@@ -23,14 +23,14 @@
             </f:if>
         </div>
 
-        <div class="profile__info">
+        <div class="profile__info col-12 col-sm-12 col-md-8">
             <f:render section="UserInfo" arguments="{_all}"/>
             <f:render section="UserContact" arguments="{_all}"/>
             <f:render section="UserBio" arguments="{_all}"/>
         </div>
 
     </div>
-</div>
+</section>
 
 <f:section name="UserInfo">
     <f:if condition="{user.first_name} || {user.last_name}">

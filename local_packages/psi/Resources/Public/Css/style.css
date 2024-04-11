@@ -507,15 +507,14 @@ h5 {
   font-weight: 700;
 }
 
-.login {
-  justify-content: center;
+.login__row {
   align-items: center;
+  justify-content: center;
   height: 100%;
   min-height: 100vh;
-  background: #F2F0FF;
 }
 
-.login__container {
+.login__box {
   padding: 45px;
   background: #ffffff;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -570,16 +569,8 @@ h5 {
   padding-bottom: 60px;
 }
 
-.profile__container {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .profile__card,
 .profile__info {
-  position: relative;
-  width: 100%;
   padding: 1.25rem 1.5rem;
   word-wrap: break-word;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -587,13 +578,6 @@ h5 {
   background-color: #fff;
   background-clip: border-box;
   box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
-}
-
-.profile__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: fit-content;
 }
 
 .profile__image {
@@ -607,12 +591,4 @@ h5 {
   padding-bottom: 0.25rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-  .profile__container {
-    flex-direction: row;
-    flex-flow: nowrap;
-    gap: 24px;
-  }
 }
