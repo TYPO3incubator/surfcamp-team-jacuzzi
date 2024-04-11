@@ -75,7 +75,7 @@
     },
     "scripts": {
 		"cs": [
-			"@php bin/php-cs-fixer fix --dry-run --diff --config=./.php-cs-fixer.php local_packages/"
+			"@php bin/php-cs-fixer fix --diff --config=./.php-cs-fixer.php local_packages/"
 		]
     }
 }
