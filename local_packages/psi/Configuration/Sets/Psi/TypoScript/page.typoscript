@@ -6,13 +6,6 @@ page {
     10 {
         paths.100 = EXT:psi/Resources/Private/Templates/
 
-        variables {
-            frontendusername = lib.frontendusername
-            frontenduserlastname = lib.frontenduserlastname
-            frontendusertitle = lib.frontendusertitle
-            frontenduseravatar = lib.frontenduseravatar
-        }
-
         dataProcessing {
             10 = menu
             10 {
@@ -49,3 +42,10 @@ page {
         theme = EXT:psi/Resources/Public/JavaScript/main.js
     }
 }
+
+[frontend.user.isLoggedIn]
+page.10.variables.frontendusername =< lib.frontendusername
+page.10.variables.frontenduserlastname =< lib.frontenduserlastname
+page.10.variables.frontendusertitle =< lib.frontendusertitle
+page.10.variables.frontenduseravatar =< lib.frontenduseravatar
+[end]
