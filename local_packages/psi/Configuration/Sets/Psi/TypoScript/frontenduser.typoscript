@@ -16,19 +16,23 @@ lib.frontendusertitle {
     10.data = TSFE : fe_user|user|title
 }
 
-lib.frontenduseravatar = FILES
+lib.frontenduseravatar = COA_INT
 lib.frontenduseravatar {
-    references {
+    10 = FILES
+    10 {
+      references {
         table = fe_users
         uid.data = TSFE : fe_user|user|uid
         fieldName = image
-    }
-    renderObj = TEXT
-    renderObj {
+      }
+      renderObj = TEXT
+      renderObj {
         data = file:current:publicUrl
         stdWrap.wrap = <img src="|" alt="">
+      }
     }
 }
+
 
 lib.frontenduserlogoutbutton = COA_INT
 lib.frontenduserlogoutbutton {
