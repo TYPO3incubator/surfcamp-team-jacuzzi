@@ -1,1 +1,139 @@
-$font-family-main:  "Nunito Sans", sans-serif;
+// breakpoints
+$breakpoints:(
+    sm: 360px,
+    md: 768px,
+    lg: 1440px,
+);
+
+// typography
+$rem-base: 16;
+$font-family-main:  "Nunito Sans";
+$font-family-headline:  "Chivo";
+$headline-line-height-scale: 1.2;
+
+$headlines: (
+  h1: 48,
+  h2: 40,
+  h3: 34,
+  h4: 28,
+  h5: 24,
+);
+
+// grid variables
+$grid-config: (
+    'columns': 12,
+    'gutter': 24px,
+    'max-width': 1440px
+);
+
+// base colors
+$primary: #63B41D;
+$secondary: #99D6B4;
+$accent: #79C9B2;
+$light: #F4F9F1;
+$dark: #090C05;
+
+// utility  
+$success: $primary;
+$error: #FF5D2D;
+$warn: #F4C659;
+$hint: #00B0FF;
+
+// contrast colors
+$contrast-primary: #FBEE14;
+$contrast-secondary: #99D6B4;
+$contrast-accent: #D5C904;
+$contrast-light: #F4F9F1;
+$contrast-dark: #090C05;
+
+// utility  
+$contrast-success: $success;
+$contrast-error: $error;
+$contrast-warn: $warn;
+$contrast-hint: $hint;
+
+// color scheme handling 
+$color-themes: (
+  // light theme colors
+    light: (
+        primary: $primary,
+        secondary: $secondary,
+        accent: $accent,
+        light: $light,
+        dark: $dark,
+        background: $light,
+        text: $dark,
+
+        // utility  
+        success: $success,
+        error: $error,
+        warn: $warn,
+        hint: $hint,
+    ),
+
+    contrastMode: (
+        primary: $contrast-primary,
+        secondary: $contrast-secondary,
+        accent: $contrast-accent,
+        background: $dark,
+        text: $light,
+
+        // utility  
+        success: $contrast-success,
+        error: $contrast-error,
+        warn: $contrast-warn,
+        hint: $contrast-hint,
+    )
+);
+
+//! generating color theme variables
+// swap .theme- => [data-scheme: "#{$theme}"]
+// needs js to work
+@each $theme, $map in $color-themes{
+
+  @if ($theme == 'light'){
+    // generating base root
+    :root{
+      @each $key, $val in $map{
+        --#{$key}: #{$val};   
+      }
+
+    }
+  } @else if ($theme == 'contrastMode') {
+    // generating root for contrast mode
+    :root[data-theme=#{$theme}]{
+      @each $key, $val in $map{
+        --#{$key}: #{$val};
+      }
+    }
+    @media (prefers-contrast: more) or (forced-colors: active){
+      :root{
+        @each $key, $val in $map{
+          --#{$key}: #{$val};
+        }
+      }
+    }
+  }
+}
+
+$spacings: (
+    4, 
+    8,
+    16
+    24,
+    28,
+    32,
+    36,
+    40,
+
+    // 8 steps
+    48,
+    56,
+    64,
+    72,
+    80,
+
+    // 16 steps
+    96,
+    112
+);

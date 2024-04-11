@@ -1,19 +1,19 @@
 .textpic {
-    @include container;
+    // @include container;
 
-    &__container {
-        @include row;
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    // &__container {
+    //     // @include row;
+    //     max-width: 1440px;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
 
-    &__content {
-        @include column(12);
-    }
+    // &__content {
+    //     @include column(12);
+    // }
 
     &__image {
-        @include column(12);
+        // @include column(12);
 
         figure {
             margin: 0;
@@ -41,12 +41,12 @@
             column-gap: calc(100% / 12);
         }
 
-        &__content {
-            @include column(4);
-        }
+        // &__content {
+        //     @include column(4);
+        // }
 
-        &__image {
-            @include column(5);
-        }
+        // &__image {
+        //     @include column(5);
+        // }
     }
 }
