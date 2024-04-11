@@ -1,20 +1,44 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<footer>
-    <p>You are on page: {page.title}</p>
-    <f:if condition="{footernavigation}">
-        <nav>
-            <ul id="sidebar-nav">
-                <f:for as="item" each="{footernavigation}">
-                    <li class="{f:if(condition: item.active, then:' active')}">
-                        <a title="{item.title}" href="{item.link}">
-                            <span>{item.title}</span>
-                        </a>
-                    </li>
-                </f:for>
-            </ul>
-        </nav>
-    </f:if>
+<footer id="site-footer">
+    <div class="footer-container">
+        <f:if condition="{frontenduserlogoutbutton}">
+            <div class="footer-logout">
+                {frontenduserlogoutbutton -> f:format.raw()}
+            </div>
+        </f:if>
+        <f:if condition="{breadcrumb}">
+            <f:then>
+                <f:variable name="breadcrumblength"><f:count>{breadcrumb}</f:count></f:variable>
+                <div class="breadcrumb-container">
+                    <p>You are on page: </p>
+                    <ul id="breadcrumb-menu">
+                        <f:for as="item" iteration="i" each="{breadcrumb}">
+                            <li>
+                                <a title="{item.title}" href="{item.link}"><span>{item.title}</span></a>
+                                <f:if condition="!{i.isLast}"><f:then> > </f:then></f:if>
+                            </li>
+                        </f:for>
+                    </ul>
+                </div>
+            </f:then>
+        </f:if>
+        <div class="footermenu-container">
+            <f:if condition="{footernavigation}">
+                <nav id="footer-nav">
+                    <ul>
+                        <f:for as="item" each="{footernavigation}">
+                            <li class="{f:if(condition: item.active, then:' active')}">
+                                <a title="{item.title}" href="{item.link}">
+                                    <span>{item.title}</span>
+                                </a>
+                            </li>
+                        </f:for>
+                    </ul>
+                </nav>
+            </f:if>
+        </div>
+    </div>
 </footer>
 
 </html>

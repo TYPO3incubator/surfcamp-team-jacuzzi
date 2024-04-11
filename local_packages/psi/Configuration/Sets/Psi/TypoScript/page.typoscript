@@ -7,6 +7,7 @@ page {
         paths.100 = EXT:psi/Resources/Private/Templates/
 
         dataProcessing {
+            # Header Navigation
             10 = menu
             10 {
                 special = directory
@@ -22,6 +23,7 @@ page {
                     }
                 }
             }
+            # Footer Navigation
             20 = menu
             20 {
                 special = directory
@@ -30,7 +32,21 @@ page {
                 levels = 1
                 as = footernavigation
             }
-            30 = pageContent
+            # Breadcrumb Navigation
+            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            30 {
+                special = rootline
+                special.range = 0|-1
+                as = breadcrumb
+            }
+            # Language Navigation
+            40 = language-menu
+            40 {
+                languages = auto
+                as = languagenavigation
+            }
+            # Page content
+            50 = pageContent
         }
     }
 
@@ -45,8 +61,11 @@ page {
 }
 
 [frontend.user.isLoggedIn]
-page.10.variables.frontendusername =< lib.frontendusername
-page.10.variables.frontenduserlastname =< lib.frontenduserlastname
-page.10.variables.frontendusertitle =< lib.frontendusertitle
-page.10.variables.frontenduseravatar =< lib.frontenduseravatar
+page.10.variables {
+    frontendusername =< lib.frontendusername
+    frontenduserlastname =< lib.frontenduserlastname
+    frontendusertitle =< lib.frontendusertitle
+    frontenduseravatar =< lib.frontenduseravatar
+    frontenduserlogoutbutton =< lib.frontenduserlogoutbutton
+}
 [end]
