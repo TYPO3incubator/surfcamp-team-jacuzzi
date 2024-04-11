@@ -45,7 +45,8 @@ page {
                 languages = auto
                 as = languagenavigation
             }
-
+            # Page content
+            50 = pageContent
         }
     }
 
@@ -58,3 +59,23 @@ page {
     }
 
 }
+
+lib.logoutbutton = TEXT
+lib.logoutbutton.value =
+
+[frontend.user.isLoggedIn]
+page.10.variables {
+    frontendusername =< lib.frontendusername
+    frontenduserlastname =< lib.frontenduserlastname
+    frontendusertitle =< lib.frontendusertitle
+    frontenduseravatar =< lib.frontenduseravatar
+}
+
+lib.logoutbutton {
+    value = LOGOUT
+    typolink {
+        parameter.data = TSFE:id
+        additionalParams = &logintype=logout
+    }
+}
+[end]

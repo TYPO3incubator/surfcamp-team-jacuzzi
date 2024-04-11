@@ -20,3 +20,18 @@ lib.dynamicContent {
   }
   slide.field = slide
 }
+
+lib.contentElement >
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+    templateName = Default
+    templateRootPaths {
+        0 = EXT:psi/Resources/Private/Templates/
+    }
+    partialRootPaths {
+        0 = EXT:psi/Resources/Private/Templates/Partials/
+    }
+    layoutRootPaths {
+        0 = EXT:psi/Resources/Private/Templates/Layouts/
+    }
+}
