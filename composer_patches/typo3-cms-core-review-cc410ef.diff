@@ -1,0 +1,170 @@
+From cc410ef0d44db8d9eb9feb4954cc7039267d4099 Mon Sep 17 00:00:00 2001
+From: Benjamin Franzke <ben@bnf.dev>
+Date: Tue, 09 Apr 2024 17:57:37 +0100
+Subject: [PATCH] [TASK] Refine site set default TypoScript handling
+
+Treat site sets (#103439) as a default content rendering template,
+in order to load Extbase plugin registrations prior to site sets.
+
+Also add a possibility to opt out from being loaded globally in
+site sets in ExtensionManagementUtility::addTypoScriptSetup
+and ExtensionManagementUtility::addTypoScriptConstants in order
+to reduce global TypoScript in upcoming commits (#103556).
+
+Resolves: #103580
+Related: #103439
+Related: #103556
+Releases: main
+Change-Id: Ib9297c775d89f1689410f83e83955d6be829d2e6
+---
+
+diff --git a/typo3/sysext/core/Classes/TypoScript/IncludeTree/SysTemplateTreeBuilder.php b/typo3/sysext/core/Classes/TypoScript/IncludeTree/SysTemplateTreeBuilder.php
+index 4685703..1eb215e 100644
+--- a/typo3/sysext/core/Classes/TypoScript/IncludeTree/SysTemplateTreeBuilder.php
++++ b/typo3/sysext/core/Classes/TypoScript/IncludeTree/SysTemplateTreeBuilder.php
+@@ -189,7 +189,8 @@
+         $includeNode->setRoot(true);
+         $includeNode->setClear(true);
+
+-        $this->addDefaultTypoScriptFromGlobals($includeNode);
++        $this->addScopedStaticsFromGlobals($includeNode, 'siteSets');
++        $this->addContentRenderingFromGlobals($includeNode, 'TYPO3_CONF_VARS defaultContentRendering');
+
+         $sets = $this->setRegistry->getSets(...$site->getSets());
+         if (count($sets) > 0) {
+@@ -198,7 +199,6 @@
+             $includeSetInclude->setPath('site:' . $site->getIdentifier() . '/');
+             foreach ($sets as $set) {
+                 $this->handleSetInclude($includeSetInclude, rtrim($set->typoscript, '/') . '/', 'set:' . $set->name);
+-                $this->addStaticMagicFromGlobals($includeSetInclude, 'set:' . $set->name);
+             }
+             $includeNode->addChild($includeSetInclude);
+         }
+@@ -534,12 +534,9 @@
+         $parentConstantNode->addChild($node);
+     }
+
+-    /**
+-     * A rather weird lookup in $GLOBALS['TYPO3_CONF_VARS']['FE'] for magic includes.
+-     * See ExtensionManagementUtility::addTypoScript() for more details on this.
+-     */
+-    private function addStaticMagicFromGlobals(IncludeInterface $parentNode, string $identifier): void
++    private function addScopedStaticsFromGlobals(IncludeInterface $parentNode, string $identifier): void
+     {
++        $defaultTypoScriptConstants = $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_' . $this->type] ?? '';
+         // defaultTypoScript_constants.' or defaultTypoScript_setup.'
+         $source = $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_' . $this->type . '.'][$identifier] ?? null;
+         if (!empty($source)) {
+@@ -549,16 +546,30 @@
+             $this->treeFromTokenStreamBuilder->buildTree($node, $this->type, $this->tokenizer);
+             $parentNode->addChild($node);
+         }
++    }
++
++    private function addContentRenderingFromGlobals(IncludeInterface $parentNode, string $name): void
++    {
++        $source = $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_' . $this->type . '.']['defaultContentRendering'] ?? null;
++        if (!empty($source)) {
++            $node = new DefaultTypoScriptMagicKeyInclude();
++            $node->setName($name);
++            $node->setLineStream($this->tokenizer->tokenize($source));
++            $this->treeFromTokenStreamBuilder->buildTree($node, $this->type, $this->tokenizer);
++            $parentNode->addChild($node);
++        }
++    }
++
++    /**
++     * A rather weird lookup in $GLOBALS['TYPO3_CONF_VARS']['FE'] for magic includes.
++     * See ExtensionManagementUtility::addTypoScript() for more details on this.
++     */
++    private function addStaticMagicFromGlobals(IncludeInterface $parentNode, string $identifier): void
++    {
++        $this->addScopedStaticsFromGlobals($parentNode, $identifier);
+         // If this is a template of type "default content rendering", see if other extensions have added their TypoScript that should be included.
+         if (in_array($identifier, $GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'], true)) {
+-            $source = $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_' . $this->type . '.']['defaultContentRendering'] ?? null;
+-            if (!empty($source)) {
+-                $node = new DefaultTypoScriptMagicKeyInclude();
+-                $node->setName('TYPO3_CONF_VARS defaultContentRendering ' . $this->type . ' for ' . $identifier);
+-                $node->setLineStream($this->tokenizer->tokenize($source));
+-                $this->treeFromTokenStreamBuilder->buildTree($node, $this->type, $this->tokenizer);
+-                $parentNode->addChild($node);
+-            }
++            $this->addContentRenderingFromGlobals($parentNode, 'TYPO3_CONF_VARS defaultContentRendering ' . $this->type . ' for ' . $identifier);
+         }
+     }
+
+diff --git a/typo3/sysext/core/Classes/Utility/ExtensionManagementUtility.php b/typo3/sysext/core/Classes/Utility/ExtensionManagementUtility.php
+index 65b0a41..317a87b 100644
+--- a/typo3/sysext/core/Classes/Utility/ExtensionManagementUtility.php
++++ b/typo3/sysext/core/Classes/Utility/ExtensionManagementUtility.php
+@@ -1025,14 +1025,23 @@
+      * FOR USE IN ext_localconf.php FILES
+      *
+      * @param string $content TypoScript Setup string
++     * @param bool $includeInSiteSets
+      */
+-    public static function addTypoScriptSetup(string $content): void
++    public static function addTypoScriptSetup(string $content, bool $includeInSiteSets = true): void
+     {
+         $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_setup'] ??= '';
+         if (!empty($GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_setup'])) {
+             $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_setup'] .= LF;
+         }
+         $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_setup'] .= $content;
++
++        if ($includeInSiteSets) {
++            $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_setup.']['siteSets'] ??= '';
++            if (!empty($GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_setup.']['siteSets'])) {
++                $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_setup.']['siteSets'] .= LF;
++            }
++            $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_setup.']['siteSets'] .= $content;
++        }
+     }
+
+     /**
+@@ -1041,14 +1050,22 @@
+      * FOR USE IN ext_localconf.php FILES
+      *
+      * @param string $content TypoScript Constants string
++     * @param bool $includeInSiteSets
+      */
+-    public static function addTypoScriptConstants(string $content): void
++    public static function addTypoScriptConstants(string $content, bool $includeInSiteSets = true): void
+     {
+         $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants'] ??= '';
+         if (!empty($GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants'])) {
+             $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants'] .= LF;
+         }
+         $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants'] .= $content;
++        if ($includeInSiteSets) {
++            $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants.']['siteSets'] ??= '';
++            if (!empty($GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants.']['siteSets'])) {
++                $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants.']['siteSets'] .= LF;
++            }
++            $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants.']['siteSets'] .= $content;
++        }
+     }
+
+     /**
+@@ -1068,7 +1085,7 @@
+      * @param int|string $afterStaticUid string pointing to the "key" of a static_file template ([reduced extension_key]/[local path]). The points is that the TypoScript you add is included only IF that static template is included (and in that case, right after). So effectively the TypoScript you set can specifically overrule settings from those static templates.
+      * @throws \InvalidArgumentException
+      */
+-    public static function addTypoScript(string $key, string $type, string $content, int|string $afterStaticUid = 0): void
++    public static function addTypoScript(string $key, string $type, string $content, int|string $afterStaticUid = 0, bool $includeInSiteSets = true): void
+     {
+         if ($type !== 'setup' && $type !== 'constants') {
+             throw new \InvalidArgumentException('Argument $type must be set to either "setup" or "constants" when calling addTypoScript from extension "' . $key . '"', 1507321200);
+@@ -1095,6 +1112,11 @@
+         } else {
+             $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_' . $type] ??= '';
+             $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_' . $type] .= $content;
++            if ($includeInSiteSets) {
++                // 'siteSets' is an @internal identifier
++                $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_' . $type . '.']['siteSets'] ??= '';
++                $GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_' . $type . '.']['siteSets'] .= $content;
++            }
+         }
+     }
+
