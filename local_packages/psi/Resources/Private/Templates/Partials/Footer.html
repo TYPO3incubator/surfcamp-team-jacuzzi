@@ -11,7 +11,7 @@
             <f:then>
                 <f:variable name="breadcrumblength"><f:count>{breadcrumb}</f:count></f:variable>
                 <div class="breadcrumb-container">
-                    <p>You are on page: </p>
+                    <p><f:translate key="breadcrumb" extensionName="psi"/></p>
                     <ul id="breadcrumb-menu">
                         <f:for as="item" iteration="i" each="{breadcrumb}">
                             <li>
