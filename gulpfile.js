@@ -56,7 +56,7 @@ function styles() {
     return src(baseSrcFile)
         .pipe(sass())
         .pipe(sourcemaps.init())
-        .pipe(concatCss('main.min.css'))
+        .pipe(concatCss('style.css'))
         .pipe(minify())
         .pipe(sourcemaps.write('.'))
         .pipe(dest(baseThemePath + 'Resources/Public/Css/'))

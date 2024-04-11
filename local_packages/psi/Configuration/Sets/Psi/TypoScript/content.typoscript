@@ -35,3 +35,10 @@ lib.contentElement {
         0 = EXT:psi/Resources/Private/Templates/Layouts/
     }
 }
+
+tt_content {
+    employee_list =< lib.contentElement
+    employee_list {
+        templateName = EmployeeList
+    }
+}

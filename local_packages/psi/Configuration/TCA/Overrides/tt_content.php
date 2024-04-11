@@ -1,5 +1,7 @@
 <?php
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 /**
  * Text Element
  */
@@ -110,3 +112,42 @@ $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
 ];
 
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['textpic'] = 'content-beside-text-img-above-center';
+
+/**
+ * CType: Employee List
+ */
+
+ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:tt_content.ctype.employee_list',
+        'value' => 'employee_list',
+        'icon' => 'apps-pagetree-folder-contains-fe_users',
+        'group' => 'special',
+        'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:tt_content.ctype.employee_list.description',
+    ]
+);
+
+$GLOBALS['TCA']['tt_content']['types']['employee_list'] = [
+    'showitem' =>
+        '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+            --palette--;;general,
+            header,
+            pages,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+            --palette--;;language,
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+            --palette--;;hidden,
+            --palette--;;access,',
+    'columnsOverrides' => [
+        'pages'    => [
+            'config'  => [
+                'size'  => 1,
+            ],
+        ],
+    ],
+];
+
+
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['employee_list'] = 'apps-pagetree-folder-contains-fe_users';

@@ -1,11 +1,13 @@
-<div class="textpic">
-    <div class="textpic__container">
-        <div class="textpic__image {f:if(condition: '{data.layout} == 1', then: 'textpic__image-right')}">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<section class="container textpic">
+    <div class="row textpic__row">
+        <div class="textpic__image col-12 col-sm-12 col-md-5 {f:if(condition: '{data.layout} == 1', then: 'textpic__image-right')}">
             <f:for each="{data.assets}" as="file">
                 <f:render section="Image" arguments="{file: file, settings: settings}"/>
             </f:for>
         </div>
-        <div class="textpic__content">
+        <div class="textpic__content col-12 col-sm-12 col-md-4">
             <f:if condition="{data.subheader}">
                 <span class="subheadline">{data.subheader}</span>
             </f:if>
@@ -19,8 +21,7 @@
             <f:format.raw>{data.bodytext}</f:format.raw>
         </div>
     </div>
-</div>
-
+</section>
 
 <f:section name="Image">
     <figure>
@@ -57,3 +58,5 @@
     <source media="{breakpoint.media}" type="{file.properties.mime_type}"
             srcset="{f:uri.image(image: file, width: width, cropVariant: cropVariant, fileExtension: '{file.properties.extension}')}"/>
 </f:section>
+
+</html>
