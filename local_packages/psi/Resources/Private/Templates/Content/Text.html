@@ -1,7 +1,8 @@
 <div class="text">
     <f:if condition="{data.subheader}">
-        <span
-            class="subheadline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">{data.subheader}</span>
+        <span class="subheadline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">
+            {data.subheader}
+        </span>
     </f:if>
     <f:if condition="{data.header}">
         <f:render partial="Content/Header" arguments="{

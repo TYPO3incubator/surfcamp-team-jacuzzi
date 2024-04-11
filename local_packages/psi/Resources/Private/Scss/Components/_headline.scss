@@ -1,0 +1,18 @@
+.headline {
+    &-center {
+        text-align: center;
+    }
+
+    &-left {
+        text-align: left;
+    }
+
+    &-right {
+        text-align: right;
+    }
+}
+
+.subheadline {
+    width: 100%;
+    display: block;
+}

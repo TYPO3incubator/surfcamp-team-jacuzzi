@@ -54,6 +54,7 @@ page {
 
     includeCSS {
         theme = EXT:psi/Resources/Public/Css/main.css
+        theme2 = EXT:psi/Resources/Public/Css/main.min.css
     }
 
     includeJSFooter {

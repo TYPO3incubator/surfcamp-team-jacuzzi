@@ -66,7 +66,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
     --palette--;;general,
-    --palette--;;headers, bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
+    --palette--;;headers, bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,link,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:media, assets,
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:appearance,
     --palette--;;frames,
@@ -83,6 +83,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
                 'type' => 'text',
                 'cols' => 50,
                 'rows' => 5,
+                'required' => true,
                 'enableRichtext' => true,
                 'richtextConfiguration' => 'default',
             ],
@@ -93,6 +94,16 @@ $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
                 'allowed' => 'common-image-types',
                 'minitems' => 1,
                 'maxitems' => 1,
+
+                'overrideChildTca' => [
+                    'types' => [
+                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                            'showitem' => '
+                        title, alternative, description,crop,
+                        --palette--;;filePalette',
+                        ],
+                    ],
+                ],
             ],
         ],
     ],

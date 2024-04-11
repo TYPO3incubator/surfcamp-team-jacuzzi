@@ -1,0 +1,38 @@
+.image {
+    @include container;
+
+    &__container {
+        @include row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    &__content {
+        @include column(8);
+
+        &-full {
+            @include column(12);
+        }
+    }
+
+    &__figure {
+        margin: 0;
+    }
+
+    &__file {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .image {
+        @include container;
+    }
+
+}

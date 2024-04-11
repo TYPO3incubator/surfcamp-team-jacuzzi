@@ -22,6 +22,161 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.headline-center {
+  text-align: center;
+}
+
+.headline-left {
+  text-align: left;
+}
+
+.headline-right {
+  text-align: right;
+}
+
+.subheadline {
+  width: 100%;
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.textpic {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.textpic__container {
+  margin-right: -12px;
+  margin-left: -12px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textpic__content {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.textpic__image {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.textpic__image figure {
+  margin: 0;
+}
+
+.textpic__image-file {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.textpic__image-right {
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .textpic {
+    flex-direction: row;
+  }
+
+  .textpic__container {
+    justify-content: center;
+    align-items: center;
+    column-gap: 8.3333333333%;
+  }
+
+  .textpic__content {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .textpic__image {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+.image {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.image__container {
+  margin-right: -12px;
+  margin-left: -12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image__content {
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.image__content-full {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.image__figure {
+  margin: 0;
+}
+
+.image__file {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .image {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
 .frame-type-felogin_login {
   width: 100%;
   margin-right: auto;
