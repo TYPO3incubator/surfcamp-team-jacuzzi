@@ -16,3 +16,6 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'
         ],
     ],
 ]);
+
+$GLOBALS['TYPO3_CONF_VARS']['FE']['contentRenderingTemplates'][] = 'siteSets';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['uzi'][] = 'Jacuzzi\Psi\ViewHelpers';
