@@ -1,0 +1,11 @@
+plugin.tx_felogin_login {
+    view {
+        templateRootPaths.10 = EXT:psi/Resources/Private/Templates/Plugins/Felogin/
+        partialRootPaths.10 = EXT:psi/Resources/Private/Partials/Plugins/Felogin/
+        layoutRootPaths.10 = EXT:psi/Resources/Private/Layouts/Plugins/Felogin/
+    }
+
+    settings {
+          redirectMode = login
+    }
+}
