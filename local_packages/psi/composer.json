@@ -22,6 +22,7 @@
     "typo3/cms-backend": "dev-main",
     "typo3/cms-frontend": "dev-main",
     "typo3/cms-impexp": "dev-main",
+	"typo3/cms-indexed-search": "dev-main",
     "typo3/cms-felogin": "dev-main"
   },
   "require-dev": {

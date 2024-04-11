@@ -2,6 +2,8 @@ page = PAGE
 page {
     shortcutIcon = EXT:psi/Resources/Public/Images/Tax-Office-Logo.png
 
+    meta.viewport = width=device-width, initial-scale=1.0
+
     10 = PAGEVIEW
     10 {
         paths.100 = EXT:psi/Resources/Private/Templates/
