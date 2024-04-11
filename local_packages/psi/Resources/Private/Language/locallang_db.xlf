@@ -3,25 +3,6 @@
 	<file source-language="en" datatype="plaintext" date="2024-04-08T16:16:32Z" product-name="psi">
 		<header/>
 		<body>
-			<trans-unit id="ctype.text">
-				<source>Text</source>
-			</trans-unit>
-			<trans-unit id="ctype.text.description">
-				<source>Text Element</source>
-			</trans-unit>
-			<trans-unit id="ctype.image">
-				<source>Image</source>
-			</trans-unit>
-			<trans-unit id="ctype.image.description">
-				<source>Image Element</source>
-			</trans-unit>
-			<trans-unit id="ctype.textpic">
-				<source>Text Image</source>
-			</trans-unit>
-			<trans-unit id="ctype.textpic.description">
-				<source>Text Image Element</source>
-			</trans-unit>
-
 			<trans-unit id="tt_content.image.layout.0">
 				<source>Container width</source>
 			</trans-unit>

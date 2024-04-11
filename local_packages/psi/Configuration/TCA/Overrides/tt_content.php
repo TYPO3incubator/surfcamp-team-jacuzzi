@@ -3,20 +3,8 @@
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 /**
- * PSI Text Element
+ * Text Element
  */
-ExtensionManagementUtility::addTcaSelectItem(
-    'tt_content',
-    'CType',
-    [
-        'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.text',
-        'value' => 'text',
-        'icon' => 'content-text',
-        'group' => 'PSI',
-        'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.text.description',
-    ]
-);
-
 $GLOBALS['TCA']['tt_content']['types']['text'] = [
     'showitem' => '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
@@ -45,19 +33,8 @@ $GLOBALS['TCA']['tt_content']['types']['text'] = [
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['text'] = 'content-text';
 
 /**
- * PSI Image Element
+ * Image Element
  */
-ExtensionManagementUtility::addTcaSelectItem(
-    'tt_content',
-    'CType',
-    [
-        'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.image',
-        'value' => 'image',
-        'icon' => 'content-image',
-        'group' => 'PSI',
-        'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.image.description',
-    ]
-);
 
 $GLOBALS['TCA']['tt_content']['types']['image'] = [
     'showitem' => '
@@ -86,19 +63,8 @@ $GLOBALS['TCA']['tt_content']['types']['image'] = [
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['image'] = 'content-image';
 
 /**
- * PSI TextImage Element
+ * TextImage Element
  */
-ExtensionManagementUtility::addTcaSelectItem(
-    'tt_content',
-    'CType',
-    [
-        'label' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.textpic',
-        'value' => 'textpic',
-        'icon' => 'content-beside-text-img-above-center',
-        'group' => 'PSI',
-        'description' => 'LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:ctype.textpic.description',
-    ]
-);
 
 $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
     'showitem' => '
