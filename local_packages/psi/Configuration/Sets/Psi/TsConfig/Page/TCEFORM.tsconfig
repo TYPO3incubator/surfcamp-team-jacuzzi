@@ -30,9 +30,6 @@ TCEFORM {
             // Related pages - Menu of related pages based on keywords
             removeItems := addToList(menu_related_pages)
 
-            // Section index - Page content marked for section menus
-            removeItems := addToList(menu_section)
-
             // Section index of subpages - Menu of subpages of selected pages including sections
             removeItems := addToList(menu_section_pages)
 

@@ -51,7 +51,7 @@ $GLOBALS['TCA']['tt_content']['types']['image'] = [
         'media' => [
             'config' => [
                 'type' => 'file',
-                'allowed' => 'jpg,jpeg,png,webp,svg',
+                'allowed' => 'common-image-types',
             ],
         ],
     ],
@@ -90,7 +90,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic'] = [
         'assets' => [
             'config' => [
                 'type' => 'file',
-                'allowed' => 'jpg,jpeg,png,webp,svg',
+                'allowed' => 'common-image-types',
                 'minitems' => 1,
                 'maxitems' => 1,
             ],
