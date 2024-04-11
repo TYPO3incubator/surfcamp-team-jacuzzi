@@ -21,6 +21,7 @@ By downloading and installing this preset, users receive:
 The Public Sector Intranet Preset comes with the following page structure:
  
 #### Home
+On the homepage, the user receives a welcome message alongside an easy and quick submenu navigation option to help navigation throught the page. 
 
 #### News & Upcoming Events
 This section displays any important announcements and upcoming institution events.
@@ -39,6 +40,21 @@ Thsi section displays the frontend users information and offers the possibility 
 
 #### Contact & Help
 This section offers contact information & info on where to get help when encountering issues with the intranet. 
+
+### Backend Users and User Groups
+This preset comes with four predefined backend user groups for the following use cases:
+
+#### Intranet Administrator
+The intranet administrator receives extensive access to the TYPO3 backend in order to enable administrative tasks. Besides general content management functionalitites, this includes the creation and adminstration of all frontend users and user groups. 
+
+#### Cafeteria Manager
+The cafeteria manager receives limited page tree access in order to offer an easy and structured way of the weekly meal plan exchange. This user resembles a "easy-access" user without distractions. 
+
+#### Content Editor
+The content editor receives full content editing access and resembles the standard content manager in institutions. 
+
+#### HR Manager
+Analogue to the cafeteria manager, the HR manager also receives limited editorial access rights to the backend. This user only receives access to manage and update the company's organigram. 
 
 --------------------------------------------
 
