@@ -1,13 +1,3 @@
-<f:if condition="{data.subheader}">
-    <span class="subheadline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">{data.subheader}</span>
-</f:if>
-<f:if condition="{data.header}">
-    <f:render partial="Content/Header" arguments="{
-                header: data.header,
-                layout: data.header_layout,
-                positionClass: '{f:if(condition: data.header_position, then: \'headline-{data.header_position}\')}',
-                default: settings.defaultHeaderType}"/>
-</f:if>
-<f:if condition="{data.bodytext}">
-    <f:format.raw>{data.bodytext}</f:format.raw>
-</f:if>
+{data.header}
+
+{data.bodytext -> f:format.html()}
