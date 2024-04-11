@@ -28,7 +28,6 @@ lib.frontenduseravatar {
       renderObj = TEXT
       renderObj {
         data = file:current:publicUrl
-        stdWrap.wrap = <img src="|" alt="">
       }
     }
 }
