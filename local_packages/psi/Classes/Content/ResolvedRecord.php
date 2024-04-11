@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Jacuzzi\Psi\Content;
@@ -32,7 +33,8 @@ readonly class ResolvedRecord implements RecordInterface
         return $this->record->getType();
     }
 
-    public function getRecord(): RecordInterface {
+    public function getRecord(): RecordInterface
+    {
         return $this->record;
     }
 
@@ -60,5 +62,4 @@ readonly class ResolvedRecord implements RecordInterface
     {
         throw new \InvalidArgumentException('Record properties cannot be unset.', 1712139282);
     }
-
 }

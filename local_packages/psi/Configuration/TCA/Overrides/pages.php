@@ -13,11 +13,10 @@ $columns = [
         'config' => [
             'type' => 'file',
             'maxitems' => 1,
-            'allowed' => 'common-image-types'
+            'allowed' => 'common-image-types',
         ],
-    ]
+    ],
 ];
-
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages', $columns);
 
