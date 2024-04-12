@@ -353,15 +353,23 @@
     padding: 30px 0;
 }
 
-.downloads-wrap,
-.latestnews-wrap {
+.downloads-wrap {
     align-items: center;
     display: flex;
     gap: 25px;
 }
+.latestnews-wrap {
+    list-style: none;
+    flex-direction: row;
+}
+@media screen and (max-width: 992px) {
+    .latestnews-wrap {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+}
 
-.downloads-single,
-.latestnews-single {
+.downloads-single{
     background-color: #FFF;
     display: block;
     flex: 0 1 calc(100% / 2 - 25px);

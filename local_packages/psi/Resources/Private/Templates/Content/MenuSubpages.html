@@ -1,5 +1,5 @@
-<section class="container text" id="c{data.uid}">
-    <div class="row text__row">
+<section class="container" id="c{data.uid}">
+    <div class="row">
         <f:if condition="{data.subheader}">
         <span
             class="topline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">
@@ -18,9 +18,9 @@
         <f:then>
             <div class="latestnews-container">
                 <div class="latestnews-inner">
-                    <ul class="latestnews-wrap">
+                    <ul class="row latestnews-wrap">
                         <f:for as="page" each="{menu}">
-                            <li class="latestnews-single profile__card">
+                            <li class="latestnews-single profile__info col-12 col-sm-12 col-md-6">
                                 <div class="latestnews-single-header">
                                     <f:if condition="{page.data.eventdatetime}">
                                         <f:then>
