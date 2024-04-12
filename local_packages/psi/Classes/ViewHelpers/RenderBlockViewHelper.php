@@ -10,6 +10,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3\CMS\Fluid\ViewHelpers\CObjectViewHelper;
 use TYPO3\CMS\Frontend\ContentObject\ContentDataProcessor;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Exception;
@@ -61,23 +62,28 @@ final class RenderBlockViewHelper extends AbstractViewHelper
             $subView->getRenderingContext()->setControllerName(ucfirst($templateNameParts[0]));
             $subView->getRenderingContext()->setControllerAction(GeneralUtility::underscoredToLowerCamelCase($templateNameParts[1]));
         }
-        $subView->assign('settings', $renderingContext->getVariableProvider()->get('settings'));
-        $subView->assign('data', $block->toArray(true));
-        $subView->assign('rawData', $block->getRecord()->getRawRecord()->toArray());
-        $subView->assign('context', $context);
+        $variables = [
+            'settings' => $renderingContext->getVariableProvider()->get('settings'),
+            'data' => $block->toArray(true),
+            'rawData' => $block->getRecord()->getRawRecord()->toArray(),
+            'context' => $context
+        ];
         try {
             $request = $renderingContext->getRequest() ?? $GLOBALS['TYPO3_REQUEST'] ?? null;
             if ($request instanceof ServerRequestInterface) {
                 $elementConfig = $request->getAttribute('frontend.typoscript')?->getSetupArray()['tt_content.'][str_replace('content.', '', $block->getFullType()) . '.'] ?? null;
                 if (is_array($elementConfig) && $elementConfig !== []) {
-                    $processed = GeneralUtility::makeInstance(ContentDataProcessor::class)->process(
-                        $request->getAttribute('currentContentObject'),
+                    $cObj = GeneralUtility::makeInstance(ContentObjectRenderer::class);
+                    $cObj->start($block->getRecord()->getRawRecord()->toArray(), 'tt_content');
+                    $cObj->setRequest($request);
+                    $variables = GeneralUtility::makeInstance(ContentDataProcessor::class)->process(
+                        $cObj,
                         $elementConfig,
-                        ['data' => $block->getRecord()->getRawRecord()->toArray()]
+                        $variables
                     );
-                    $subView->assign('data', array_replace_recursive(['data' => $block->toArray(true)], $processed));
                 }
             }
+            $subView->assignMultiple($variables);
             $content = $subView->render();
         } catch (InvalidTemplateResourceException) {
             // Render via TypoScript as fallback

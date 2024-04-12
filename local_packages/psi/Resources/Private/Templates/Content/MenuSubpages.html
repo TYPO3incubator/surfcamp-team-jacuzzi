@@ -1,12 +1,11 @@
 {namespace uzi=Jacuzzi\Psi\ViewHelpers}
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-    <f:variable name="subpages"><uzi:subpages uid="{data.pages}"/></f:variable>
-    <f:if condition="{subpages}">
+    <f:if condition="{menu}">
         <f:then>
             <div class="latestnews-container">
                 <div class="latestnews-inner">
                     <ul class="latestnews-wrap">
-                        <f:for as="page" each="{subpages}">
+                        <f:for as="page" each="{menu}">
                             <li class="latestnews-single profile__card">
                                 <div class="latestnews-single-header">
                                     <f:if condition="{page.eventdatetime}">
