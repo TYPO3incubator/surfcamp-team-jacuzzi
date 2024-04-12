@@ -38,9 +38,9 @@
 	padding-right: calc(var(--gutter) / 2);
 
 	.row {
-	    display: flex; 
+	    display: flex;
 	    flex-wrap: wrap;
-	    gap: var(--gutter);
+        column-gap: var(--gutter);
 	}
 
 	.col {
@@ -73,7 +73,7 @@
 				flex-basis: calc((100% - #{map-get($grid-config, gutter)} * 2 ) / #{map-get($grid-config, columns)} * #{$i});
 			}
 
-		}	
+		}
 		@for $i from 1 through map-get($grid-config, columns) {
 			.#{$bp}-offset-#{$i}-l {
 			    margin-right: calc(100% / (#{map-get($grid-config, columns)} / #{$i}));
@@ -81,6 +81,6 @@
 			.#{$bp}-offset-#{$i}-r {
 			    margin-right: calc(100% / (#{map-get($grid-config, columns)} / #{$i}));
 			}
-		}	
+		}
 	}
 }

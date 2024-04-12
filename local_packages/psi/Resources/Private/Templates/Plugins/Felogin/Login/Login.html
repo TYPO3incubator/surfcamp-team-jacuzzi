@@ -2,7 +2,7 @@
 
 <div class="container login">
     <div class="row login__row">
-        <div class="login__box col-12 col-sm-12 col-md-6">
+        <div class="login__box col-12 col-sm-12 col-md-8 col-lg-6">
             <div class="login__welcome">
                 <f:if condition="{settings.welcome_header}">
                     <h3 class="login__welcome-header">{settings.welcome_header}</h3>
@@ -18,9 +18,9 @@
             </f:form>
 
             <f:section name="content">
-                <h2 class="login__header">
+                <h4 class="login__header">
                     <f:translate key="login"/>
-                </h2>
+                </h4>
 
                 <label class="login__label" for="tx-felogin-input-username">
                     <f:translate key="username"/>
@@ -79,9 +79,9 @@
             <f:if condition="{settings.status_header} || {settings.status_message}">
                 <div class="login__confidentiality">
                     <f:if condition="{settings.status_header}">
-                        <h4 class="login__confidentiality-header">
+                        <span class="topline login__confidentiality-header">
                             {settings.status_header}
-                        </h4>
+                        </span>
                     </f:if>
                     <f:if condition="{settings.status_message}">
                         <p class="login__confidentiality-message">
@@ -93,12 +93,23 @@
 
             <f:flashMessages/>
             <f:if condition="{messageKey} == 'error'">
-                <h3 class="login__error">
-                    <f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_header'}"/>
-                </h3>
-                <p class="login__error">
-                    <f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_message'}"/>
-                </p>
+                <div class="login__error">
+                        <span class="topline login__error-header">
+                            <f:translate key="tt_content.pi_flexform.felogin_login.s_messages.error_header"
+                                         extensionName="psi"/>
+                        </span>
+                    <p class="login__error-message">
+                        <f:if condition="{settings.error_message}">
+                            <f:then>
+                                {settings.error_message}
+                            </f:then>
+                            <f:else>
+                                <f:translate key="tt_content.pi_flexform.felogin_login.s_messages.error_message"
+                                             extensionName="psi"/>
+                            </f:else>
+                        </f:if>
+                    </p>
+                </div>
             </f:if>
         </div>
     </div>

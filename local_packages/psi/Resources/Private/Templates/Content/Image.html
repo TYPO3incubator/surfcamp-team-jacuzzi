@@ -5,7 +5,7 @@
         <div class="image__content {f:if(condition: '{data.layout} == 1', then: 'col-12 col-sm-12', else: 'col-10 cl-sm-10 col-md-8')}">
             <f:if condition="{data.subheader}">
             <span
-                class="subheadline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">
+                class="topline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">
                 {data.subheader}
             </span>
             </f:if>
