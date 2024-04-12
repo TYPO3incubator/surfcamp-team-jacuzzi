@@ -1,1 +1,10 @@
 @import "EXT:indexed_search/Configuration/TypoScript/constants.typoscript"
+
+plugin.tx_indexedsearch {
+  settings.rootPidList = -1
+  view {
+    templateRootPath = EXT:psi/Resources/Private/Templates/Plugins/IndexedSearch/Templates/
+    partialRootPath = EXT:psi/Resources/Private/Templates/Plugins/IndexedSearch/Partials/
+    layoutRootPath = EXT:psi/Resources/Private/Templates/Plugins/IndexedSearch/Layouts/
+  }
+}

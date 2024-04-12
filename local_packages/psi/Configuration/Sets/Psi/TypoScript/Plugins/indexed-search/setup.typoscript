@@ -1,9 +1,1 @@
 @import "EXT:indexed_search/Configuration/TypoScript/setup.typoscript"
-
-plugin.tx_indexedsearch {
-  view {
-    templateRootPaths.10 = EXT:psi/Resources/Private/Templates/Plugins/IndexedSearch/Templates
-    partialRootPaths.10 = EXT:psi/Resources/Private/Templates/Plugins/IndexedSearch/Partials
-    layoutRootPaths.10 = EXT:psi/Resources/Private/Templates/Plugins/IndexedSearch/Layouts
-  }
-}

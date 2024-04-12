@@ -1,11 +1,5 @@
-@import "Base/global";
-@import "Base/typography";
-@import "Base/variables";
-@import "Base/body";
-@import "Base/container";
-@import "Components/headline";
-@import "Components/text";
-@import "Components/textpic";
-@import "Components/image";
-@import "Plugins/Felogin/login";
-@import "Plugins/Felogin/profile";
+@import "Base/index";
+
+@import "Components/index";
+
+@import "Plugins/Felogin/index";

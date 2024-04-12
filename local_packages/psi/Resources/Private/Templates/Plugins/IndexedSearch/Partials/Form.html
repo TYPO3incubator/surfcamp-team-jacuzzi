@@ -75,11 +75,21 @@
                 </f:if>
             </f:if>
             <div class="tx-indexedsearch-search-submit">
-                <button class="header-searchbutton">
-                    <f:translate key="search-button" extensionName="psi"></f:translate>
-                </button>
+                <f:form.submit name="search[submitButton]" value="{f:translate(key: 'search-button', extensionName: 'psi')}" id="tx-indexedsearch-searchbox-button-submit" class="header-searchbutton" />
             </div>
         </fieldset>
+        <f:if condition="{settings.displayAdvancedSearchLink}">
+            <p>
+            <f:if condition="{searchParams.extendedSearch}">
+                <f:then>
+                    <f:link.action action="form" arguments="{search: {extendedSearch: 0}}"><f:translate key="form.linkToRegularSearch" /></f:link.action>
+                </f:then>
+                <f:else>
+                    <f:link.action action="form" arguments="{search: {extendedSearch: 1}}"><f:translate key="form.linkToAdvancedSearch" /></f:link.action>
+                </f:else>
+            </f:if>
+            </p>
+        </f:if>
     </f:form>
 </div>
 </html>

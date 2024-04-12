@@ -11,9 +11,9 @@
     <div class="profile__container">
 
         <div class="profile__card">
-            <f:if condition="{user.image}">
-                <img alt="Image placeholder" class="profile__image"
-                     src="https://static.vecteezy.com/system/resources/previews/009/749/643/non_2x/woman-profile-mascot-illustration-female-avatar-character-icon-cartoon-girl-head-face-business-user-logo-free-vector.jpg">
+            <f:variable name="frontenduseravatar" value="{f:cObject(typoscriptObjectPath: 'lib.frontenduseravatar')}" />
+            <f:if condition="{frontenduseravatar}">
+                <img src="{frontenduseravatar -> f:format.raw()}" alt="Image placeholder" class="profile__image" />
             </f:if>
             <f:if condition="{user.first_name} || {user.last_name}">
                 <h3 class="profile__name">{user.first_name} {user.last_name}</h3>

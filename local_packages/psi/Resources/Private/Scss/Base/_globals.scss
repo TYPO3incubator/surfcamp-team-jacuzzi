@@ -1,0 +1,39 @@
+*, 
+:before,
+:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	// creating rem based on var base-rem which is used for rem() function
+	font-size: calc(#{$rem-base} * 1px);
+}
+
+body {
+	font-family: $font-family-main;
+	font-weight: 400;
+	color: var(--text, #1d0b1e);
+	position: relative;
+	margin: 0;
+	background: var(--background, #fff);
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+// headlines
+@each $selector, $size in $headlines{
+	.#{$selector}, #{$selector}{
+	  font-size: calc(#{$size} * 1px);
+	  line-height: calc(#{$size} * #{$headline-line-height-scale} * 1px);
+	  font-family: $font-family-headline;
+	  display: block;
+	  text-rendering: optimizeLegibility;
+	  hyphens: auto;
+	  font-weight: bold;
+	  word-wrap: break-word;
+	}
+  }
