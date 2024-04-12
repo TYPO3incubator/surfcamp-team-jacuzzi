@@ -1,6 +1,7 @@
 #page-header {
 	display: flex;
 	height: rem(80);
+	border-bottom: 1px solid var(--container-border);
 }
 .header-inner {
 	background-color: var(--light);
@@ -27,6 +28,7 @@
 	width: rem(64);
 	&:hover {
 		cursor: pointer;
+		border: 2px inset var(--container-border);
 	}
 }
 .header-logo {

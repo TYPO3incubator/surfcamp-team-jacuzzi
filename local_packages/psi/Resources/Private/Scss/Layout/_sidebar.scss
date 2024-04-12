@@ -2,9 +2,10 @@
 	display: flex;
 }
 .sidebar-container {
-	background-color: #C7C7C7;
+	background-color: var(--light);
 	display: flex;
 	max-width: rem(240);
+	border-right: 1px solid var(--container-border);
 }
 #site-content.sidebar-collapse {
 	.sidebar-container {
