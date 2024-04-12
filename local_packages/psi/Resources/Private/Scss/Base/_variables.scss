@@ -61,22 +61,26 @@ $color-themes: (
         accent: $accent,
         light: $light,
         dark: $dark,
-        background: $light,
+        background: #fff,
         text: $dark,
-
+        text-light: #6F6F6F,
+        link: $primary,
+        
         // utility  
         success: $success,
         error: $error,
         warn: $warn,
         hint: $hint,
-    ),
-
+        ),
+        
     contrastMode: (
         primary: $contrast-primary,
         secondary: $contrast-secondary,
         accent: $contrast-accent,
         background: $dark,
         text: $light,
+        text-light: $contrast-secondary,
+        link: var(--primary),
 
         // utility  
         success: $contrast-success,
@@ -137,3 +141,15 @@ $spacings: (
     96,
     112
 );
+
+$section-spacings: clamp(64px, 5vw, 80px);
+
+$border-radius: (
+  small: toUnit(4, 'px'),
+  medium: toUnit(8, 'px'),
+  large: toUnit(12, 'px')
+);
+
+$box-shadow-shade: color-mix(in srgb, var(--dark), transparent 70%); 
+$box-shadow-small: 0 0 rem(4) 0 $box-shadow-shade;
+$box-shadow-medium: 0 0 rem(8) 0 $box-shadow-shade;

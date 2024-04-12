@@ -1,0 +1,29 @@
+#main-content {
+	padding: rem(30);
+	width: calc(100% - #{rem(240)});
+}
+.user-info-container {
+	align-items: center;
+	display: flex;
+	gap: rem(4);
+	padding: rem(4);
+}
+.user-info-avatar {
+	img {
+		border: 1px solid var(--primary);
+		border-radius: 50%;
+	}
+}
+.user-info-name {
+	align-items: center;
+	display: flex;
+	gap: rem(4);
+	p {
+		margin: 0;
+	}
+}
+.fe-user-title {
+	font-size: rem(12);
+	margin: 0;
+	margin-bottom: rem(4);
+}

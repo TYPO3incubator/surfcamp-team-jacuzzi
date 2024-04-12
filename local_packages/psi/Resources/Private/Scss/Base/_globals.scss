@@ -23,6 +23,23 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.section,
+section {
+	margin-top: clamp(48px, 5vw, 76px);
+	margin-bottom: clamp(48px, 5vw, 76px);
+
+	&.no-margin {
+		margin-top: 0;
+		margin-bottom: 0;
+		&--top {
+			margin-top: 0;
+		}
+		&--bot {
+			margin-bottom: 0;
+		}
+	}
+}
+
 
 // headlines
 @each $selector, $size in $headlines{
@@ -37,3 +54,8 @@ body {
 	  word-wrap: break-word;
 	}
   }
+
+
+a {
+	color: var(--link);
+}
