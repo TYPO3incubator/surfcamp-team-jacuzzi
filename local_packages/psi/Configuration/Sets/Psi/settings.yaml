@@ -3,7 +3,7 @@ psi:
     mainnavigation: 1
     footernavigation: 12
   pageIds:
-    searchresult: 37
+    searchresult: 7
   breakpoints:
     desktop:
       media: '(min-width: 1200px)'
