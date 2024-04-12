@@ -89,9 +89,6 @@ TCEFORM {
         // Notes Description
         rowDescription.disabled = 1
 
-        // Header Link
-        header_link.disabled = 1
-
         subheader.label = LLL:EXT:psi/Resources/Private/Language/locallang_db.xlf:tt_content.topline
 
         frame_class {
