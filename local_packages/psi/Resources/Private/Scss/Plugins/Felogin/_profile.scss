@@ -8,6 +8,7 @@
         box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
 
         &-inner {
+            row-gap: var(--gutter);
             border: 1px solid rgba(0, 0, 0, .05);
             box-shadow: none;
 
@@ -49,7 +50,7 @@
         color: var(--text-light);
     }
 
-    &__data {
+    &__label {
         font-weight: 600;
     }
 
