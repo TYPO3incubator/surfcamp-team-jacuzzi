@@ -1,20 +1,18 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-    <div class="downloads-container">
-        <div class="downloads-inner">
-            <ul class="downloads-wrap">
-                <f:for each="{data.media}" as="file" >
-                    <li class="downloads-single profile__card">
-                        <p class="downloads-date"><f:format.date format="d.m.Y" date="{file.originalFile.properties.creation_date}"></f:format.date></p>
-                        <p class="downloads-filename">{file.title}</p>
-                        <f:link.file file="{file}" target="_blank">
-                            <span class="download-cta"><f:translate key="download-button" extensionName="psi"/></span>
-                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                                <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/>
-                            </svg>
-                        </f:link.file>
-                    </li>
-                </f:for>
-            </ul>
-        </div>
+<div class="downloads-container" id="c{data.uid}">
+    <div class="downloads-inner">
+        <ul class="downloads-wrap">
+            <f:for each="{data.media}" as="file" >
+                <li class="downloads-single profile__card">
+                    <p class="downloads-date"><f:format.date format="d.m.Y" date="{file.originalFile.properties.creation_date}"></f:format.date></p>
+                    <p class="downloads-filename">{file.title}</p>
+                    <f:link.file file="{file}" target="_blank">
+                        <span class="download-cta"><f:translate key="download-button" extensionName="psi"/></span>
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                            <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/>
+                        </svg>
+                    </f:link.file>
+                </li>
+            </f:for>
+        </ul>
     </div>
-</html>
+</div>

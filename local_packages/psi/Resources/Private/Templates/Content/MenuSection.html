@@ -1,7 +1,5 @@
-{data.header}
-
 <f:if condition="{menu}">
-    <ul>
+    <ul id="c{data.uid}">
         <f:for each="{menu}" as="page">
             <li>
                 <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')}{f:if(condition: page.current, then: ' aria-current="page"')} title="{page.title}">
