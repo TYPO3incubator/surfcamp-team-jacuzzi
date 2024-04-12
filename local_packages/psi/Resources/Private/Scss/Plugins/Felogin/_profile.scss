@@ -1,28 +1,73 @@
 .profile {
-	padding-top: 60px;
-	padding-bottom: 60px;
+    &__info {
+        padding: 32px;
+        word-wrap: break-word;
+        border-radius: 0.625rem;
+        background-color: #fff;
+        background-clip: border-box;
+        box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
 
-	&__card,
-	&__info {
-		padding: 1.25rem 1.5rem;
-		word-wrap: break-word;
-		border: 1px solid rgba(0, 0, 0, .05);
-		border-radius: 0.625rem;
-		background-color: #fff;
-		background-clip: border-box;
-		box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
-	}
+        &-inner {
+            border: 1px solid rgba(0, 0, 0, .05);
+            box-shadow: none;
 
-	&__image {
-		width: 200px;
-		height: 200px;
-	}
+            & + & {
+                margin-top: 32px;
+            }
+        }
 
-	&__header {
-		font-size: .75rem;
-		padding-top: .25rem;
-		padding-bottom: .25rem;
-		letter-spacing: .04em;
-		text-transform: uppercase;
-	}
+        &-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: rem(100);
+        max-width: rem(100);
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        transition: all 0.5s ease-in-out;
+    }
+
+    &__description {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+
+    &__basic {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__label,
+    &__data {
+        color: var(--text-light);
+    }
+
+    &__data {
+        font-weight: 600;
+    }
+
+    &__location {
+        font-weight: 400;
+    }
+
+    &__header {
+        flex-basis: 100%;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+@include breakpoint-up(md) {
+    .profile {
+        &__description {
+            flex-flow: row;
+        }
+    }
 }

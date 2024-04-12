@@ -5,51 +5,85 @@
 		<body>
 			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.status_header">
 				<source>Confidentiality Header</source>
+				<target>Encabezado de Confidencialidad</target>
 			</trans-unit>
 			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.status_message">
 				<source>Confidentiality Message</source>
+				<target>Mensaje de Confidencialidad</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.error_header">
+				<source>Login failure</source>
+				<target>Error de inicio de sesión</target>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.error_message">
+				<source>An error occurred during login. Most likely you didn't enter the username or password correctly. Be certain that you enter them precisely as they are, including upper/lower case. Another possibility is that cookies might be disabled in your web browser.</source>
+				<target>Se produjo un error durante el inicio de sesión. Lo más probable es que no haya ingresado el nombre de usuario o la contraseña correctamente. Asegúrese de ingresarlos exactamente como son, incluyendo mayúsculas y minúsculas. Otra posibilidad es que las cookies estén desactivadas en su navegador web.</target>
 			</trans-unit>
 
 			<trans-unit id="fe_users.info.header">
 				<source>User information</source>
-				<target>Informaciones Usero</target>
+				<target>Información de Usuario</target>
 			</trans-unit>
-			<trans-unit id="fe_users.contact.header">
-				<source>Contact information</source>
+			<trans-unit id="fe_users.personal_info.header">
+				<source>Personal information</source>
+				<target>Información Personal</target>
 			</trans-unit>
-			<trans-unit id="fe_users.bio.header">
-				<source>Short Bio</source>
+			<trans-unit id="fe_users.address.header">
+				<source>Address</source>
+				<target>Dirección</target>
+			</trans-unit>
+			<trans-unit id="fe_users.profile.header">
+				<source>Personal Profile</source>
+				<target>Perfil Personal</target>
 			</trans-unit>
 
+			<trans-unit id="fe_users.profile.label">
+				<source>Address</source>
+				<target>Dirección</target>
+			</trans-unit>
 			<trans-unit id="fe_users.firstname.label">
-				<source>First Name:</source>
+				<source>First Name</source>
+				<target>Nombre</target>
 			</trans-unit>
 			<trans-unit id="fe_users.lastname.label">
-				<source>Last Name:</source>
+				<source>Last Name</source>
+				<target>Apellido</target>
 			</trans-unit>
 			<trans-unit id="fe_users.title.label">
-				<source>Position / Department:</source>
+				<source>Position / Department</source>
+				<target>Puesto / Departamento</target>
 			</trans-unit>
 			<trans-unit id="fe_users.address.label">
-				<source>Address:</source>
+				<source>Address</source>
+				<target>Dirección</target>
 			</trans-unit>
 			<trans-unit id="fe_users.country.label">
-				<source>Country:</source>
+				<source>Country</source>
+				<target>País</target>
 			</trans-unit>
 			<trans-unit id="fe_users.city.label">
-				<source>City:</source>
+				<source>City</source>
+				<target>Ciudad</target>
 			</trans-unit>
 			<trans-unit id="fe_users.zip.label">
-				<source>ZIP Code:</source>
+				<source>ZIP Code</source>
+				<target>Código Postal</target>
 			</trans-unit>
 			<trans-unit id="fe_users.email.label">
-				<source>Email Address:</source>
+				<source>Email Address</source>
+				<target>Correo Electrónico</target>
 			</trans-unit>
 			<trans-unit id="fe_users.telephone.label">
-				<source>Telephone:</source>
+				<source>Telephone</source>
+				<target>Teléfono</target>
 			</trans-unit>
 			<trans-unit id="fe_users.fax.label">
-				<source>Fax:</source>
+				<source>Fax</source>
+				<target>Fax</target>
+			</trans-unit>
+			<trans-unit id="fe_users.bio.label">
+				<source>Bio</source>
+				<target>Biografía</target>
 			</trans-unit>
 			<trans-unit id="breadcrumb">
 				<source>You are on page:</source>

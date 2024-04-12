@@ -1,275 +1,41 @@
-/* chivo-100 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 100;
-    src: url('../Fonts/chivo-v18-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-100italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: italic;
-    font-weight: 100;
-    src: url('../Fonts/chivo-v18-latin-100italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-200 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 200;
-    src: url('../Fonts/chivo-v18-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-200italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: italic;
-    font-weight: 200;
-    src: url('../Fonts/chivo-v18-latin-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-300 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../Fonts/chivo-v18-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-300italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: italic;
-    font-weight: 300;
-    src: url('../Fonts/chivo-v18-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../Fonts/chivo-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: italic;
-    font-weight: 400;
-    src: url('../Fonts/chivo-v18-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-500 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../Fonts/chivo-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-500italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: italic;
-    font-weight: 500;
-    src: url('../Fonts/chivo-v18-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-600 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../Fonts/chivo-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-600italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: italic;
-    font-weight: 600;
-    src: url('../Fonts/chivo-v18-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-700 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../Fonts/chivo-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-700italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: italic;
-    font-weight: 700;
-    src: url('../Fonts/chivo-v18-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-800 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 800;
-    src: url('../Fonts/chivo-v18-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-800italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: italic;
-    font-weight: 800;
-    src: url('../Fonts/chivo-v18-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-900 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../Fonts/chivo-v18-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* chivo-900italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Chivo';
-    font-style: italic;
-    font-weight: 900;
-    src: url('../Fonts/chivo-v18-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../Fonts/nunito-sans/NunitoSans-Regular.ttf") format("ttf");
 }
 
-/* nunito-sans-200 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 200;
-    src: url('../Fonts/nunito-sans-v15-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-family: "Nunito Sans", sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../Fonts/nunito-sans/NunitoSans-Bold.ttf") format("ttf");
 }
-/* nunito-sans-200italic - latin */
+
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: italic;
-    font-weight: 200;
-    src: url('../Fonts/nunito-sans-v15-latin-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-family: "Nunito Sans", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../Fonts/nunito-sans/NunitoSans-Italic.ttf") format("ttf");
 }
-/* nunito-sans-300 - latin */
+
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../Fonts/nunito-sans-v15-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-family: "Nunito Sans", sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../Fonts/nunito-sans/NunitoSans-Bold.ttf") format("ttf");
 }
-/* nunito-sans-300italic - latin */
+
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: italic;
-    font-weight: 300;
-    src: url('../Fonts/nunito-sans-v15-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../Fonts/nunito-sans-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: italic;
-    font-weight: 400;
-    src: url('../Fonts/nunito-sans-v15-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-500 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../Fonts/nunito-sans-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-500italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: italic;
-    font-weight: 500;
-    src: url('../Fonts/nunito-sans-v15-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-600 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../Fonts/nunito-sans-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-600italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: italic;
-    font-weight: 600;
-    src: url('../Fonts/nunito-sans-v15-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-700 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../Fonts/nunito-sans-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-700italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: italic;
-    font-weight: 700;
-    src: url('../Fonts/nunito-sans-v15-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-800 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    src: url('../Fonts/nunito-sans-v15-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-800italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: italic;
-    font-weight: 800;
-    src: url('../Fonts/nunito-sans-v15-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-900 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../Fonts/nunito-sans-v15-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* nunito-sans-900italic - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Nunito Sans';
-    font-style: italic;
-    font-weight: 900;
-    src: url('../Fonts/nunito-sans-v15-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-family: "Chivo", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../Fonts/chivo/Chivo-Bold.ttf") format("ttf");
 }
 
 :root {
@@ -278,8 +44,10 @@
   --accent: #79C9B2;
   --light: #F4F9F1;
   --dark: #090C05;
-  --background: #F4F9F1;
+  --background: #FFFFFF;
   --text: #090C05;
+  --text-light: #6F6F6F;
+  --link: #63B41D;
   --success: #63B41D;
   --error: #FF5D2D;
   --warn: #F4C659;
@@ -292,6 +60,8 @@
   --accent: #D5C904;
   --background: #090C05;
   --text: #F4F9F1;
+  --text-light: #99D6B4;
+  --link: var(--primary);
   --success: #63B41D;
   --error: #FF5D2D;
   --warn: #F4C659;
@@ -305,6 +75,8 @@
     --accent: #D5C904;
     --background: #090C05;
     --text: #F4F9F1;
+    --text-light: #99D6B4;
+    --link: var(--primary);
     --success: #63B41D;
     --error: #FF5D2D;
     --warn: #F4C659;
@@ -325,7 +97,7 @@ html {
 }
 
 body {
-  font-family: "Nunito Sans";
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   color: var(--text, #1d0b1e);
   position: relative;
@@ -334,6 +106,28 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.section,
+section {
+  margin-top: clamp(48px, 5vw, 76px);
+  margin-bottom: clamp(48px, 5vw, 76px);
+}
+
+.section.no-margin,
+section.no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.section.no-margin--top,
+section.no-margin--top {
+  margin-top: 0;
+}
+
+.section.no-margin--bot,
+section.no-margin--bot {
+  margin-bottom: 0;
 }
 
 .h1,
@@ -396,6 +190,10 @@ h5 {
   word-wrap: break-word;
 }
 
+a {
+  color: var(--link);
+}
+
 .container {
   --columns: 12;
   --gutter: 24px;
@@ -410,24 +208,17 @@ h5 {
 
 .container .row {
   display: flex;
-  flex-flow: row wrap;
-  gap: var(--gutter);
+  flex-wrap: wrap;
+  column-gap: var(--gutter);
 }
 
 .container .col {
   flex: 0 0 auto;
   min-height: 0;
   min-width: 0;
-  width: 100%;
   flex-basis: auto;
   box-sizing: border-box;
-  padding: 0 var(--gutter/2);
-}
-
-@media screen and (min-width: 768px) {
-  .container .col {
-    padding: 0 var(--gutter);
-  }
+  padding: 0 calc(var(--gutter) / 2);
 }
 
 .container .col .no-gutter {
@@ -435,195 +226,765 @@ h5 {
 }
 
 .col-1 {
-  flex-basis: calc((100% - 24px) / 12 * 1);
+  flex-basis: calc((100% - 24px * 2) / 12 * 1);
 }
 
 .col-2 {
-  flex-basis: calc((100% - 24px) / 12 * 2);
+  flex-basis: calc((100% - 24px * 2) / 12 * 2);
 }
 
 .col-3 {
-  flex-basis: calc((100% - 24px) / 12 * 3);
+  flex-basis: calc((100% - 24px * 2) / 12 * 3);
 }
 
 .col-4 {
-  flex-basis: calc((100% - 24px) / 12 * 4);
+  flex-basis: calc((100% - 24px * 2) / 12 * 4);
 }
 
 .col-5 {
-  flex-basis: calc((100% - 24px) / 12 * 5);
+  flex-basis: calc((100% - 24px * 2) / 12 * 5);
 }
 
 .col-6 {
-  flex-basis: calc((100% - 24px) / 12 * 6);
+  flex-basis: calc((100% - 24px * 2) / 12 * 6);
 }
 
 .col-7 {
-  flex-basis: calc((100% - 24px) / 12 * 7);
+  flex-basis: calc((100% - 24px * 2) / 12 * 7);
 }
 
 .col-8 {
-  flex-basis: calc((100% - 24px) / 12 * 8);
+  flex-basis: calc((100% - 24px * 2) / 12 * 8);
 }
 
 .col-9 {
-  flex-basis: calc((100% - 24px) / 12 * 9);
+  flex-basis: calc((100% - 24px * 2) / 12 * 9);
 }
 
 .col-10 {
-  flex-basis: calc((100% - 24px) / 12 * 10);
+  flex-basis: calc((100% - 24px * 2) / 12 * 10);
 }
 
 .col-11 {
-  flex-basis: calc((100% - 24px) / 12 * 11);
+  flex-basis: calc((100% - 24px * 2) / 12 * 11);
 }
 
 .col-12 {
-  flex-basis: calc((100% - 24px) / 12 * 12);
+  flex-basis: calc((100% - 24px * 2) / 12 * 12);
 }
 
-.col-sm-1 {
-  flex-basis: calc((100% - 24px) / 12 * 1);
+@media screen and (min-width: 360px) {
+  .col-sm-1 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 1);
+  }
+
+  .col-sm-2 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 2);
+  }
+
+  .col-sm-3 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 3);
+  }
+
+  .col-sm-4 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 4);
+  }
+
+  .col-sm-5 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 5);
+  }
+
+  .col-sm-6 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 6);
+  }
+
+  .col-sm-7 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 7);
+  }
+
+  .col-sm-8 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 8);
+  }
+
+  .col-sm-9 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 9);
+  }
+
+  .col-sm-10 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 10);
+  }
+
+  .col-sm-11 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 11);
+  }
+
+  .col-sm-12 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 12);
+  }
+
+  .sm-offset-1-l {
+    margin-right: calc(100% / (12 / 1));
+  }
+
+  .sm-offset-1-r {
+    margin-right: calc(100% / (12 / 1));
+  }
+
+  .sm-offset-2-l {
+    margin-right: calc(100% / (12 / 2));
+  }
+
+  .sm-offset-2-r {
+    margin-right: calc(100% / (12 / 2));
+  }
+
+  .sm-offset-3-l {
+    margin-right: calc(100% / (12 / 3));
+  }
+
+  .sm-offset-3-r {
+    margin-right: calc(100% / (12 / 3));
+  }
+
+  .sm-offset-4-l {
+    margin-right: calc(100% / (12 / 4));
+  }
+
+  .sm-offset-4-r {
+    margin-right: calc(100% / (12 / 4));
+  }
+
+  .sm-offset-5-l {
+    margin-right: calc(100% / (12 / 5));
+  }
+
+  .sm-offset-5-r {
+    margin-right: calc(100% / (12 / 5));
+  }
+
+  .sm-offset-6-l {
+    margin-right: calc(100% / (12 / 6));
+  }
+
+  .sm-offset-6-r {
+    margin-right: calc(100% / (12 / 6));
+  }
+
+  .sm-offset-7-l {
+    margin-right: calc(100% / (12 / 7));
+  }
+
+  .sm-offset-7-r {
+    margin-right: calc(100% / (12 / 7));
+  }
+
+  .sm-offset-8-l {
+    margin-right: calc(100% / (12 / 8));
+  }
+
+  .sm-offset-8-r {
+    margin-right: calc(100% / (12 / 8));
+  }
+
+  .sm-offset-9-l {
+    margin-right: calc(100% / (12 / 9));
+  }
+
+  .sm-offset-9-r {
+    margin-right: calc(100% / (12 / 9));
+  }
+
+  .sm-offset-10-l {
+    margin-right: calc(100% / (12 / 10));
+  }
+
+  .sm-offset-10-r {
+    margin-right: calc(100% / (12 / 10));
+  }
+
+  .sm-offset-11-l {
+    margin-right: calc(100% / (12 / 11));
+  }
+
+  .sm-offset-11-r {
+    margin-right: calc(100% / (12 / 11));
+  }
+
+  .sm-offset-12-l {
+    margin-right: calc(100% / (12 / 12));
+  }
+
+  .sm-offset-12-r {
+    margin-right: calc(100% / (12 / 12));
+  }
 }
 
-.col-sm-2 {
-  flex-basis: calc((100% - 24px) / 12 * 2);
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 1);
+  }
+
+  .col-md-2 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 2);
+  }
+
+  .col-md-3 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 3);
+  }
+
+  .col-md-4 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 4);
+  }
+
+  .col-md-5 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 5);
+  }
+
+  .col-md-6 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 6);
+  }
+
+  .col-md-7 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 7);
+  }
+
+  .col-md-8 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 8);
+  }
+
+  .col-md-9 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 9);
+  }
+
+  .col-md-10 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 10);
+  }
+
+  .col-md-11 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 11);
+  }
+
+  .col-md-12 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 12);
+  }
+
+  .md-offset-1-l {
+    margin-right: calc(100% / (12 / 1));
+  }
+
+  .md-offset-1-r {
+    margin-right: calc(100% / (12 / 1));
+  }
+
+  .md-offset-2-l {
+    margin-right: calc(100% / (12 / 2));
+  }
+
+  .md-offset-2-r {
+    margin-right: calc(100% / (12 / 2));
+  }
+
+  .md-offset-3-l {
+    margin-right: calc(100% / (12 / 3));
+  }
+
+  .md-offset-3-r {
+    margin-right: calc(100% / (12 / 3));
+  }
+
+  .md-offset-4-l {
+    margin-right: calc(100% / (12 / 4));
+  }
+
+  .md-offset-4-r {
+    margin-right: calc(100% / (12 / 4));
+  }
+
+  .md-offset-5-l {
+    margin-right: calc(100% / (12 / 5));
+  }
+
+  .md-offset-5-r {
+    margin-right: calc(100% / (12 / 5));
+  }
+
+  .md-offset-6-l {
+    margin-right: calc(100% / (12 / 6));
+  }
+
+  .md-offset-6-r {
+    margin-right: calc(100% / (12 / 6));
+  }
+
+  .md-offset-7-l {
+    margin-right: calc(100% / (12 / 7));
+  }
+
+  .md-offset-7-r {
+    margin-right: calc(100% / (12 / 7));
+  }
+
+  .md-offset-8-l {
+    margin-right: calc(100% / (12 / 8));
+  }
+
+  .md-offset-8-r {
+    margin-right: calc(100% / (12 / 8));
+  }
+
+  .md-offset-9-l {
+    margin-right: calc(100% / (12 / 9));
+  }
+
+  .md-offset-9-r {
+    margin-right: calc(100% / (12 / 9));
+  }
+
+  .md-offset-10-l {
+    margin-right: calc(100% / (12 / 10));
+  }
+
+  .md-offset-10-r {
+    margin-right: calc(100% / (12 / 10));
+  }
+
+  .md-offset-11-l {
+    margin-right: calc(100% / (12 / 11));
+  }
+
+  .md-offset-11-r {
+    margin-right: calc(100% / (12 / 11));
+  }
+
+  .md-offset-12-l {
+    margin-right: calc(100% / (12 / 12));
+  }
+
+  .md-offset-12-r {
+    margin-right: calc(100% / (12 / 12));
+  }
 }
 
-.col-sm-3 {
-  flex-basis: calc((100% - 24px) / 12 * 3);
+@media screen and (min-width: 1440px) {
+  .col-lg-1 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 1);
+  }
+
+  .col-lg-2 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 2);
+  }
+
+  .col-lg-3 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 3);
+  }
+
+  .col-lg-4 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 4);
+  }
+
+  .col-lg-5 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 5);
+  }
+
+  .col-lg-6 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 6);
+  }
+
+  .col-lg-7 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 7);
+  }
+
+  .col-lg-8 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 8);
+  }
+
+  .col-lg-9 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 9);
+  }
+
+  .col-lg-10 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 10);
+  }
+
+  .col-lg-11 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 11);
+  }
+
+  .col-lg-12 {
+    flex-basis: calc((100% - 24px * 2) / 12 * 12);
+  }
+
+  .lg-offset-1-l {
+    margin-right: calc(100% / (12 / 1));
+  }
+
+  .lg-offset-1-r {
+    margin-right: calc(100% / (12 / 1));
+  }
+
+  .lg-offset-2-l {
+    margin-right: calc(100% / (12 / 2));
+  }
+
+  .lg-offset-2-r {
+    margin-right: calc(100% / (12 / 2));
+  }
+
+  .lg-offset-3-l {
+    margin-right: calc(100% / (12 / 3));
+  }
+
+  .lg-offset-3-r {
+    margin-right: calc(100% / (12 / 3));
+  }
+
+  .lg-offset-4-l {
+    margin-right: calc(100% / (12 / 4));
+  }
+
+  .lg-offset-4-r {
+    margin-right: calc(100% / (12 / 4));
+  }
+
+  .lg-offset-5-l {
+    margin-right: calc(100% / (12 / 5));
+  }
+
+  .lg-offset-5-r {
+    margin-right: calc(100% / (12 / 5));
+  }
+
+  .lg-offset-6-l {
+    margin-right: calc(100% / (12 / 6));
+  }
+
+  .lg-offset-6-r {
+    margin-right: calc(100% / (12 / 6));
+  }
+
+  .lg-offset-7-l {
+    margin-right: calc(100% / (12 / 7));
+  }
+
+  .lg-offset-7-r {
+    margin-right: calc(100% / (12 / 7));
+  }
+
+  .lg-offset-8-l {
+    margin-right: calc(100% / (12 / 8));
+  }
+
+  .lg-offset-8-r {
+    margin-right: calc(100% / (12 / 8));
+  }
+
+  .lg-offset-9-l {
+    margin-right: calc(100% / (12 / 9));
+  }
+
+  .lg-offset-9-r {
+    margin-right: calc(100% / (12 / 9));
+  }
+
+  .lg-offset-10-l {
+    margin-right: calc(100% / (12 / 10));
+  }
+
+  .lg-offset-10-r {
+    margin-right: calc(100% / (12 / 10));
+  }
+
+  .lg-offset-11-l {
+    margin-right: calc(100% / (12 / 11));
+  }
+
+  .lg-offset-11-r {
+    margin-right: calc(100% / (12 / 11));
+  }
+
+  .lg-offset-12-l {
+    margin-right: calc(100% / (12 / 12));
+  }
+
+  .lg-offset-12-r {
+    margin-right: calc(100% / (12 / 12));
+  }
 }
 
-.col-sm-4 {
-  flex-basis: calc((100% - 24px) / 12 * 4);
+#page-header {
+  display: flex;
+  height: 5rem;
 }
 
-.col-sm-5 {
-  flex-basis: calc((100% - 24px) / 12 * 5);
+.header-inner {
+  background-color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.875rem;
+  padding-left: 0;
+  width: 100%;
 }
 
-.col-sm-6 {
-  flex-basis: calc((100% - 24px) / 12 * 6);
+.header-left-container {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
-.col-sm-7 {
-  flex-basis: calc((100% - 24px) / 12 * 7);
+.header-menu-toggle {
+  background: var(--light);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  justify-content: center;
+  width: 4rem;
 }
 
-.col-sm-8 {
-  flex-basis: calc((100% - 24px) / 12 * 8);
+.header-menu-toggle:hover {
+  cursor: pointer;
 }
 
-.col-sm-9 {
-  flex-basis: calc((100% - 24px) / 12 * 9);
+.header-logo {
+  height: 3.75rem;
 }
 
-.col-sm-10 {
-  flex-basis: calc((100% - 24px) / 12 * 10);
+.header-logo img {
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
-.col-sm-11 {
-  flex-basis: calc((100% - 24px) / 12 * 11);
+.menu-toggle-stripe {
+  background-color: var(--primary);
+  height: 0.25rem;
+  margin: 0 auto;
+  width: 2.5rem;
 }
 
-.col-sm-12 {
-  flex-basis: calc((100% - 24px) / 12 * 12);
+.header-avatar img {
+  height: auto;
+  max-width: 5rem;
 }
 
-.col-md-1 {
-  flex-basis: calc((100% - 24px) / 12 * 1);
+.header-search-container {
+  margin: 0 auto;
 }
 
-.col-md-2 {
-  flex-basis: calc((100% - 24px) / 12 * 2);
+.breadcrumb-container {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
 }
 
-.col-md-3 {
-  flex-basis: calc((100% - 24px) / 12 * 3);
+.breadcrumb-container p,
+.breadcrumb-container a {
+  font-size: 0.875rem;
 }
 
-.col-md-4 {
-  flex-basis: calc((100% - 24px) / 12 * 4);
+#breadcrumb-menu {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
 }
 
-.col-md-5 {
-  flex-basis: calc((100% - 24px) / 12 * 5);
+#breadcrumb-menu li {
+  display: block;
 }
 
-.col-md-6 {
-  flex-basis: calc((100% - 24px) / 12 * 6);
+#breadcrumb-menu li a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
 }
 
-.col-md-7 {
-  flex-basis: calc((100% - 24px) / 12 * 7);
+#main-content {
+  padding: 1.875rem;
+  width: calc(100% - 15rem);
 }
 
-.col-md-8 {
-  flex-basis: calc((100% - 24px) / 12 * 8);
+.user-info-container {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
 }
 
-.col-md-9 {
-  flex-basis: calc((100% - 24px) / 12 * 9);
+.user-info-avatar img {
+  border: 1px solid var(--primary);
+  border-radius: 50%;
 }
 
-.col-md-10 {
-  flex-basis: calc((100% - 24px) / 12 * 10);
+.user-info-name {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
 }
 
-.col-md-11 {
-  flex-basis: calc((100% - 24px) / 12 * 11);
+.user-info-name p {
+  margin: 0;
 }
 
-.col-md-12 {
-  flex-basis: calc((100% - 24px) / 12 * 12);
+.fe-user-title {
+  font-size: 0.75rem;
+  margin: 0;
+  margin-bottom: 0.25rem;
 }
 
-.col-lg-1 {
-  flex-basis: calc((100% - 24px) / 12 * 1);
+#site-footer {
+  display: flex;
+  height: 3.125rem;
 }
 
-.col-lg-2 {
-  flex-basis: calc((100% - 24px) / 12 * 2);
+.footer-container {
+  background-color: var(--accent, #D9D9D9);
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 
-.col-lg-3 {
-  flex-basis: calc((100% - 24px) / 12 * 3);
+.footer-logout {
+  background-color: #c7c7c7;
+  display: flex;
+  width: 15rem;
 }
 
-.col-lg-4 {
-  flex-basis: calc((100% - 24px) / 12 * 4);
+.footer-logout a {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: auto 0;
+  padding-left: 2rem;
+  text-decoration: none;
 }
 
-.col-lg-5 {
-  flex-basis: calc((100% - 24px) / 12 * 5);
+.footermenu-container {
+  display: flex;
+  justify-content: center;
+  padding-right: 2rem;
 }
 
-.col-lg-6 {
-  flex-basis: calc((100% - 24px) / 12 * 6);
+#footer-nav {
+  display: flex;
+  margin: auto;
+  padding: 0;
 }
 
-.col-lg-7 {
-  flex-basis: calc((100% - 24px) / 12 * 7);
+#footer-nav li {
+  display: block;
 }
 
-.col-lg-8 {
-  flex-basis: calc((100% - 24px) / 12 * 8);
+.language-menu {
+  display: flex;
+  justify-content: center;
 }
 
-.col-lg-9 {
-  flex-basis: calc((100% - 24px) / 12 * 9);
+#language-navigation {
+  display: flex;
+  gap: 0.25rem;
+  margin: auto;
+  padding: 0;
 }
 
-.col-lg-10 {
-  flex-basis: calc((100% - 24px) / 12 * 10);
+#language-navigation li {
+  border-right: 1px solid var(--text);
+  display: block;
+  padding-right: 0.25rem;
 }
 
-.col-lg-11 {
-  flex-basis: calc((100% - 24px) / 12 * 11);
+#language-navigation li:last-child {
+  border-right: none;
 }
 
-.col-lg-12 {
-  flex-basis: calc((100% - 24px) / 12 * 12);
+#language-navigation li a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+#site-content {
+  display: flex;
+}
+
+.sidebar-container {
+  background-color: #C7C7C7;
+  display: flex;
+  max-width: 15rem;
+}
+
+#site-content.sidebar-collapse .sidebar-container {
+  width: 4rem;
+}
+
+#site-content.sidebar-collapse #main-content {
+  width: calc(100% - 4rem);
+}
+
+#site-content.sidebar-collapse .sidebar-inner {
+  padding: 2rem 0.25rem;
+}
+
+#site-content.sidebar-collapse .user-info-container {
+  justify-content: center;
+}
+
+#site-content.sidebar-collapse .user-infos {
+  display: none;
+}
+
+.sidebar-inner {
+  padding: 30px 1rem;
+  width: 100%;
+}
+
+#sidebar-nav {
+  margin: 0;
+  padding: 0;
+}
+
+#mainnavigation[aria-expanded=false] .sidebar-nav-link-text {
+  display: none;
+}
+
+#mainnavigation[aria-expanded=false] .sidebar-nav-link {
+  padding: 1rem 0.625rem;
+}
+
+.sidebar-nav-item {
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.sidebar-nav-item:hover {
+  background-color: var(--light);
+  cursor: pointer;
+}
+
+.sidebar-nav-link {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  gap: 0.25rem;
+  text-decoration: none;
+  padding: 1rem;
+  padding-left: 0.25rem;
+  width: 100%;
+}
+
+.sidebar-nav-icon {
+  height: auto;
+  max-width: 2rem;
+}
+
+.sidebar-nav-link-text {
+  margin: auto 0;
+  text-decoration: none;
 }
 
 .headline-center {
@@ -638,9 +999,11 @@ h5 {
   text-align: right;
 }
 
-.subheadline {
+.topline {
   width: 100%;
   display: block;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
 }
 
 .image__row {
@@ -648,12 +1011,16 @@ h5 {
 }
 
 .image__figure {
-  margin: 0;
+  margin: 32px 0 0;
 }
 
 .image__file {
   width: 100%;
   height: auto;
+}
+
+.text__body {
+  margin-top: 32px;
 }
 
 .text-center {
@@ -669,7 +1036,7 @@ h5 {
 }
 
 .textpic__row {
-  flex-flow: column !important;
+  flex-flow: column;
   justify-content: space-evenly;
 }
 
@@ -687,25 +1054,29 @@ h5 {
   order: 2;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .textpic__row {
-    flex-flow: row !important;
+    flex-flow: row;
     align-items: center;
   }
+}
+
+.employee__list {
+  row-gap: var(--gutter);
 }
 
 .employee__item {
   display: flex;
   flex-direction: row;
-  padding: 16px;
+  padding: 1rem 1.5rem;
   gap: 34px;
-  background: #99D6B4;
+  background: var(--light);
 }
 
 .employee__image {
   width: 100%;
-  height: 72px;
-  max-width: 72px;
+  height: 4.5rem;
+  max-width: 4.5rem;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
@@ -716,6 +1087,7 @@ h5 {
   display: flex;
   flex-direction: column;
   width: 100%;
+  word-break: break-word;
 }
 
 .employee__title {
@@ -737,6 +1109,18 @@ h5 {
   margin-top: 6px;
 }
 
+.employee__detail a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary);
+}
+
+.employee__detail a:hover,
+.employee__detail a:focus,
+.employee__detail a:active {
+  border-bottom: 2px dashed;
+}
+
 .employee__label {
   font-weight: 700;
 }
@@ -746,6 +1130,7 @@ h5 {
   justify-content: center;
   height: 100%;
   min-height: 100vh;
+  padding: 60px 0;
 }
 
 .login__box {
@@ -764,14 +1149,13 @@ h5 {
   margin: 0 0 15px;
   padding: 15px;
   border: 0;
-  background: #f2f2f2;
+  background: var(--light);
   box-sizing: border-box;
   font-size: 14px;
 }
 
 .login__input:focus {
-  outline: none;
-  background: #F2F0FF;
+  outline-color: var(--primary);
 }
 
 .login__label {
@@ -785,44 +1169,121 @@ h5 {
   width: 100%;
   margin: 15px 0 0;
   padding: 15px;
-  border: 0;
-  background: #9B8BF4;
+  color: var(--primary);
+  background: none;
+  border: 2px var(--primary) solid;
+  border-radius: 4px;
   box-sizing: border-box;
   font-size: 18px;
   font-weight: 600;
-  color: #ffffff;
   cursor: pointer;
 }
 
 .login__submit:hover {
-  background: #c379b8;
+  color: var(--text);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
-.profile {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.login__submit:focus {
+  outline-color: var(--accent);
 }
 
-.profile__card,
+.login__header {
+  margin-bottom: 16px;
+}
+
+.login__welcome {
+  margin-bottom: 32px;
+}
+
+.login__welcome-header {
+  margin-bottom: 12px;
+}
+
+.login__confidentiality {
+  margin-top: 32px;
+}
+
+.login__confidentiality-message {
+  font-size: 14px;
+}
+
+.login__error {
+  margin-top: 32px;
+  padding: 16px 14px;
+  color: var(--text);
+  background: rgba(255, 93, 45, 0.3);
+  border: 2px var(--error) solid;
+  border-radius: 4px;
+}
+
 .profile__info {
-  padding: 1.25rem 1.5rem;
+  padding: 32px;
   word-wrap: break-word;
-  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 0.625rem;
   background-color: #fff;
   background-clip: border-box;
   box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
 }
 
+.profile__info-inner {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+}
+
+.profile__info-inner + .profile__info-inner {
+  margin-top: 32px;
+}
+
+.profile__info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .profile__image {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 6.25rem;
+  max-width: 6.25rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+.profile__description {
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.profile__basic {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile__label,
+.profile__data {
+  color: var(--text-light);
+}
+
+.profile__data {
+  font-weight: 600;
+}
+
+.profile__location {
+  font-weight: 400;
 }
 
 .profile__header {
-  font-size: 0.75rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  flex-basis: 100%;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .profile__description {
+    flex-flow: row;
+  }
 }
