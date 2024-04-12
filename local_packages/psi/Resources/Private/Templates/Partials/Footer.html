@@ -2,16 +2,21 @@
 
 <footer id="site-footer">
     <div class="footer-container">
-        <f:if condition="{frontenduserlogoutbutton}">
+        <f:if condition="{frontendusername}">
             <div class="footer-logout">
-                {frontenduserlogoutbutton -> f:format.raw()}
+                <f:link.page pageUid="{site.rootPageId}" additionalParams="{'logintype': 'logout'}"><f:translate key="logout-label" extensionName="psi"/></f:link.page>
+                <svg class="svg-icon" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M640 768c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C661.333333 763.733333 652.8 768 640 768z"  />
+                    <path d="M853.333333 554.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C874.666667 550.4 866.133333 554.666667 853.333333 554.666667z"  />
+                    <path d="M853.333333 554.666667 170.666667 554.666667c-25.6 0-42.666667-17.066667-42.666667-42.666667s17.066667-42.666667 42.666667-42.666667l682.666667 0c25.6 0 42.666667 17.066667 42.666667 42.666667S878.933333 554.666667 853.333333 554.666667z"  />
+                </svg>
             </div>
         </f:if>
         <f:if condition="{breadcrumb}">
             <f:then>
                 <f:variable name="breadcrumblength"><f:count>{breadcrumb}</f:count></f:variable>
                 <div class="breadcrumb-container">
-                    <p>You are on page: </p>
+                    <p><f:translate key="breadcrumb" extensionName="psi"/></p>
                     <ul id="breadcrumb-menu">
                         <f:for as="item" iteration="i" each="{breadcrumb}">
                             <li>

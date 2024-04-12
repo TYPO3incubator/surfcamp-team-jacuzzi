@@ -15,16 +15,16 @@
             <f:form.hidden name="search[numberOfResults]" value="{searchParams.numberOfResults}" />
             <f:form.hidden name="search[extendedSearch]" value="{searchParams.extendedSearch}" />
         </div>
-        <fieldset>
-            <legend><f:translate key="form.legend" /></legend>
+        <fieldset id="search-form">
+            <legend><f:translate key="form.legend" extensionName="psi"/></legend>
             <div class="tx-indexedsearch-form">
-                <label for="tx-indexedsearch-searchbox-sword"><f:translate key="form.searchFor" />:</label>
-                <f:form.textfield name="search[sword]" value="{sword}" id="tx-indexedsearch-searchbox-sword" class="tx-indexedsearch-searchbox-sword" />
+                <label for="tx-indexedsearch-searchbox-sword"><f:translate key="search-button" extensionName="psi"/>:</label>
+                <f:form.textfield name="search[sword]" value="{sword}" id="tx-indexedsearch-searchbox-sword" class="search-searchbox  tx-indexedsearch-searchbox-sword" />
             </div>
             <f:if condition="{searchParams.extendedSearch}">
                 <f:if condition="{showTypeSearch}">
                     <div class="tx-indexedsearch-search-for">
-                        <label for="tx-indexedsearch-selectbox-searchtype"><f:translate key="form.match" />:</label>
+                        <label for="tx-indexedsearch-selectbox-searchtype"><f:translate key="search-button" extensionName="psi"/>:</label>
                         <f:if condition="{allSearchTypes}">
                             <f:form.select name="search[searchType]" options="{allSearchTypes}" value="{searchParams.searchType}" id="tx-indexedsearch-selectbox-searchtype" class="tx-indexedsearch-selectbox-searchtype" />
                         </f:if>
@@ -75,17 +75,17 @@
                 </f:if>
             </f:if>
             <div class="tx-indexedsearch-search-submit">
-                <f:form.submit name="search[submitButton]" value="{f:translate(key: 'form.submit')}" id="tx-indexedsearch-searchbox-button-submit" class="tx-indexedsearch-searchbox-button" />
+                <f:form.submit name="search[submitButton]" value="{f:translate(key: 'search-button', extensionName: 'psi')}" id="tx-indexedsearch-searchbox-button-submit" class="header-searchbutton" />
             </div>
         </fieldset>
         <f:if condition="{settings.displayAdvancedSearchLink}">
             <p>
             <f:if condition="{searchParams.extendedSearch}">
                 <f:then>
-                    <f:link.action action="form" arguments="{search: {extendedSearch: 0}}"><f:translate key="form.linkToRegularSearch" /></f:link.action>
+                    <f:link.action action="form" arguments="{search: {sword: sword, extendedSearch: 0}}"><f:translate key="form.linkToRegularSearch" /></f:link.action>
                 </f:then>
                 <f:else>
-                    <f:link.action action="form" arguments="{search: {extendedSearch: 1}}"><f:translate key="form.linkToAdvancedSearch" /></f:link.action>
+                    <f:link.action action="form" arguments="{search: {sword: sword, extendedSearch: 1}}"><f:translate key="form.linkToAdvancedSearch" /></f:link.action>
                 </f:else>
             </f:if>
             </p>

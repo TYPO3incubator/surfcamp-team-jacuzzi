@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" datatype="plaintext" date="2024-04-08T16:16:32Z" product-name="psi">
+	<file source-language="en" target-language="es" datatype="plaintext" date="2024-04-08T16:16:32Z" product-name="psi">
 		<header/>
 		<body>
 			<trans-unit id="tt_content.pi_flexform.felogin_login.s_messages.status_header">
@@ -12,6 +12,7 @@
 
 			<trans-unit id="fe_users.info.header">
 				<source>User information</source>
+				<target>Informaciones Usero</target>
 			</trans-unit>
 			<trans-unit id="fe_users.contact.header">
 				<source>Contact information</source>
@@ -52,24 +53,31 @@
 			</trans-unit>
 			<trans-unit id="breadcrumb">
 				<source>You are on page:</source>
+				<target>Estas en pagina:</target>
 			</trans-unit>
 			<trans-unit id="search-button">
 				<source>Search</source>
+				<target>Buscar</target>
 			</trans-unit>
 			<trans-unit id="form.legend" resname="form.legend">
 				<source>Search form</source>
+				<target>Buscar Formular</target>
 			</trans-unit>
-			<trans-unit id="form.searchFor" resname="form.searchFor">
-				<source>Search for</source>
+			<trans-unit id="form.legend" resname="form.legend">
+				<source>Search form</source>
+				<target>Formulario de búsquedar</target>
 			</trans-unit>
 			<trans-unit id="form.linkToAdvancedSearch" resname="form.linkToAdvancedSearch">
 				<source>Advanced Search</source>
+				<target>Búsqueda Avanzada</target>
 			</trans-unit>
 			<trans-unit id="result.noResult" resname="result.noResult">
 				<source>No results found.</source>
+				<target>No se han encontrado resultados.</target>
 			</trans-unit>
 			<trans-unit id="logout-label" resname="logout-label">
 				<source>Logout</source>
+				<target>Salir del systema</target>
 			</trans-unit>
 		</body>
 	</file>

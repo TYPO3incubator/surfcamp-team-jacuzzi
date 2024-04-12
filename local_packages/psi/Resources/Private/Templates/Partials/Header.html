@@ -17,18 +17,22 @@
             <div class="header-search-container">
                 <form method="post" action="{f:uri.action(action: 'search', controller: 'Search', extensionName: 'IndexedSearch', pluginName: 'Pi2', pageUid: settings.psi.pageIds.searchresult)}">
                     <input type="text" name="tx_indexedsearch_pi2[search][sword]" value="">
-                    <input type="submit" value="Suchen" name="tx_indexedsearch_pi2[search][submitButton]">
+                    <input type="submit" value="{f:translate(key: 'search-button', extensionName: 'psi')}" name="tx_indexedsearch_pi2[search][submitButton]">
                 </form>
             </div>
         </f:if>
         <div class="language-menu">
             <ul id="language-navigation">
                 <f:for as="lang" each="{languagenavigation}">
-                    <li>
-                        <a title="{lang.title}" hreflang="{lang.hreflang}" href="{lang.link}">
-                            <span>{lang.title}</span>
-                        </a>
-                    </li>
+                    <f:if condition="{lang.available}">
+                        <f:then>
+                            <li>
+                                <a title="{lang.title}" hreflang="{lang.hreflang}" href="{lang.link}">
+                                    <span>{lang.title}</span>
+                                </a>
+                            </li>
+                        </f:then>
+                    </f:if>
                 </f:for>
             </ul>
         </div>
