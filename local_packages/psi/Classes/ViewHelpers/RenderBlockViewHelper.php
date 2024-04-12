@@ -29,7 +29,7 @@ final class RenderBlockViewHelper extends AbstractViewHelper
     public function initializeArguments(): void
     {
         parent::initializeArguments();
-        $this->registerArgument('data', RecordInterface::class, 'Block data', false, []);
+        $this->registerArgument('block', RecordInterface::class, 'The block to render', true);
         $this->registerArgument('context', 'array', 'Context information', false, []);
     }
 
@@ -38,7 +38,7 @@ final class RenderBlockViewHelper extends AbstractViewHelper
      */
     public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
     {
-        $data = $arguments['data'];
+        $block = $arguments['block'];
         $context = $arguments['context'] ?: [];
 
         $view = $renderingContext->getViewHelperVariableContainer()->getView();
@@ -55,13 +55,13 @@ final class RenderBlockViewHelper extends AbstractViewHelper
         $r = clone $view->getRenderingContext();
         $subView->setRequest($renderingContext->getRequest());
         $subView->getRenderingContext()->setTemplatePaths($r->getTemplatePaths());
-        if (count($templateNameParts = explode('.', $data->getFullType())) === 2) {
+        if (count($templateNameParts = explode('.', $block->getFullType())) === 2) {
             $subView->getRenderingContext()->setControllerName(ucfirst($templateNameParts[0]));
             $subView->getRenderingContext()->setControllerAction(GeneralUtility::underscoredToLowerCamelCase($templateNameParts[1]));
         }
         $subView->assign('settings', $renderingContext->getVariableProvider()->get('settings'));
-        $subView->assign('data', $data->toArray(true));
-        $subView->assign('rawData', $data->getRecord()->getRawRecord()->toArray());
+        $subView->assign('data', $block->toArray(true));
+        $subView->assign('rawData', $block->getRecord()->getRawRecord()->toArray());
         $subView->assign('context', $context);
         try {
             $content = $subView->render();
@@ -69,13 +69,13 @@ final class RenderBlockViewHelper extends AbstractViewHelper
             // Render via TypoScript as fallback
             /** @var CObjectViewHelper $cObjectViewHelper */
             $cObjectViewHelper = $view->getViewHelperResolver()->createViewHelperInstance('f', 'cObject');
-            $blockType = $data->getFullType();
+            $blockType = $block->getFullType();
             if (str_starts_with($blockType, 'content')) {
                 $blockType = 'tt_' . $blockType . '.20';
             }
             $cObjectViewHelper->setArguments([
                 'typoscriptObjectPath' => $blockType,
-                'data' => $data->getRecord()->getRawRecord()->toArray(),
+                'data' => $block->getRecord()->getRawRecord()->toArray(),
                 'context' => $context,
             ]);
             $cObjectViewHelper->setRenderingContext($subView->getRenderingContext());
