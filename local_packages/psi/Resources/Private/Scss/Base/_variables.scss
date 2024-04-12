@@ -66,6 +66,7 @@ $color-themes: (
         text: $dark,
         text-light: #6F6F6F,
         link: $primary,
+        container-border: transparent,
 
         // utility
         success: $success,
@@ -78,10 +79,12 @@ $color-themes: (
         primary: $contrast-primary,
         secondary: $contrast-secondary,
         accent: $contrast-accent,
+        light: $dark,
         background: $dark,
         text: $light,
         text-light: $contrast-secondary,
         link: var(--primary),
+        container-border: $white,
 
         // utility
         success: $contrast-success,
