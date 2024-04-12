@@ -2,7 +2,7 @@
     <div class="downloads-container">
         <div class="downloads-inner">
             <ul class="downloads-wrap">
-                <f:for as="file" each="{data.media}">
+                <f:for each="{data.media}" as="file" >
                     <li class="downloads-single profile__card">
                         <p class="downloads-date"><f:format.date format="d.m.Y" date="{file.originalFile.properties.creation_date}"></f:format.date></p>
                         <p class="downloads-filename">{file.title}</p>

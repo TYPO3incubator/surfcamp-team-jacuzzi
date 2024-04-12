@@ -64,6 +64,7 @@ final class RenderBlockViewHelper extends AbstractViewHelper
         $subView->assign('rawData', $block->getRecord()->getRawRecord()->toArray());
         $subView->assign('context', $context);
         try {
+
             $content = $subView->render();
         } catch (InvalidTemplateResourceException) {
             // Render via TypoScript as fallback
