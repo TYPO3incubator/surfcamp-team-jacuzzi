@@ -149,5 +149,4 @@ $GLOBALS['TCA']['tt_content']['types']['employee_list'] = [
     ],
 ];
 
-
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['employee_list'] = 'apps-pagetree-folder-contains-fe_users';

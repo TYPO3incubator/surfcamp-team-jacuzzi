@@ -8,9 +8,9 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
-class FetchFrontendUsersViewHelper extends AbstractViewHelper
+final class FetchFrontendUsersViewHelper extends AbstractViewHelper
 {
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('pid', 'int', 'Page ID', true);
     }
