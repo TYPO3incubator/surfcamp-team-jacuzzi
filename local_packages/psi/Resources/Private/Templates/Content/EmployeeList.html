@@ -7,7 +7,7 @@
                 <f:for each="{psi:fetchFrontendUsers(pid: data.pages)}" as="user" iteration="iterator">
                     <li class="employee__item col-12 col-sm-12 col-md-4">
                         <f:if condition="{user.media}">
-                            <f:image src="{user.media}" class="employee__image"/>
+                            <f:image image="{user.media}" class="employee__image"/>
                         </f:if>
                         <div class="employee__details">
                             <f:if condition="{user.title}">
