@@ -321,23 +321,52 @@
 .language-menu {
     display: flex;
     justify-content: center;
+    position: relative;
+    width: 150px;
 }
 
 #language-navigation {
+    appearance: none;
+    border: 1px solid #63B21F;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    gap: 0px;
     margin: auto;
-    padding: 0;
+    /*padding: 5px 25px;*/
+    position: absolute;
+    left: 0;
+    top: calc(50% - 15px);
+    width: 100%;
+}
+
+.language-menu::after {
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    content: "";
+    height: 10px;
+    position: absolute;
+    top: calc(50% - 7px);
+    transform: rotate(135deg);
+    right: 10px;
+    width: 10px;
 }
 
 #language-navigation li {
-    border-right: 1px solid #000;
-    display: block;
+    background-color: #D9D9D9;
+    display: none;
     padding-right: 5px;
+    padding: 10px 15px;
 }
 
-#language-navigation li:last-child {
-    border-right: none
+#language-navigation li.active {
+    display: block;
+}
+
+#language-navigation:hover li {
+    display: block;
 }
 
 #language-navigation li a {

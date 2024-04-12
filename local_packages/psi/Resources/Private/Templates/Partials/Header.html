@@ -28,7 +28,7 @@
                 <f:for as="lang" each="{languagenavigation}">
                     <f:if condition="{lang.available}">
                         <f:then>
-                            <li>
+                            <li class="{f:if(condition: '{lang.active} === 1', then: 'active', else: 'inactive')}" >
                                 <a title="{lang.title}" hreflang="{lang.hreflang}" href="{lang.link}">
                                     <span>{lang.title}</span>
                                 </a>
