@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Jacuzzi\Psi\ViewHelpers;
 
 use Jacuzzi\Psi\Domain\RecordInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3\CMS\Fluid\ViewHelpers\CObjectViewHelper;
+use TYPO3\CMS\Frontend\ContentObject\ContentDataProcessor;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Exception;
@@ -64,7 +66,18 @@ final class RenderBlockViewHelper extends AbstractViewHelper
         $subView->assign('rawData', $block->getRecord()->getRawRecord()->toArray());
         $subView->assign('context', $context);
         try {
-
+            $request = $renderingContext->getRequest() ?? $GLOBALS['TYPO3_REQUEST'] ?? null;
+            if ($request instanceof ServerRequestInterface) {
+                $elementConfig = $request->getAttribute('frontend.typoscript')?->getSetupArray()['tt_content.'][str_replace('content.', '', $block->getFullType()) . '.'] ?? null;
+                if (is_array($elementConfig) && $elementConfig !== []) {
+                    $processed = GeneralUtility::makeInstance(ContentDataProcessor::class)->process(
+                        $request->getAttribute('currentContentObject'),
+                        $elementConfig,
+                        ['data' => $block->getRecord()->getRawRecord()->toArray()]
+                    );
+                    $subView->assign('data', array_replace_recursive(['data' => $block->toArray(true)], $processed));
+                }
+            }
             $content = $subView->render();
         } catch (InvalidTemplateResourceException) {
             // Render via TypoScript as fallback

@@ -35,3 +35,17 @@ lib.contentElement {
         0 = EXT:psi/Resources/Private/Templates/Layouts/
     }
 }
+
+tt_content.menu_subpages.dataProcessing {
+  10 = menu
+  10 {
+    special = directory
+    special.value.field = pages
+    dataProcessing {
+      10 = files
+      10.references.fieldName = media
+    }
+  }
+}
+
+
