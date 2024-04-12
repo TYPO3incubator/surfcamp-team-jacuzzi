@@ -63,20 +63,24 @@ $color-themes: (
         dark: $dark,
         background: #fff,
         text: $dark,
-
+        text-light: #6F6F6F,
+        link: $primary,
+        
         // utility  
         success: $success,
         error: $error,
         warn: $warn,
         hint: $hint,
-    ),
-
+        ),
+        
     contrastMode: (
         primary: $contrast-primary,
         secondary: $contrast-secondary,
         accent: $contrast-accent,
         background: $dark,
         text: $light,
+        text-light: $contrast-secondary,
+        link: var(--primary),
 
         // utility  
         success: $contrast-success,
