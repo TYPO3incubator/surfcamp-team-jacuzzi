@@ -25,3 +25,18 @@
 @function rem($value){
     @return calc($value / $rem-base) + rem;
 }
+
+//! simple function to add values to different units
+@function toUnit($value, $unit){
+    // $value => 10/15 some number
+    // unit => rem,em,px,%,vmin,vmax etc
+    @return $value + unquote($unit);
+}
+// example
+// .toUnit-test{
+//     padding: toUnit(10, 'px');
+//     margin: toUnit(10, '%');
+//     width: toUnit(10, 'vmin');
+//     line-height: toUnit(10, 'vh');
+//     font-size: toUnit(10, 'rem');
+// }

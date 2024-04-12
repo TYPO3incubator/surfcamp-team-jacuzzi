@@ -61,7 +61,7 @@ $color-themes: (
         accent: $accent,
         light: $light,
         dark: $dark,
-        background: $light,
+        background: #fff,
         text: $dark,
 
         // utility  
@@ -136,4 +136,12 @@ $spacings: (
     // 16 steps
     96,
     112
+);
+
+$section-spacings: clamp(64px, 5vw, 80px);
+
+$border-radius: (
+  small: toUnit(4, 'px'),
+  medium: toUnit(8, 'px'),
+  large: toUnit(12, 'px')
 );
