@@ -44,7 +44,7 @@ section {
 // headlines
 @each $selector, $size in $headlines{
 	.#{$selector}, #{$selector}{
-	  font-size: toUNit(#{$size}, 'px');
+	  font-size: calc(#{$size} * 1px);
 	  line-height: calc(#{$size} * #{$headline-line-height-scale} * 1px);
 	  font-family: $font-family-headline;
 	  display: block;

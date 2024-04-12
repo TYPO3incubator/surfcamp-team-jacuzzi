@@ -12,7 +12,9 @@
     }
 }
 
-.subheadline {
+.topline {
     width: 100%;
     display: block;
+    margin-bottom: rem(4);
+    text-transform: uppercase;
 }

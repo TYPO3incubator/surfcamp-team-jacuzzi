@@ -145,3 +145,7 @@ $border-radius: (
   medium: toUnit(8, 'px'),
   large: toUnit(12, 'px')
 );
+
+$box-shadow-shade: color-mix(in srgb, var(--dark), transparent 70%); 
+$box-shadow-small: 0 0 rem(4) 0 $box-shadow-shade;
+$box-shadow-medium: 0 0 rem(8) 0 $box-shadow-shade;
