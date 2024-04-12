@@ -3,6 +3,12 @@
 	<file source-language="en" datatype="plaintext" date="2024-04-08T16:16:32Z" product-name="psi">
 		<header/>
 		<body>
+			<trans-unit id="tt_content.ctype.employee_list">
+				<source>Employee List</source>
+			</trans-unit>
+			<trans-unit id="tt_content.ctype.employee_list.description">
+				<source>Employee list with card view</source>
+			</trans-unit>
 			<trans-unit id="tt_content.image.layout.0">
 				<source>Container width</source>
 			</trans-unit>

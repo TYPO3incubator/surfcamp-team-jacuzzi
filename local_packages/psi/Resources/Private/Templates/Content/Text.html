@@ -1,17 +1,24 @@
-<div class="text">
-    <f:if condition="{data.subheader}">
-        <span class="subheadline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<section class="container text">
+    <div class="row">
+        <f:if condition="{data.subheader}">
+        <span
+            class="subheadline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">
             {data.subheader}
         </span>
-    </f:if>
-    <f:if condition="{data.header}">
-        <f:render partial="Content/Header" arguments="{
+        </f:if>
+        <f:if condition="{data.header}">
+            <f:render partial="Content/Header" arguments="{
                 header: data.header,
                 layout: data.header_layout,
                 positionClass: '{f:if(condition: data.header_position, then: \'headline-{data.header_position}\')}',
                 default: settings.defaultHeaderType}"/>
-    </f:if>
-    <f:if condition="{data.bodytext}">
-        <f:format.raw>{data.bodytext}</f:format.raw>
-    </f:if>
-</div>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <f:format.raw>{data.bodytext}</f:format.raw>
+        </f:if>
+    </div>
+</section>
+
+</html>

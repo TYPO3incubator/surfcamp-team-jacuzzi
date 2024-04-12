@@ -53,6 +53,7 @@ page {
     }
 
     includeCSS {
+        style = EXT:psi/Resources/Public/Css/style.css
         theme = EXT:psi/Resources/Public/Css/main.css
     }
 

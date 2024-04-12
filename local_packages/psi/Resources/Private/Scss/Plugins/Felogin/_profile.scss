@@ -1,20 +1,9 @@
 .profile {
-	// @include container;
 	padding-top: 60px;
 	padding-bottom: 60px;
 
-	&__container {
-		// @include row;
-		max-width: 1440px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
 	&__card,
 	&__info {
-		// @include column(12);
-		position: relative;
-		width: 100%;
 		padding: 1.25rem 1.5rem;
 		word-wrap: break-word;
 		border: 1px solid rgba(0, 0, 0, .05);
@@ -22,13 +11,6 @@
 		background-color: #fff;
 		background-clip: border-box;
 		box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15);
-	}
-
-	&__card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: fit-content;
 	}
 
 	&__image {
@@ -42,23 +24,5 @@
 		padding-bottom: .25rem;
 		letter-spacing: .04em;
 		text-transform: uppercase;
-	}
-}
-
-@media (min-width: 768px) {
-	.profile {
-		&__container {
-			flex-direction: row;
-			flex-flow: nowrap;
-			gap: 24px;
-		}
-
-		// &__card {
-		// 	@include column(4);
-		// }
-
-		// &__info {
-		// 	@include column(8);
-		// }
 	}
 }

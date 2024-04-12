@@ -1,19 +1,10 @@
 .textpic {
-    // @include container;
-
-    // &__container {
-    //     // @include row;
-    //     max-width: 1440px;
-    //     margin-left: auto;
-    //     margin-right: auto;
-    // }
-
-    // &__content {
-    //     @include column(12);
-    // }
+    &__row {
+        flex-flow: column!important;
+        justify-content: space-evenly;
+    }
 
     &__image {
-        // @include column(12);
 
         figure {
             margin: 0;
@@ -33,20 +24,9 @@
 
 @media (min-width: 768px) {
     .textpic {
-        flex-direction: row;
-
-        &__container {
-            justify-content: center;
+        &__row {
+            flex-flow: row!important;
             align-items: center;
-            column-gap: calc(100% / 12);
         }
-
-        // &__content {
-        //     @include column(4);
-        // }
-
-        // &__image {
-        //     @include column(5);
-        // }
     }
 }

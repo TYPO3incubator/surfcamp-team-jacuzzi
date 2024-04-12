@@ -27,12 +27,12 @@ return [
     ],
     'EXTENSIONS' => [
         'backend' => [
-            'backendFavicon' => '',
-            'backendLogo' => '',
-            'loginBackgroundImage' => '',
-            'loginFootnote' => '',
-            'loginHighlightColor' => '',
-            'loginLogo' => '',
+            'backendFavicon' => 'EXT:psi/Resources/Public/Icons/Extension.svg',
+            'backendLogo' => 'EXT:psi/Resources/Public/Icons/Extension.svg',
+            'loginBackgroundImage' => 'EXT:psi/Resources/Public/Images/Background.jpeg',
+            'loginFootnote' => 'Made with ❤️ in Fuerteventura',
+            'loginHighlightColor' => '#99c6bb',
+            'loginLogo' => 'EXT:psi/Resources/Public/Icons/Extension.svg',
             'loginLogoAlt' => '',
         ],
         'extensionmanager' => [

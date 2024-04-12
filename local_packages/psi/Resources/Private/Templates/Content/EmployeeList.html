@@ -1,0 +1,53 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:psi="http://typo3.org/ns/Jacuzzi/Psi/ViewHelpers">
+<section class="container employee">
+    <f:if condition="{psi:fetchFrontendUsers(pid: data.pages) -> f:count() > 0}">
+        <f:then>
+            <ul class="row employee__list">
+                <f:for each="{psi:fetchFrontendUsers(pid: data.pages)}" as="user" iteration="iterator">
+                    <li class="employee__item col-12 col-sm-12 col-md-4">
+                        <f:if condition="{user.media}">
+                            <f:image src="{user.media}" class="employee__image"/>
+                        </f:if>
+                        <div class="employee__details">
+                            <f:if condition="{user.title}">
+                                <span class="employee__title">{user.title}</span>
+                            </f:if>
+                            <f:if condition="{user.first_name} && {user.last_name}">
+                                <h5 class="employee__name">{user.first_name}, {user.last_name}</h5>
+                            </f:if>
+                            <f:if condition="{user.email}">
+                                <div class="employee__detail employee__detail--email">
+                                    <span class="employee__label">
+                                        <f:translate key="fe_users.email.label" extensionName="psi"/>
+                                    </span>
+                                    <a class="employee__email" href="mailto:{user.email}">{user.email}</a>
+                                </div>
+                            </f:if>
+                            <f:if condition="{user.telephone}">
+                                <div class="employee__detail employee__detail--telephone">
+                                    <span class="employee__label">
+                                        <f:translate key="fe_users.telephone.label" extensionName="psi"/>
+                                    </span>
+                                    <a class="employee__phone" href="tel:{user.telephone}">{user.telephone}</a>
+                                </div>
+                            </f:if>
+                            <f:if condition="{user.fax}">
+                                <div class="employee__detail employee__detail--fax">
+                                    <span class="employee__label">
+                                        <f:translate key="fe_users.fax.label" extensionName="psi"/>
+                                    </span>
+                                    <span class="employee__fax">{user.fax}</span>
+                                </div>
+                            </f:if>
+                        </div>
+                    </li>
+                </f:for>
+            </ul>
+        </f:then>
+        <f:else>
+            <p class="employee__no-employees">No employees found.</p>
+        </f:else>
+    </f:if>
+</section>
+</html>
