@@ -83,6 +83,10 @@
 				<source>Download</source>
 				<target>Descargar</target>
 			</trans-unit>
+			<trans-unit id="news-readmore" resname="news-readmore">
+				<source>Read more</source>
+				<target>Sigue leyendo</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
