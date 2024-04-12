@@ -79,6 +79,10 @@
 				<source>Logout</source>
 				<target>Salir del systema</target>
 			</trans-unit>
+			<trans-unit id="download-button" resname="download-button">
+				<source>Download</source>
+				<target>Descargar</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

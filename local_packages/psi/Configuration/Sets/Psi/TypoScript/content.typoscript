@@ -35,3 +35,20 @@ lib.contentElement {
         0 = EXT:psi/Resources/Private/Templates/Layouts/
     }
 }
+
+# Files Download CE
+
+tt_content {
+  psi_downloads =< lib.contentElement
+  psi_downloads {
+    templateName = PsiDownloads
+    dataProcessing {
+      30 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      30 {
+        references.fieldName = media
+        as = image
+      }
+    }
+  }
+}
+
