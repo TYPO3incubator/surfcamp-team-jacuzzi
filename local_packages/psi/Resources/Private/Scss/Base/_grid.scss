@@ -37,7 +37,7 @@
 
 	.row {
 	    display: flex; 
-	    flex-flow: row wrap;
+	    flex-wrap: wrap;
 	    gap: var(--gutter);
 	}
 
@@ -45,14 +45,9 @@
 		flex: 0 0 auto;
 		min-height: 0;
 		min-width: 0;
-		width: 100%;
 		flex-basis: auto;
 		box-sizing: border-box;
-		padding: 0 var(--gutter / 2);
-
-		@include breakpoint-up(md){
-			padding: 0 var(--gutter);
-		} 
+		padding: 0 calc(var(--gutter) / 2);
 
 		.no-gutter {
 			padding: 0;
@@ -60,19 +55,21 @@
 	}
 }
 
-
 // generating columns
 @for $i from 1 through map-get($grid-config, columns) {
+
 	.col-#{$i}{
-		flex-basis: calc((100% - #{map-get($grid-config, gutter)}) / #{map-get($grid-config, columns)} * #{$i});
+		flex-basis: calc((100% - #{map-get($grid-config, gutter)} * 2 ) / #{map-get($grid-config, columns)} * #{$i});
 	}
 }
 
 // generating responsive columns
 @each $bp, $value in $breakpoints {
-	@for $i from 1 through map-get($grid-config, columns) {
-		.col-#{$bp}-#{$i}{
-			flex-basis: calc((100% - #{map-get($grid-config, gutter)}) / #{map-get($grid-config, columns)} * #{$i});
-		}
+	@include breakpoint-up(#{$bp}) {
+		@for $i from 1 through map-get($grid-config, columns) {
+			.col-#{$bp}-#{$i}{
+				flex-basis: calc((100% - #{map-get($grid-config, gutter)} * 2 ) / #{map-get($grid-config, columns)} * #{$i});
+			}
+		}		
 	}
 }
