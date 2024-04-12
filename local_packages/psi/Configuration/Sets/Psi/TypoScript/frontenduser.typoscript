@@ -31,14 +31,3 @@ lib.frontenduseravatar {
       }
     }
 }
-
-
-lib.frontenduserlogoutbutton = COA_INT
-lib.frontenduserlogoutbutton {
-    10 = TEXT
-    10.value = LOGOUT
-    10.typolink {
-       parameter.data = TSFE:id
-       additionalParams = &logintype=logout
-    }
-}
