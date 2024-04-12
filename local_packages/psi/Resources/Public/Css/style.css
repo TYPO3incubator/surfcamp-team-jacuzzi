@@ -1640,6 +1640,10 @@ a {
   border-radius: 4px;
 }
 
+.profile__headline {
+  margin-bottom: 60px;
+}
+
 .profile__info {
   padding: 32px;
   word-wrap: break-word;
