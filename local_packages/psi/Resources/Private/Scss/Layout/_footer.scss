@@ -1,0 +1,37 @@
+#site-footer {
+	display: flex;
+	height: rem(50);
+}
+.footer-container {
+	background-color: var(--accent, #D9D9D9);
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+	width: 100%;
+}
+.footer-logout {
+	background-color:  #c7c7c7;
+	display: flex;
+	width: rem(240);
+	a {
+		display: block;
+		font-size: rem(20);
+		font-weight: 600;
+		margin: auto 0;
+		padding-left: rem(32);
+		text-decoration: none;
+	}
+}
+.footermenu-container {
+	display: flex;
+	justify-content: center;
+	padding-right: rem(32);
+}
+#footer-nav {
+	display: flex;
+	margin: auto;
+	padding: 0;
+	li {
+		display: block;
+	}
+}
