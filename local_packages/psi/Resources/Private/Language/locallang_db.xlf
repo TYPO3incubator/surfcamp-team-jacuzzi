@@ -24,6 +24,27 @@
 			<trans-unit id="tt_content.textpic.layout.1">
 				<source>Image position right</source>
 			</trans-unit>
+			<trans-unit id="fe_users.department.none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="fe_users.department.management">
+				<source>Management</source>
+			</trans-unit>
+			<trans-unit id="fe_users.department.marketing">
+				<source>Marketing</source>
+			</trans-unit>
+			<trans-unit id="fe_users.department.legal">
+				<source>Legal</source>
+			</trans-unit>
+			<trans-unit id="fe_users.department.hr">
+				<source>HR</source>
+			</trans-unit>
+			<trans-unit id="fe_users.department.finance">
+				<source>Finance</source>
+			</trans-unit>
+			<trans-unit id="fe_users.department.it">
+				<source>IT</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

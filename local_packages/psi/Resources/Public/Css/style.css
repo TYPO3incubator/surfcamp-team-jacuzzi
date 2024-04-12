@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
@@ -1125,6 +1127,58 @@ a {
   font-weight: 700;
 }
 
+.employee__filter {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: 0.25em;
+  overflow: hidden;
+  border: 1px solid var(--primary);
+  /* Remove IE arrow */
+}
+
+.employee__filter-container {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 60px;
+}
+
+.employee__filter::after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: var(--primary);
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+
+.employee__filter:hover::after {
+  color: var(--light);
+}
+
+.employee__filter select {
+  /* Reset Select */
+  appearance: none;
+  outline: 10px #000;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #000;
+  border-color: var(--primary);
+  background-color: var(--light);
+  background-image: none;
+  cursor: pointer;
+}
+
+.employee__filter select::-ms-expand {
+  display: none;
+}
+
 .login__row {
   align-items: center;
   justify-content: center;
@@ -1228,6 +1282,7 @@ a {
 }
 
 .profile__info-inner {
+  row-gap: var(--gutter);
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: none;
 }
@@ -1268,7 +1323,7 @@ a {
   color: var(--text-light);
 }
 
-.profile__data {
+.profile__label {
   font-weight: 600;
 }
 
