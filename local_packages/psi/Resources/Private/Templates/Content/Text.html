@@ -1,10 +1,10 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <section class="container text">
-    <div class="row">
+    <div class="row text__row">
         <f:if condition="{data.subheader}">
         <span
-            class="subheadline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">
+            class="topline {f:if(condition: '{data.header} && {data.header_position}', then: 'headline-{data.header_position}')}">
             {data.subheader}
         </span>
         </f:if>
@@ -16,7 +16,9 @@
                 default: settings.defaultHeaderType}"/>
         </f:if>
         <f:if condition="{data.bodytext}">
-            <f:format.raw>{data.bodytext}</f:format.raw>
+            <div class="text__body">
+                <f:format.raw>{data.bodytext}</f:format.raw>
+            </div>
         </f:if>
     </div>
 </section>

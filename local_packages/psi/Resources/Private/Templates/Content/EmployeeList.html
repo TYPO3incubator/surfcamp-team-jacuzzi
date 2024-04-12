@@ -5,7 +5,7 @@
         <f:then>
             <ul class="row employee__list">
                 <f:for each="{psi:fetchFrontendUsers(pid: data.pages)}" as="user" iteration="iterator">
-                    <li class="employee__item col-12 col-sm-12 col-md-4">
+                    <li class="employee__item col-12 col-sm-12 col-md-6 col-lg-4">
                         <f:if condition="{user.media}">
                             <f:image image="{user.media}" class="employee__image"/>
                         </f:if>
@@ -19,7 +19,7 @@
                             <f:if condition="{user.email}">
                                 <div class="employee__detail employee__detail--email">
                                     <span class="employee__label">
-                                        <f:translate key="fe_users.email.label" extensionName="psi"/>
+                                        <f:translate key="fe_users.email.label" extensionName="psi"/>:
                                     </span>
                                     <a class="employee__email" href="mailto:{user.email}">{user.email}</a>
                                 </div>
@@ -27,7 +27,7 @@
                             <f:if condition="{user.telephone}">
                                 <div class="employee__detail employee__detail--telephone">
                                     <span class="employee__label">
-                                        <f:translate key="fe_users.telephone.label" extensionName="psi"/>
+                                        <f:translate key="fe_users.telephone.label" extensionName="psi"/>:
                                     </span>
                                     <a class="employee__phone" href="tel:{user.telephone}">{user.telephone}</a>
                                 </div>
@@ -35,7 +35,7 @@
                             <f:if condition="{user.fax}">
                                 <div class="employee__detail employee__detail--fax">
                                     <span class="employee__label">
-                                        <f:translate key="fe_users.fax.label" extensionName="psi"/>
+                                        <f:translate key="fe_users.fax.label" extensionName="psi"/>:
                                     </span>
                                     <span class="employee__fax">{user.fax}</span>
                                 </div>
