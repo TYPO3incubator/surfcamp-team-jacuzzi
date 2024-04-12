@@ -3,15 +3,64 @@
 <section class="container employee" id="c{data.uid}">
     <f:if condition="{psi:fetchFrontendUsers(pid: data.pages) -> f:count() > 0}">
         <f:then>
+            <div class="employee__filter-container">
+                <div class="employee__filter">
+                    <select id="departmentFilter">
+                        <option value="0">
+                            <f:translate key="fe_users.department.all" extensionName="psi"/>
+                        </option>
+                        <option value="1">
+                            <f:translate key="fe_users.department.management" extensionName="psi"/>
+                        </option>
+                        <option value="2">
+                            <f:translate key="fe_users.department.marketing" extensionName="psi"/>
+                        </option>
+                        <option value="3">
+                            <f:translate key="fe_users.department.legal" extensionName="psi"/>
+                        </option>
+                        <option value="4">
+                            <f:translate key="fe_users.department.hr" extensionName="psi"/>
+                        </option>
+                        <option value="5">
+                            <f:translate key="fe_users.department.finance" extensionName="psi"/>
+                        </option>
+                        <option value="6">
+                            <f:translate key="fe_users.department.it" extensionName="psi"/>
+                        </option>
+                    </select>
+                </div>
+            </div>
             <ul class="row employee__list">
                 <f:for each="{psi:fetchFrontendUsers(pid: data.pages)}" as="user" iteration="iterator">
-                    <li class="employee__item col-12 col-sm-12 col-md-6 col-lg-4">
+                    <li class="employee__item col-12 col-sm-12 col-md-6 col-lg-4"
+                        data-department="{user.employee_department}">
                         <f:if condition="{user.media}">
                             <f:image image="{user.media}" class="employee__image"/>
                         </f:if>
                         <div class="employee__details">
-                            <f:if condition="{user.title}">
-                                <span class="employee__title">{user.title}</span>
+                            <f:if condition="{user.employee_department}">
+                                <span class="employee__title">
+                                      <f:if condition="{user.employee_department} == '1'">
+                        <f:then>
+                            <f:translate key="fe_users.department.management" extensionName="psi"/>
+                        </f:then>
+                        <f:else if="{user.employee_department} == '2'">
+                            <f:translate key="fe_users.department.marketing" extensionName="psi"/>
+                        </f:else>
+                        <f:else if="{user.employee_department} == '3'">
+                            <f:translate key="fe_users.department.legal" extensionName="psi"/>
+                        </f:else>
+                        <f:else if="{user.employee_department} == '4'">
+                            <f:translate key="fe_users.department.hr" extensionName="psi"/>
+                        </f:else>
+                        <f:else if="{user.employee_department} == '5'">
+                            <f:translate key="fe_users.department.finance" extensionName="psi"/>
+                        </f:else>
+                        <f:else if="{user.employee_department} == '6'">
+                            <f:translate key="fe_users.department.it" extensionName="psi"/>
+                        </f:else>
+                    </f:if>
+                                </span>
                             </f:if>
                             <f:if condition="{user.first_name} && {user.last_name}">
                                 <h5 class="employee__name">{user.first_name}, {user.last_name}</h5>

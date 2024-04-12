@@ -121,6 +121,34 @@
 				<source>Read more</source>
 				<target>Sigue leyendo</target>
 			</trans-unit>
+			<trans-unit id="fe_users.department.all">
+				<source>All Departments</source>
+				<target>Todos los Departamentos</target>
+			</trans-unit>
+			<trans-unit id="fe_users.department.management">
+				<source>Management</source>
+				<target>Gestión</target>
+			</trans-unit>
+			<trans-unit id="fe_users.department.marketing">
+				<source>Marketing</source>
+				<target>Marketing</target>
+			</trans-unit>
+			<trans-unit id="fe_users.department.legal">
+				<source>Legal</source>
+				<target>Legal</target>
+			</trans-unit>
+			<trans-unit id="fe_users.department.hr">
+				<source>HR</source>
+				<target>Recursos Humanos</target>
+			</trans-unit>
+			<trans-unit id="fe_users.department.finance">
+				<source>Finance</source>
+				<target>Finanzas</target>
+			</trans-unit>
+			<trans-unit id="fe_users.department.it">
+				<source>IT</source>
+				<target>Tecnología de la Información</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
