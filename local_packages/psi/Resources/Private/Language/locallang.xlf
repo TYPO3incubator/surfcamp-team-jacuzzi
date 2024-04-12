@@ -68,6 +68,9 @@
 			<trans-unit id="result.noResult" resname="result.noResult">
 				<source>No results found.</source>
 			</trans-unit>
+			<trans-unit id="logout-label" resname="logout-label">
+				<source>Logout</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

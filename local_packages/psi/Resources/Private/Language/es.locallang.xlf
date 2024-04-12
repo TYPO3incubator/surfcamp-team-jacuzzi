@@ -75,6 +75,10 @@
 				<source>No results found.</source>
 				<target>No se han encontrado resultados.</target>
 			</trans-unit>
+			<trans-unit id="logout-label" resname="logout-label">
+				<source>Logout</source>
+				<target>Salir del systema</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

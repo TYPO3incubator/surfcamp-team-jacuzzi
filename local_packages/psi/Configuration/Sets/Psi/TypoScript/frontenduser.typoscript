@@ -29,13 +29,3 @@ lib.frontenduseravatar {
         stdWrap.wrap = <img src="|" alt="">
     }
 }
-
-lib.frontenduserlogoutbutton = COA_INT
-lib.frontenduserlogoutbutton {
-    10 = TEXT
-    10.value = LOGOUT
-    10.typolink {
-       parameter = 1
-       additionalParams = &logintype=logout
-    }
-}

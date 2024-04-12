@@ -249,8 +249,10 @@ body {
 }
 
 .footer-logout {
+    align-items: center;
     background-color: #C7C7C7;
     display: flex;
+    gap: 5px;
     width: 240px;
 }
 
@@ -260,8 +262,13 @@ body {
     font-size: 20px;
     font-weight: 600;
     margin: auto 0;
-    padding-left: 30px;
+    padding-left: 20px;
     text-decoration: none;
+}
+
+.footer-logout svg {
+    height: auto;
+    width: 30px;
 }
 
 .footermenu-container {
