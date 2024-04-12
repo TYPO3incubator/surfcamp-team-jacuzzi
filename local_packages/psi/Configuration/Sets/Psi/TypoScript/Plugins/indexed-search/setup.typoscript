@@ -1,1 +1,3 @@
 @import "EXT:indexed_search/Configuration/TypoScript/setup.typoscript"
+
+plugin.tx_indexedsearch.targetPid = {$psi.pageIds.searchresult}
