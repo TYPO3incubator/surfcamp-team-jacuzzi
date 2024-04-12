@@ -343,3 +343,40 @@
     color: #000;
     text-decoration: none;
 }
+
+.downloads-inner {
+    padding: 30px;
+}
+
+.downloads-wrap {
+    align-items: center;
+    display: flex;
+    gap: 25px;
+}
+
+.downloads-single {
+    background-color: #FFF;
+    display: block;
+    flex: 0 1 calc(100% / 2 - 25px);
+    max-width: calc(100% / 2 - 25px);
+}
+
+.downloads-single p {
+    margin-bottom: 10px;
+}
+
+.downloads-filename {
+    font-size: 18px;
+    font-width: 700;
+    text-transform: uppercase;
+}
+
+.downloads-single a {
+    display: flex;
+    gap: 5px;
+    color: #000;
+}
+
+.download-cta {
+    line-height: 24px;
+}

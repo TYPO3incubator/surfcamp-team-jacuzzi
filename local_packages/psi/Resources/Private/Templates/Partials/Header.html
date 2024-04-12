@@ -15,9 +15,11 @@
         </div>
         <f:if condition="{frontendusername}">
             <div class="header-search-container">
-                <form method="post" action="{f:uri.action(action: 'search', controller: 'Search', extensionName: 'IndexedSearch', pluginName: 'Pi2', pageUid: settings.psi.pageIds.searchresult)}">
-                    <input type="text" name="tx_indexedsearch_pi2[search][sword]" value="">
-                    <input type="submit" value="{f:translate(key: 'search-button', extensionName: 'psi')}" name="tx_indexedsearch_pi2[search][submitButton]">
+                <form method="post" action="{f:uri.page(pageUid: settings.psi.pageIds.searchresult, additionalParams:'{tx_indexedsearch_pi2: {action:\'search\',controller:\'Search\'}}')}">
+                    <input class="header-searchbox" type="text" name="tx_indexedsearch_pi2[search][sword]" value="">
+                    <button class="header-searchbutton">
+                        <f:translate key="search-button" extensionName="psi"></f:translate>
+                    </button>
                 </form>
             </div>
         </f:if>
