@@ -1,23 +1,23 @@
 #page-header {
 	display: flex;
-	height: 80px;
+	height: rem(80);
 }
 .header-inner {
 	background-color: var(--background);
 	display: flex;
 	justify-content: space-between;
-	padding: 0 30px;
+	padding: 0 rem(30);
 	padding-left: 0;
 	width: 100%;
 }
 .header-left-container {
 	align-items: center;
 	display: flex;
-	gap: 25px;
+	gap: rem(24);
 	justify-content: center;
 }
 .header-menu-toggle {
-	background: var(--accent);
+	background: var(--light);
 	border: none;
 	display: flex;
 	flex-direction: column;
@@ -40,7 +40,7 @@
 }
 .menu-toggle-stripe {
 	background-color: var(--primary);
-	height: rem(5);
+	height: rem(4);
 	margin: 0 auto;
 	width: rem(40);
 }
