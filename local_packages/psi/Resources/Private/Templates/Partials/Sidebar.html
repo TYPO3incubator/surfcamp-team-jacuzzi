@@ -4,7 +4,9 @@
     <div class="sidebar-inner">
         <f:if condition="{frontendusername}">
             <div class="user-info-container">
-                <div class="user-info-avatar">{frontenduseravatar -> f:format.raw()}</div>
+                <div class="user-info-avatar">
+                    <img src="{frontenduseravatar -> f:format.raw()}" width="50" />
+                </div>
                 <div class="user-infos">{frontendusertitle -> f:format.raw()}
                     <div class="user-info-name">
                         {frontendusername -> f:format.raw()}
