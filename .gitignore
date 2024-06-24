@@ -8,6 +8,5 @@
 *.vscode
 .env
 .DS_Store
-/config/sites
 /node_modules
 .php-cs-fixer.cache
